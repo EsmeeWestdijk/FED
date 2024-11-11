@@ -41,15 +41,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Home pagina
-  <img src="therme_home_image.png" width="375px" alt="omschrijving van de pagina">
+  <img src="readme-images/therme_home_image.png" width="375px" alt="home pagina therme">
 
-  Reference-style: 
-  ![alt text][screenhot]
-[screenhot]: https://github.com/EsmeeWestdijk/FED/blob/main/readme-images/therme_home_image.png "Foto home"
 
   #### Screenshot(s) van de tweede pagina (small screen):
   Collecties pagina 
-  <img src="therme_collecties_image.png" width="375px" alt="omschrijving van de pagina">
+  <img src="readme-images/therme_collecties_image.png" width="375px" alt="collecties pagina therme">
  
 </details>
 
