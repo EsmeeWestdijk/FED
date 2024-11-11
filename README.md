@@ -43,6 +43,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Home pagina
   <img src="therme_home_image.png" width="375px" alt="omschrijving van de pagina">
 
+  Reference-style: 
+  ![alt text][screenhot]
+[screenhot]: https://github.com/EsmeeWestdijk/FED/blob/main/readme-images/therme_home_image.png "Foto home"
+
   #### Screenshot(s) van de tweede pagina (small screen):
   Collecties pagina 
   <img src="therme_collecties_image.png" width="375px" alt="omschrijving van de pagina">
