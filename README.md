@@ -67,28 +67,28 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen uit WCAG test 
  Lijst met je bevindingen die in de test naar voren kwamen:
- Score bij content: alles yes 
- Score bij global code: alles yes 
- Score bij ketboard: alles yes 
- Score bij: mobile and touch: 3/4 yes - Links en buttons zijn makkelijk te bedienen behalve de filter opties bij producten. Deze filter opties staan te dicht op elkaar. 
- Score bij headings: alles yes 
- Score bij lists: yes
- Score bij images: 1/4 yes - alle afbeeldingen staan vermeld als background-image. Hierdoor zie ik geen alt-test bij de afbeeldingen staan. Wel wordt er bij elke background-image een 0 alt gegeven. 
- Score bij media: Niet van toepassing (er is geen video of audio op deze website). 
- Score bij controls: 5/6 yes - de filter optie van producten is vormgegeven als een grote button. 
- Score bij apperance: 2/4 yes - dark en light mode is niet geactiveerd voor de website en de high-contrast optie modes is wordt niet ondersteunt. 
- Score bij animations: 1/2 yes - er is geen mogelijkheid om de animatie stop te zetten. 
- Score bij color contrast: alles yes 
+ - Score bij content: alles yes 
+ - Score bij global code: alles yes 
+ - Score bij ketboard: alles yes 
+ - Score bij: mobile and touch: 3/4 yes - Links en buttons zijn makkelijk te bedienen behalve de filter opties bij producten. Deze filter opties staan te dicht op elkaar. 
+ - Score bij headings: alles yes 
+ - Score bij lists: yes
+ - Score bij images: 1/4 yes - alle afbeeldingen staan vermeld als background-image. Hierdoor zie ik geen alt-test bij de afbeeldingen staan. Wel wordt er bij elke background-image een 0 alt gegeven. 
+ - Score bij media: Niet van toepassing (er is geen video of audio op deze website). 
+ - Score bij controls: 5/6 yes - de filter optie van producten is vormgegeven als een grote button. 
+ - Score bij apperance: 2/4 yes - dark en light mode is niet geactiveerd voor de website en de high-contrast optie modes is wordt niet ondersteunt. 
+ - Score bij animations: 1/2 yes - er is geen mogelijkheid om de animatie stop te zetten. 
+ - Score bij color contrast: alles yes 
 
  Naast de checklist van WCAG heb ik ook bij de inspector tools gekeken naar mijn website hoe hij eruit ziet met verschillende visuele beperkingen. Hier zijn de volgende resultaten: 
 
  Blurred vison
- <img src="readme-images/blurred_vison_home.png" width="375px" alt="blurred vison">
- <img src="readme-images/blurred_vison_product.png" width="375px" alt="blurred vison">
+ <img src="readme-images/blurred_vison_home.png" width="200px" alt="blurred vison">
+ <img src="readme-images/blurred_vison_product.png" width="200px" alt="blurred vison">
 
  Reduced contrast 
- <img src="readme-images/reduced_contrast_home.png" width="375px" alt="reduced contrast">
- <img src="readme-images/reduced_contrast_product.png" width="375px" alt="reduced contrast">
+ <img src="readme-images/reduced_contrast_home.png" width="200px" alt="reduced contrast">
+ <img src="readme-images/reduced_contrast_product.png" width="200px" alt="reduced contrast">
 
  Protanopia (geen rood)
  <img src="readme-images/no_red_home.png" width="200px" alt="geen rood">
