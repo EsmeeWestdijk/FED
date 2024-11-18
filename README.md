@@ -37,15 +37,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Je opdracht:
   link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp:
-  [klik hier op naar de therme website te gaan] (https://www.therme.nl/) 
+  [klik hier op naar de therme website te gaan] (https://www.douglas.nl/nl) 
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Home pagina
-  <img src="readme-images/therme_home_image.png" width="375px" alt="home pagina therme">
+  <img src="readme-images/Douglas_home_pagina.PNG" width="375px" alt="home pagina van de Douglas">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   Collecties pagina 
-  <img src="readme-images/therme_collecties_image.png" width="375px" alt="collecties pagina therme">
+  <img src="readme-images/Douglas_parfum_pagina.PNG" width="375px" alt="parfum pagina van ysl luchtje op de douglas website">
  
 </details>
 
@@ -62,22 +62,26 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - De voiceover leest de koppen voor en de hoeveelste kop het is van de pagina geeft het ook aan.  
   - De voiceover gaat langs de links en benoemd de link bij de naam van de text.  
   - De voiceover leest in de header alle hoofdmenu elementen voor, alleen niet de subelementen in een element.  
-  - Bij Bente gaat de voiceover niet goed door de links over de pagina en op mijn computer wel. 
-  - Bij de Navigatie optie in de rotor selecteert hij de hele pagina meteen (waar ik me op bevind). 
+  - De website bestaat vooral uit links
+  - Bij de functie nagivatie in de rotor zijn er wenig onderdelen beschikbaar 
+  - Bij de functie koppen begint de voice over ergens midden op de homepagina pas. 
+  - Op de pagina van een parfum worden de recenties overgeslagen door de voiceover. 
+  - De website bevat weinig koppen. 
+  - Als ik op de pagina van een parfum zit kan ik via de voiceover niet komen bij de button om het product toe te voegen aan het winkelmandje. 
 
   ### Bevindingen uit WCAG test 
  Lijst met je bevindingen die in de test naar voren kwamen:
  - Score bij content: alles yes 
- - Score bij global code: alles yes 
- - Score bij ketboard: alles yes 
- - Score bij: mobile and touch: 3/4 yes - Links en buttons zijn makkelijk te bedienen behalve de filter opties bij producten. Deze filter opties staan te dicht op elkaar. 
+ - Score bij global code: html niet valide 
+ - Score bij keyboard: alles yes 
+ - Score bij: mobile and touch: 3/4 yes - niet zo veel ruimte tussen de parfum plaatjes en het + knopje. 
  - Score bij headings: alles yes 
- - Score bij lists: yes
- - Score bij images: 1/4 yes - alle afbeeldingen staan vermeld als background-image. Hierdoor zie ik geen alt-test bij de afbeeldingen staan. Wel wordt er bij elke background-image een 0 alt gegeven. 
- - Score bij media: Niet van toepassing (er is geen video of audio op deze website). 
- - Score bij controls: 5/6 yes - de filter optie van producten is vormgegeven als een grote button. 
+ - Score bij lists: no
+ - Score bij images: 1/4 yes - Ik kan geen alt tekst vinden er staan alleen maar linkjes. Wel wordt er bij sommige alt 0 gegeven.  
+ - Score bij media: 2/4 yes - geen captions en transcripts mogelijk. 
+ - Score bij controls: alles yes 
  - Score bij apperance: 2/4 yes - dark en light mode is niet geactiveerd voor de website en de high-contrast optie modes is wordt niet ondersteunt. 
- - Score bij animations: 1/2 yes - er is geen mogelijkheid om de animatie stop te zetten. 
+ - Score bij animations: alles yes
  - Score bij color contrast: alles yes 
 
  Naast de checklist van WCAG heb ik ook bij de inspector tools gekeken naar mijn website hoe hij eruit ziet met verschillende visuele beperkingen. Hier zijn de volgende resultaten: 
