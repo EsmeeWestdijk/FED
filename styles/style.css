@@ -17,6 +17,7 @@
 	/* startje */
 	--color-text:#111;
 	--color-background:#eee;
+	
 }
 
 
@@ -28,4 +29,19 @@
 /****************/
 
 /* jouw code */
+ul:nth-of-type(2){
+ display: flex;
+ flex-wrap: wrap;
+ gap: 1em; 
+ list-style-type: none;
+ overflow-x: auto;
+ text-transform: uppercase;
+
+}
+
+ul:nth-of-type(2) li{
+	flex-shrink: 0;
+	margin-right: 0.125em;
+}
+
 

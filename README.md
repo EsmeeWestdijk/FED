@@ -19,7 +19,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Esmee Westdijk 
 
   #### Je startniveau:
-  Mijn startniveau is rood
+  Mijn startniveau is blauw
 
   #### Je focus:
   Ik focus op surface
@@ -84,6 +84,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
  - Score bij animations: alles yes
  - Score bij color contrast: alles yes 
 
+(Dit is nog van mijn eerste website)
  Naast de checklist van WCAG heb ik ook bij de inspector tools gekeken naar mijn website hoe hij eruit ziet met verschillende visuele beperkingen. Hier zijn de volgende resultaten: 
 
  Blurred vison
@@ -132,7 +133,7 @@ Archromatopsia (geen kleur)
   <img src="readme-images/breakdown_parfum_pagina.png" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
@@ -149,7 +150,17 @@ Archromatopsia (geen kleur)
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  
+   <img src="readme-images/Code_html_1.png" width="375px" alt="code html">
+   Ik vond deze section gemakkelijk gaan, hier had ik een beetje een idee van hoe ik de code moest opschrijven. 
+
+   <img src="readme-images/Code_html_2.png" width="375px" alt="code html">
+   De section van "voor jou geselecteerd" vond ik erg moeilijk om te maken aangezien ik niet weet of ieder appart stukje tekst ook daadwerkelijk in een apparte p moet. Daarnaast lukt het mij ook niet om het euro teken te typen dus die mis ik ook nog in de tekst. 
+
+   <img src="readme-images/Code_html_3.png" width="375px" alt="code html">
+   In deze section is het de bedoeling dat er video's staan van de website, een sort kleine reclame clips. Nu kan ik de video's niet downloaden en weet ik niet zo goed hoe ik zo'n soort een video zou moeten noteren in de html. 
+
+
 
 
   ### Agenda voor meeting
@@ -158,8 +169,8 @@ Archromatopsia (geen kleur)
   | Esmee          | (Mohammed)/Xavanna | Tom          |        |
   | ---            | ---                | ---          | ---              |
   | Menu           | en dit             | en ik dit    | en dan ik dat    |
-  | ul en li       | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Footer         | dit als er tijd is | nog een punt | dit wil ik zeker |
+  | Video's        | ...                | ...          | ...              |
 
 
   ### Verslag van meeting
