@@ -17,6 +17,11 @@
 	/* startje */
 	--color-text:#111;
 	--color-background:#eee;
+	--color-text-button: #eee; 
+	--color-button:#111; 
+	
+	--font-family: Sans-serif, Helvetica; 
+	
 	
 }
 
@@ -29,19 +34,101 @@
 /****************/
 
 /* jouw code */
+
+header{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+header h1{
+	position: relative;
+	justify-content: center;
+	align-items: center;
+}
+
+nav ul{
+	list-style-type: none;
+	display: flex;
+	justify-content: flex-end;
+	gap: 2em;
+}
+
+
+nav img{
+	width: 2em;
+}
+
+
+body{
+	font-family: var(--font-family);
+	background-color: var(--color-background);
+}
+
+button{
+	background-color: var(--color-button);
+	color: var(--color-text-button); 
+}
+
 ul:nth-of-type(2){
  display: flex;
  flex-wrap: wrap;
  gap: 1em; 
  list-style-type: none;
- overflow-x: auto;
  text-transform: uppercase;
-
 }
 
-ul:nth-of-type(2) li{
+main > section:nth-of-type(1) ul {
+	display: flex;
+	overflow-x: auto;
+}
+
+main > section:nth-of-type(1) li{
 	flex-shrink: 0;
-	margin-right: 0.125em;
+	list-style-type: none;
+}
+
+main > section:nth-of-type(1) li img{
+	width: 100%;
+	height: auto;
 }
 
 
+
+main > section:nth-of-type(2) ul {
+	display: flex;
+	overflow-x: auto;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 2em;
+
+}
+
+main > section:nth-of-type(2) li {
+	flex-shrink: 0;
+	list-style-type: none;
+}
+
+main > section:nth-of-type(2) li img{
+	width: 8em;
+	margin-right: .125em;
+	display: block;
+}
+
+
+main > section:nth-of-type(5) ul{
+	display: flex;
+	overflow-x: auto;
+}
+
+main > section:nth-of-type(5) li{
+	flex-shrink: 0;
+	list-style-type: none;
+}
+
+main > section:nth-of-type(5) li img{
+	width: 20em; 
+	gap: 0.5em;
+}
