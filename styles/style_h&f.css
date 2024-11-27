@@ -1,0 +1,70 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+    box-sizing:border-box;  
+    }
+  
+  
+  
+  
+  
+  
+  /*********************/
+  /* CUSTOM PROPERTIES */
+  /*********************/
+  :root {
+      /* startje */
+      --color-text:#111;
+      --color-background:#eee;
+      --color-text-button: #eee; 
+      --color-button:#111; 
+      
+      --font-family: Sans-serif, Helvetica; 
+    }
+  
+  
+  
+  
+  
+  /****************/
+  /* JOUW STYLING */
+  /****************/
+  
+  /* jouw code */
+  
+  header{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+  
+  header h1{
+      position: relative;
+      justify-content: center;
+      align-items: center;
+    }
+  
+  
+  header ul:nth-of-type(1){
+     display: flex;
+    flex-wrap: wrap;
+    gap: 1em; 
+    list-style-type: none;
+    text-transform: uppercase;
+   } 
+
+   nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2em;
+    }
+
+
+   nav img{
+    width: 2em;
+   }
+   

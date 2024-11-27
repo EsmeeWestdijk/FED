@@ -1,0 +1,126 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+
+
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* startje */
+	--color-text:#111;
+	--color-background:#eee;
+	--color-text-button: #eee; 
+	--color-button:#111; 
+	
+	--font-family: Sans-serif, Helvetica; 
+	
+	
+}
+
+
+
+
+
+/****************/
+/* JOUW STYLING */
+/****************/
+
+/* jouw code */
+
+
+
+body{
+	font-family: var(--font-family);
+	background-color: var(--color-background);
+}
+
+button{
+	background-color: var(--color-button);
+	color: var(--color-text-button); 
+}
+
+
+main > section:nth-of-type(1) ul {
+	display: flex;
+	overflow-x: auto; 
+	scroll-snap-type: mandatory;
+}
+
+main > section:nth-of-type(1) li{
+	flex-shrink: 0;
+	list-style-type: none;
+}
+
+main > section:nth-of-type(1) li img{
+	width: 40em;
+	height: 40em;
+}
+
+
+main > section:nth-of-type(2) ul {
+	display: flex;
+	overflow-x: auto;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 2em;
+
+}
+
+main > section:nth-of-type(2) li {
+	flex-shrink: 0;
+	list-style-type: none;
+}
+
+main > section:nth-of-type(2) li img{
+	width: 8em;
+	margin-right: .125em;
+	display: block;
+}
+
+
+main > section:nth-of-type(5) ul{
+	display: flex;
+	overflow-x: auto;
+}
+
+main > section:nth-of-type(5) li{
+	flex-shrink: 0;
+	list-style-type: none;
+}
+
+main > section:nth-of-type(5) li img{
+	width: 20em; 
+	gap: 0.5em;
+}
+
+
+
+
+main > section:nth-of-type(4) ul{
+	display: flex;
+	overflow-x: auto;
+	object-fit: cover;
+}
+
+main > section:nth-of-type(4) li{
+  flex-shrink: 0;
+  list-style-type: none;
+}
+
+main > section:nth-of-type(4) li img{
+  width: 10em;
+}
+
+main > section:nth-of-type(4) li button img{
+	width: 5em;
+
+ }
+  
