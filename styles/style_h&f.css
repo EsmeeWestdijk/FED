@@ -32,13 +32,13 @@
   /****************/
   
   /* jouw code */
+
+  body{
+    margin: 0;
+  }
   
   header{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      text-align: center;
+      
     }
 
   .visually-hidden{
@@ -68,6 +68,15 @@
     text-transform: uppercase;
    } 
 
+   header nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 1em; 
+   }
+
    nav ul{
     list-style-type: none;
     display: flex;
@@ -77,7 +86,7 @@
 
 
    nav img{
-    width: 2em;
+    width: 1.5em;
    }
   
    nav img:nth-of-type(1){
@@ -106,6 +115,19 @@
   /* FOOTER */
   /****************/
 
-  
+  details summary{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+
+  details img{
+    width: 1em;
+    
+  }
    
-  
+  details[open] img{
+    rotate: 180deg; 
+  }

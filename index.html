@@ -8,26 +8,34 @@
 
 	<title>Douglas</title>
 
-	<link href="styles/style.css" rel="stylesheet">
-	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+	<link href="styles/style_1.css" rel="stylesheet">
+	<link href="styles/style_2.css" rel="stylesheet">
+	<link href="styles/style_h&f.css" rel="stylesheet">
+
+	<link rel="icon" type="image/svg+xml" href="images/favicon_Douglas.ico">
 </head>
 
 <body>
 	<header>
-		<h1>DOUGLAS</h1>
+
+		<h1 class="visually-hidden">DOUGLAS</h1>
 
 		<nav>
+
+			<img src="images/Douglas_merknaam.png" alt="logo douglas"> 
+			<img src="images/menu_icon.svg" alt="menu"> 
+		    <img src="images/profiel_icon.jpg" alt="profiel icon poppetje">
+			<img src="images/hartje_icon.webp" alt="hartje icon">
+		    <img src="images/winkeltas_icon.webp" alt="winkeltas icon">
+		
 			<form>
 				<label for="zoekbalk"></label>
 				<input type="text" id="zoekbalk" name="zoekopdracht" value="Hallo, waar ben je naar op zoek?">
 				<!-- bron: https://www.w3schools.com/html/html_forms.asp -->
 			</form>
 
-			<button aria-hidden="true">
-				<img src="images/menu_icon.svg" alt="menu icon 3 streepjes">
-            </button>
 
-			<ul>
+			<!-- <ul>
 				<li>Black friday</li>
 				<li>Merken</li>
 				<li>Parfum</li>
@@ -45,22 +53,9 @@
 				<li>Duurzaamheid</li>
 				<li>Cadeautips</li>
 				<li>Trending</li>
-			</ul>
-
-			<ul>
-
-				<li>
-					<img src="images/profiel_icon.jpg" alt="profiel icon poppetje">
-				</li>
-
-				<li>
-					<img src="images/hartje_icon.webp" alt="hartje icon">
-				</li>
-
-				<li>
-					<img src="images/winkeltas_icon.webp" alt="winkeltas icon">
-				</li>
-			</ul>
+			</ul> -->
+			
+		</nav>
 
 	</header>
 
@@ -215,10 +210,10 @@
 				<li>
 					<h3>Yves Saint Laurant</h3>
 					<img src="images/foto's_van_douglas/ysl_libre_klein.jpg" alt="">
-					<button> <img src="images/hartje_button.jpg" alt=""></button>
+					<img src="images/hartje_button.jpg" alt="hartje button"> 
 					<p>Libre</p>
 					<p>Eau de parfum</p>
-					<p>Adviesprijs 92,00</p>
+					<p>Adviesprijs <s>€92,00</s></p>
 					<p>59,80</p>
 					<p>30 ml</p>
 				</li>
@@ -226,18 +221,21 @@
 				<li>
 					<h3>Bobby Brown</h3>
 					<img src="images/foto's_van_douglas/Bobby_brown_lipstick.jpg" alt="">
+					<img src="images/hartje_button.jpg" alt="hartje button"> 
 					<p>Extra Lip Tint Lippenbalsem</p>
-					<p>44,00 2.3 g</p>
+					<p>€44,00</p>
+					<p>2.3 g</p>
 				</li>
 
 				<li>
 					<h3>Narciso rodriguez</h3>
 					<img src="images/foto's_van_douglas/luchtje_narciso_rodriguez.jpeg" alt="">
+					<img src="images/hartje_button.jpg" alt="hartje button"> 
 					<p>for her</p>
 					<p>Musc Noir Eau de Parfum</p>
 					<p>Eau de parfum</p>
-					<p>Adviesprijs 107,00</p>
-					<p>58,85</p>
+					<p>Adviesprijs <s>€107,00</s></p>
+					<p>€58,85</p>
 					<p>50 ml</p>
 				</li>
 			</ul>
@@ -288,18 +286,219 @@
 
 	<footer>
 		<section>
-			<h3>Douglas nieuwsletter</h3>
-			<p>Blijf altijd op de hoogte van het laatste beautynieuws!</p>
-			<img src="images/foto's_van_douglas/2024-category-slider-fragrance01.jpg" alt="">
 
-			<form>
-				<label for="email"> E-mailadres</label>
+		    <section>
+			  <h3>Douglas nieuwsletter</h3>
+			  <p>Blijf altijd op de hoogte van het laatste beautynieuws!</p>
+			  <img src="images/footer_landscape.avif" alt="footer foto">
+
+			  <form>
+				<label for="e-mail"></label>
 				<input type="text" id="e-mail" name="e-mail">
 				<button>Aanmelden</button>
 				<!-- bron: https://www.w3schools.com/html/html_forms.asp -->
+			  </form>
+		    </section>
+
+			<ul>
+				<li><img src="images/levering_auto.png" alt="bezorg auto icon"></li>
+				<li>Snelle levering*</li>
+				<li><img src="images/bezorg_wagen.png" alt="bezorg lader icon"></li>
+				<li>Gratis verzending</li>
+				<li>vanaf €25,-</li>
+				<li><img src="images/makeup_lip.png" alt="lippenstift icon"></li>
+				<li>Het grootste beautyassoritment</li>
+				<li>keuze uit ruim 100.000 producten</li>
+				<li><img src="images/cadeautje.png" alt="cadeautje icon"></li>
+				<li>Kies 2 gratis samples**</li>
+			</ul>
+
+			<p>Producten van Douglas-partners worden binnen 2-4 werkdagen geleverd. ** Samples bij minimale bestelwaarde
+				van € 20,-. Niet beschikbaar voor bestellingen die volledig door Douglas-partners worden geleverd.</p>
+		</section>
+
+		<section>
+			<h4>Betalingsmogelijkheden</h4>
+			
+				<a href="#"> <img src="images/Mastercard.svg" alt="mastercard"></a>
+				<a href="#"> <img src="images/Visa.svg" alt="visa"></a> 
+				<a href="#"> <img src="images/GPay.svg" alt="Gpay"></a>
+				<a href="#"> <img src="images/Master-Payment-ApplePay.svg" alt="Applepay"></a>
+				<a href="#"> <img src="images/Master-Payment-iDeal.svg" alt="iDeal"></a>
+			
+
+			<h4>verzending en levering</h4>
+			 <a href="#"> <img src="images/DHL.svg" alt="DHL platje"></a>
+
+			<h4>Zorgeloos shoppen</h4>
+			<a href="#"> <img src="images/Shopping-awards-logo-zelf-gemaakt-2-.webp" alt="Shopping awards plaatje"></a>
+
+			<h4>Douglas-app</h4>
+			<a href="#"> <img src="images/master-apple-store-icon-EN.svg" alt="apple app store"></a>
+			<a href="#"> <img src="images/master-google-play-icon-EN.svg" alt="Google plat store"></a>
+			
+			<h4>Volg ons</h4>
+			<a href="#"> <img src="images/Master-Social-Icon-Facebook.svg" alt="facebook icon"></a>
+			<a href="#"> <img src="images/Master-Social-Icon-Instagram.svg" alt="instagram icon"></a>
+			<a href="#"> <img src="images/Master-Social-Icon-YouTube.svg" alt="youtube icon"></a>
+			<a href="#"> <img src="images/Master-Social-Icon-TikTok.svg" alt="tiktok icon"></a>
+
+		</section>
+
+		<section>
+			<details>
+				<summary>Klantenservice <img src="images/pijltje_naar_beneden.jpg" alt="pijltje naar beneden"></summary>
+				<!--bron: https://nl.vecteezy.com/gratis-vector/pijltje-naar-beneden-->
+                 <a href="#">Veelgestelde vragen</a>
+                 <a href="#">Ruilen & Retourneren</a>
+                 <a href="#">Betaalmethodes</a>
+                 <a href="#">Verzending & Levering</a>
+			</details>
+
+			<details>
+				<summary>Meer informatie <img src="images/pijltje_naar_beneden.jpg" alt="pijltje naar beneden"></summary>
+				<!--bron: https://nl.vecteezy.com/gratis-vector/pijltje-naar-beneden--></summary>
+				 <a href="#">Exclusieve voordelen</a>
+                 <a href="#">Douglas Marketing Solutions</a>
+                 <a href="#">Paginaoverzicht</a>
+			</details>
+
+			<details>
+				<summary>Over Douglas <img src="images/pijltje_naar_beneden.jpg" alt="pijltje naar beneden"></summary>
+				<!--bron: https://nl.vecteezy.com/gratis-vector/pijltje-naar-beneden--></summary>
+				 <a href="#">Over ons</a>
+                 <a href="#">Vacatures</a>
+                 <a href="#">Word leverancier</a>
+                 <a href="#">Zakelijk bestellen</a>
+			</details>
+		
+		</section>
+
+		<section>
+			<h2>Zoek een store</h2>
+			<img src="images/Footer_zoek.avif" alt="ronde afbeeling winkel"> 
+			<p>Zoek een Douglas-store bij jou in de buurt en ervaar onze producten in het echt.</p>
+
+			<form>
+				<label for="postcodeofplaats"> postcode of plaats</label>
+				<input type="text" id="postcodeofplaats" name="postcode of plaats">
 			</form>
+
+			<h4>Ervaar en probeer</h4>
+			<img src="images/vinkje_icon.webp" alt="vinkje"> 
+			<!--bron:https://nl.dreamstime.com/vinkje-tick-icon-no-image120599675-->
+			<p>Meer dan 100 stores in Nederland</p>
+			<img src="images/vinkje_icon.webp" alt="vinkje"> 
+			<!--bron:https://nl.dreamstime.com/vinkje-tick-icon-no-image120599675-->
+			<p>Beauty- en merkevents</p>
+
+			<h4>Reserveren en ophalen</h4>
+			<img src="images/vinkje_icon.webp" alt="vinkje"> 
+			<!--bron:https://nl.dreamstime.com/vinkje-tick-icon-no-image120599675-->
+			<p>Check de productbeschikbaarheid in jouw store</p>
+			<img src="images/vinkje_icon.webp" alt="vinkje"> 
+			<!--bron:https://nl.dreamstime.com/vinkje-tick-icon-no-image120599675-->
+			<p>Gratis producten in store reserveren</p>
+		</section>
+
+		<section>
+			<a>Privacybeleid</a>
+			<a>Colofon</a>
+			<a>Alegemne voorwaarden</a>
+			<a>Cookies</a>
+			<a>© 2024 Parfumerie Douglas Nederland B.V.</a>
+		</section>
+
+		<section>
+			<p>Top Merken</p>
+			<a href="#">Carolina Herrera</a>
+			<a href="#">Clarins</a>
+			<a href="#">Clinique</a>
+			<a href="#">DIOR - Sauvage</a>
+			<a href="#">Drunk Elephant</a>
+			<a href="#">Estée Lauder</a>
+			<a href="#">Hugo Boss</a>
+			<a href="#">Janzen</a>
+			<a href="#">Jean Paul Gaultier</a>
+			<a href="#">Kérastase</a>
+			<a href="#">Lancôme</a>
+			<a href="#">Lancôme - La vie est belle</a>
+			<a href="#">Olaplex</a>
+			<a href="#">Rituals</a>
+			<a href="#">Sol de Janeiro</a>
+			<a href="#">Tangle Teezer</a>
+			<a href="#">The Ordinary</a>
+			<a href="#">TOM FORD</a>
+			<a href="#">Versace - Eros</a>
+			<a href="#">Zadig&Voltaire</a>
+
+			<p>Top Categorieën</p>
+			<a href="#">Body mist</a>
+			<a href="#">Bronzer</a>
+			<a href="#">Concealer</a>
+			<a href="#">Damesparfum</a>
+			<a href="#">Foundation</a>
+			<a href="#">Gezichtslotion</a>
+			<a href="#">Gezichtsreiniging</a>
+			<a href="#">Highlighter</a>
+			<a href="#">Leave-in conditioner</a>
+			<a href="#">Lipgloss</a>
+			<a href="#">Liquid blush</a>
+			<a href="#">Make-up</a>
+			<a href="#">Mascara</a>
+			<a href="#">Massageolie</a>
+			<a href="#">Nagellak</a>
+			<a href="#">Penselen</a>
+			<a href="#">Reinigingsolie</a>
+			<a href="#">Setting spray</a>
+			<a href="#">Stijltangen</a>
+			<a href="#">Wenkbrauwverf</a>
+
+			<p>Top Producten</p>
+			<a href="#">1 Million Eau de toilette</a>
+			<a href="#">Billie Eilish Parfum</a>
+			<a href="#">Black Opium Eau de parfum</a>
+			<a href="#">Born This Way Super Coverage Concealer</a>
+			<a href="#">Bum Bum Cream Bodycrème</a>
+			<a href="#">Collistar Magic Drops Face</a>
+			<a href="#">DIOR Addict Lip Glow Oil</a>
+			<a href="#">Dior Homme Eau de Parfum Intense</a>
+			<a href="#">e.l.f. Cosmetics Halo Glow Liquid Filter</a>
+			<a href="#">Gucci Bloom Eau de parfum</a>
+			<a href="#">Gucci Flora Gorgeous Gardenia</a>
+			<a href="#">Gucci Rush Eau de toilette</a>
+			<a href="#">Instant Anti Age Eraser Concealer</a>
+			<a href="#">J’adore Eau de parfum</a>
+			<a href="#">JOOP! Homme Eau de toilette</a>
+			<a href="#">Libre Eau de parfum</a>
+			<a href="#">No.3 Hair Perfector Haarmasker</a>
+			<a href="#">Obsession Eau de parfum</a>
+			<a href="#">Telescopic Mascara</a>
+			<a href="#">This is Her Eau de parfum</a>
+
+			<p>Actueel</p>
+			<a href="#">Black Friday</a>
+			<a href="#">Cyber Monday</a>
+			<a href="#">Kerstcadeaus</a>
+			<a href="#">Adventskalenders</a>
+			<a href="#">Adventskalenders voor vrouwen</a>
+			<a href="#">Adventskalenders voor mannen</a>
+			<a href="#">Rituals Adventskalender</a>
+			<a href="#">NYX Adventskalender</a>
+			<a href="#">Benefit Adventskalender</a>
+			<a href="#">Essie Adventskalender</a>
+			<a href="#">Neonail Adventskalender</a>
+			<a href="#">Babor Adventskalender</a>
+			<a href="#">Kerstcadeaus</a>
+			<a href="#">Kerstmake-up</a>
+			<a href="#">Brow lamination</a>
+			<a href="#">Droge hoofdhuid</a>
+			<a href="#">Gerstekorrels verwijderen</a>
+			<a href="#">Mee-eters verwijderen</a>
+			<a href="#">Wenkbrauwen verven</a>
 		</section>
 	</footer>
+
 
 	<script defer src="scripts/script.js"></script>
 </body>
