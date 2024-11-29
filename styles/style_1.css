@@ -189,6 +189,7 @@ main > section:nth-of-type(4) li{
 	display: grid;
 	flex-shrink: 0;
 	list-style-type: none;
+	align-content: start;
 
 }
 

@@ -87,6 +87,18 @@
      border: 1px solid #cccc;
     }
 
+    nav form label{
+      width: 100%; 
+      background-color: aqua;
+      display: block; 
+    }
+
+    nav form label input{
+      width: 100%; 
+      background-color: aqua;
+      display: block; 
+    }
+
    nav img{
     width: 1.5em;
    }
