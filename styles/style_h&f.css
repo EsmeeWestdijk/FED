@@ -52,13 +52,7 @@
       /*bron: a11yproject*/ 
 
     }
-  
-  header h1{
-      position: relative;
-      justify-content: center;
-      align-items: center;
-    }
-  
+
   
   header ul:nth-of-type(1){
      display: flex;
@@ -83,7 +77,15 @@
     justify-content: flex-end;
     gap: 2em;
     }
+    /*bron: samen met Sanne in de les*/ 
 
+    nav form{
+     width: 40em;
+     margin: auto;
+     padding: 0.75em;
+     background-color: #f9f9f9;
+     border: 1px solid #cccc;
+    }
 
    nav img{
     width: 1.5em;
@@ -114,6 +116,7 @@
    /****************/
   /* FOOTER */
   /****************/
+
 
   details summary{
     list-style: none;

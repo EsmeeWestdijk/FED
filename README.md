@@ -84,7 +84,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
  - Score bij animations: alles yes
  - Score bij color contrast: alles yes 
 
-(Dit is nog van mijn eerste website)
+(Dit is nog van mijn eerste website)!!
  Naast de checklist van WCAG heb ik ook bij de inspector tools gekeken naar mijn website hoe hij eruit ziet met verschillende visuele beperkingen. Hier zijn de volgende resultaten: 
 
  Blurred vison
@@ -176,10 +176,12 @@ Archromatopsia (geen kleur)
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Via network images en videos downloaden van de webiste 
+  - Video uitzoeken hoe te maken met placeholder
+  - Nette html code 
+  - footer html aanmaken 
+  - links in het bestand kan je linken met een # op de eigen pagina 
+
 
 </details>
 
@@ -193,17 +195,35 @@ Archromatopsia (geen kleur)
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  <img src="readme-images/Code_header_nav.png" width="375px" alt="code van de header">
+  Hier zie je de code die ik samen met sanne heb toegepast tijdens de werkgroep. Ik kwam er niet helemaal uit hoe ik mijn icons in de header naast elkaar kreeg. Later bleek dat ik niet de selector had aangeroepen en daarom de afbeeldingen niet naast elkaar positioneerde. 
+
+  <img src="readme-images/Foto_header_nav.png" width="375px" alt="header van de website">
+  Zie hier de uiteindelijke header na een verbetering van de code. 
+
+  <img src="readme-images/Oude_code_select_slider.png" width="375px" alt="oude code voor slider 1">
+  Hier zie je de code die ik zelf had toegepast om mijn slider voor de producten na te maken. In de werkgroep heb ik nagevraagd of dit goed was. Helaas beelk het beter te kunnen met grid omdat een aantal elementen over elkaar heen moesten worden geplaatst.
+
+  <img src="readme-images/Code_nieuw_select_slider.png" width="375px" alt="nieuwe code slider 1">
+  Hier zie je de nieuwe code die ik met de uitleg van Sanne heb weten toepassen in mijn eigen code. Door wat uitleg en een voorbeeld code over grid begreep ik weer wat de bedoeling was. 
+
+  <img src="readme-images/Foto_select_slider.png" width="375px" alt="slider select op website"> 
+  Zie hier de silder hoe die er nu uit ziet. Alles staat met het grid op de juiste plek alleen vind ik de verhoudingen nog niet helemaal kloppen. 
+
+  <img src="readme-images/Foto_stories_slider.png" width="375px" alt="slider 2 layout met flex"> 
+  Daarnaast heb ik hier nog een voorbeeld van een slider waarvan ik zelf de layout heb gedaan. Dit heb ik ook allemaal gepositioneerd met flex en dergelijken. Nu vraag ik me nog even af of dit ook perse grid moet worden. 
+
+
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  | Esmee          | Mo                 | Tom          | Sander           |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Slider 2 flex  | en dit             | en ik dit    | en dan ik dat    |
+  | Positie slider | dit als er tijd is | nog een punt | dit wil ik zeker |
+  | Video's/ form  | ...                | ...          | ...              |
 
 
   ### Verslag van meeting
