@@ -221,8 +221,8 @@ Archromatopsia (geen kleur)
 
   | Esmee          | Mo                 | Tom          | Sander           |
   | ---            | ---                | ---          | ---              |
-  | Slider 2 flex  | en dit             | en ik dit    | en dan ik dat    |
-  | Positie slider | dit als er tijd is | nog een punt | dit wil ik zeker |
+  | Slider 2 flex  | @media             | svg's        | svg's            |
+  | Positie slider | Responsive         |              | grid's           |
   | Video's/ form  | ...                | ...          | ...              |
 
 

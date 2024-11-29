@@ -134,3 +134,24 @@
   details[open] img{
     rotate: 180deg; 
   }
+
+
+  footer{
+   margin: 1em;
+  }
+  
+  footer a{
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 2em;
+  }
+
+  footer p{
+    padding-left: 2em;
+  }
+
+  footer section:nth-of-type(4) img:nth-of-type(2),img:nth-of-type(3),img:nth-of-type(4), img:nth-of-type(5)  {
+    width: 2em;
+  }

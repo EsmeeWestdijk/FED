@@ -16,15 +16,28 @@
 :root {
 	/* startje */
 	color-scheme: light dark;
+
 	--color-text:#111; 
 	--color-background:#eee;
 	
 	--font-family: Sans-serif, Helvetica; 
-	
 }
 
+@media (prefers-color-scheme:dark){
+	:root{
+		--color-dark-background: #111;
+		--color-dark-text: #eee; 
 
+	}
+}
 
+html:has( [value="light"]:checked){
+	color-scheme: light;
+}
+
+html:has( [value="dark"]:checked){
+	color-scheme: dark;
+}
 
 
 /****************/
