@@ -58,10 +58,60 @@ button{
 	color: var(--color-text-button); 
 }
 
+ main > section:nth-of-type(1) ul {
+	list-style: none;
+	display: flex;
+	padding: 0;
+	margin: 0;
+	overflow-x: auto;
+  }
+  
+  main > section:nth-of-type(1)li {
+	position: relative;
+	overflow: hidden;
+	flex-shrink: 0;
+	width: 18em;
+	margin: 0;
+  }
+  
+  main > section:nth-of-type(1) li img {
+    width: 30em;
+	aspect-ratio: 3/4;
+	object-fit: cover;
+	height: auto;
+	display: block;
+  }
+  /*bron: chatGPT voor schaaling van de afbeelding. 
+  Promt: hoe krijg ik de afbeeldingen precies zoals op de foto in breedte en hoogte? 
+  Antwoord: width: 260px en aspect-ratio: 3 / 4: Hiermee zorg je voor een consistente breedte en hoogteverhouding (3:4), zoals in je voorbeeld.
+  object-fit: cover in de img: Dit zorgt ervoor dat de afbeelding de hele container vult zonder vervorming, terwijl het beeld wordt bijgesneden als dat nodig is.*/ 
 
-main > section:nth-of-type(1) ul {
+  
+  main > section:nth-of-type(1) li h2,
+  main > section:nth-of-type(1) li p {
+	color: white;
+	text-align: center;
+	width: 100%;
+	margin: 0;
+	padding: 0; 
+	background-color: rgba(0, 0, 0, 0.5);
+	position: absolute;
+  }
+  
+  main > section:nth-of-type(1)li h2 {
+	font-size: 2rem;
+	
+  }
+  
+  main > section:nth-of-type(1)li p {
+	font-size: 1rem;
+  }
+  
+
+/*main > section:nth-of-type(1) ul {
 	display: flex;
 	overflow-x: auto; 
+	margin: 0;
 }
 
 main > section:nth-of-type(1) li{
@@ -70,9 +120,10 @@ main > section:nth-of-type(1) li{
 }
 
 main > section:nth-of-type(1) li img{
-	width: 40em;
-	height: 40em;
-}
+	width: 30em; 
+	height: 100%;
+	margin: 0;
+}*/
 
 
 main > section:nth-of-type(2) ul {
@@ -96,28 +147,79 @@ main > section:nth-of-type(2) li img{
 	display: block;
 }
 
-main > section:nth-last-of-type(3) h2{
-	text-align: center;
-	font-size: 2em;
-	margin-bottom: 20px;
-}
 
 
 main > section:nth-of-type(3) ul{
 	display: flex;
-	overflow-x: auto; 
-	padding: 0;
+	overflow-x: auto;
+}
+
+main > section:nth-of-type(3) li{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto 1fr auto;
+	background-color: black;
+	color: #eee;
 	margin: 0;
 }
+/* bron: Chatgpt om te herhalen hoe je ook alweer een grid moest opstellen
+Promt: Hoe kan ik twee foto's op elkaar plaatsen en tekst met grid zoals dit (foto)?
+Antwoord: 
+display: grid;: Dit maakt de li-tag de grid container. Hiermee vertel je de browser dat alles binnen deze li-tag op een grid moet worden geplaatst.
+grid-template-columns: 1fr;: Dit zorgt ervoor dat de li slechts één kolom heeft die zich uitstrekt over de gehele breedte. 1fr betekent "één fractie" van de beschikbare ruimte, dus het vult altijd de breedte op die beschikbaar is.
+grid-template-rows: auto 1fr auto;: Dit definieert de rijen binnen het grid:
+De eerste rij heeft een automatische hoogte (dit betekent dat de hoogte van de rij wordt bepaald door de hoogte van de inhoud).
+De tweede rij neemt de rest van de ruimte in (door gebruik te maken van 1fr).
+De derde rij heeft weer een automatische hoogte.*/ 
 
+main > section:nth-of-type(3) img:first-of-type{
+	grid-row: 1;
+	display: block;
+	margin: 0;
+	width: 30em;
+	padding: 0;
 
-main > section:nth-of-type(3) ul li{
-	flex-shrink: 0;
-	list-style-type: none;
+	grid-row-start: 1;
+	grid-column-start: 1;
+
+	z-index: 0;
 }
 
-main > section:nth-of-type(3) li img:first-of-type{
-   width: 25em;
+main > section:nth-of-type(3) img:last-of-type{
+	grid-row: 2;
+	display: block;
+	margin: 0 auto;
+	width: 6em;
+
+	grid-row-start: 1;
+	grid-column-start: 1;
+
+	justify-self: end;
+	align-self: end;
+	margin-left: 1em;
+
+	z-index: 3;
+}
+
+
+main > section:nth-of-type(3) li h3{
+	grid-row: 3;
+	margin: 0;
+	padding: 0.5em;
+	text-transform: uppercase;
+	font-weight: 200;
+	font-size: small;
+}
+
+main > section:nth-of-type(3) li p{
+	grid-row: 4;
+	margin: 0;
+	padding: 0.5em;
+	background-color: black;
+	color: #eee;
+	font-weight: 100;
+	font-size: smaller;
+	padding-bottom: 2em;
 
 }
 
@@ -133,36 +235,7 @@ main > section:nth-of-type(4) h2, section:nth-of-type(3) h2, section:nth-of-type
 	padding-bottom: 1em;
 }
 
-/*main > section:nth-of-type(4) ul{
-	display: flex;
-	overflow-x: auto;
-	
-}
 
-main > section:nth-of-type(4) li{
-  flex-shrink: 0;
-  list-style-type: none;
-  position: relative; 
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-right: 2em;
-}
-
-
-main > section:nth-of-type(4) li img:first-of-type{
-  width: 10em;
-  order: 1; 
-}
-
-main > section:nth-of-type(4) li img:nth-of-type(2){
-	width: 2em;
-	order: 1; 
-	position: absolute;
-	bottom: 13em; 
-	right: 1em; 
-
-  }*/
 
 main > section:nth-of-type(4) li h3{
 	order: 2; 
@@ -269,9 +342,6 @@ main > section:nth-of-type(4) li:nth-of-type(3) p:nth-of-type(5){
 	font-size: medium;
 	font-weight: 700;
 }
-
-
-
 
 
 

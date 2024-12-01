@@ -1,15 +1,24 @@
 // JavaScript Document
-console.log("hi");
+var openButton = document.querySelector("header > button");
+openButton.onclick = openMenu;
 
-const menuButton = document.querySelector("nav Button");
-const deNav = document.querySelector("nav");
-
-// stap 2: laat de menu-button luisteren naar kliks en voer dan een functie uit
-menuButton.onclick = toggleMenu; 
-
-// stap 3: voeg in de functie een class toe aan de nav
-function toggleMenu(){
-  deNav.classList.toggle("toonMenu"); 
+function openMenu() {  
+  var deNav = document.querySelector("nav");
+  deNav.classList.add("toonMenu");
 }
 
-// bron: sanne les stof 
+
+
+
+/************************************/
+/* menu sluiten met de sluit button */
+/************************************/
+
+
+var sluitButton = document.querySelector("nav button");
+sluitButton.onclick = sluitMenu;
+
+function sluitMenu() {
+  var deNav = document.querySelector("nav");
+  deNav.classList.remove("toonMenu");
+}
