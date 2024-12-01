@@ -1,242 +1,320 @@
 /**************/
 /* CSS REMEDY */
 /**************/
-*, *::after, *::before {
-    box-sizing:border-box;  
-    }
-  
-  
-  
-  
-  
-  
-  /*********************/
-  /* CUSTOM PROPERTIES */
-  /*********************/
-  :root {
-      /* startje */
-      --color-text:#111;
-      --color-background:#eee;
-      --color-text-button: #eee; 
-      --color-button:#111; 
-      
-      --font-family: Sans-serif, Helvetica; 
-    }
-  
-  
-  
-  
-  
-  /****************/
-  /* JOUW STYLING */
-  /****************/
-  
-  /* jouw code */
-
-  body{
-    margin: 0;
-  }
-  
-  header{
-      margin: 1em; 
-      display:flex;
-      justify-content:space-between; 
-      align-items:center;
-      top:0;
-    }
-  /* bron: Sanne oefenopdracht codepen hamburgermenu*/ 
-
-  header > button {
-    order:-1;
-  }
-
-  .visually-hidden{
-      clip: rect(0 0 0 0);
-      clip-path: inset(50%);
-      height: 1px;
-      overflow: hidden;
-      position: absolute;
-      white-space: nowrap;
-      width: 1px;
-      /*bron: a11yproject*/ 
-
-    }
-
-  
-  header ul:nth-of-type(1){
-     display: flex;
-    flex-wrap: wrap;
-    gap: 1em; 
-    list-style-type: none;
-    text-transform: uppercase;
-   } 
-
-   header nav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-wrap: wrap;
-    gap: 1em; 
-   }
-
-   nav ul{
-    list-style-type: none;
-    display: flex;
-    justify-content: flex-end;
-    gap: 2em;
-    }
-    /*bron: samen met Sanne in de les*/ 
-
-    nav form{
-     width: 40em;
-     margin: auto;
-     padding: 0.75em;
-     background-color: #f9f9f9;
-     border: 1px solid #cccc;
-    }
-
-    nav form label{
-      width: 100%; 
-      display: block; 
-    }
-
-    nav form label input{
-      width: 100%; 
-      display: block; 
-      border: none; 
-      color: grey; 
-    }
-    /*bron: samen met Sanne in de voortgangles*/
-
-    nav > form label img{
-
-      width: 5em;
-    }
-
-
-   nav img{
-    width: 1.5em;
-   }
-  
-   nav img:nth-of-type(1){
-    width: 10em;
-    display: flex;
-    justify-content: center; 
-    margin: auto;
-  
-   } 
-
-   nav img:nth-of-type(2), nav img:nth-last-of-type(3){
-    order: -1;
-    justify-content:flex-start;
-    
-   }
-
-   nav img:nth-last-of-type(4){
-    display: flex;
-    align-items: center;
-    
-   }
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 
 
 
-   /****************/
-  /* FOOTER */
-  /****************/
 
 
-  details summary{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 
-  }
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+  /* startje */
+  --color-text: #111;
+  --color-background: #eee;
+  --color-text-button: #eee;
+  --color-button: #111;
 
-  details img{
-    width: 1em;
-    
-  }
-   
-  details[open] img{
-    rotate: 180deg; 
-  }
+  --font-family: Sans-serif, Helvetica;
+}
 
 
-  footer{
-   margin: 1em;
-  }
-  
-  footer a{
-    list-style-type: none;
-    text-decoration: none;
-    color: black; 
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 2em;
-  }
 
-  footer p{
-    padding-left: 2em;
-  }
 
-  footer section:nth-of-type(4) img:nth-of-type(2),img:nth-of-type(3),img:nth-of-type(4), img:nth-of-type(5)  {
-    width: 2em;
-  }
 
-  footer section:nth-of-type(1){
-    background-size: cover;
-    background-color: #eee;
+/****************/
+/* JOUW STYLING */
+/****************/
 
-  }
+/* jouw code */
 
-footer section:nth-of-type(1) button{
-  padding-left: 5em;
-  padding-right: 5em;
-  padding-top: 1em;
-  padding-bottom: 1em;
+body {
+  margin: 0;
+}
+
+header {
+  margin: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+}
+
+/* bron: Sanne oefenopdracht codepen hamburgermenu*/
+
+header>button {
+  order: -1;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /*bron: a11yproject*/
+
+}
+
+
+header ul:nth-of-type(1) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  list-style-type: none;
+  text-transform: uppercase;
+}
+
+header nav {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-footer section:nth-of-type(1) form{
-     width: 25em;
-     margin: auto;
-     padding: 0.75em;
-     background-color: #f9f9f9;
-     border: 1px solid #cccc;
-}
-
-footer section:nth-of-type(1) form label{
-  width: 100%; 
-  display: block; 
-}
-
-footer section:nth-of-type(1) form label input{
-  width: 100%;  
-  display: block; 
-  border: none; 
-  color: grey; 
-}
-
-footer section:nth-of-type(2) ul{
-  display: flex;
+  text-align: center;
   flex-wrap: wrap;
+  gap: 1em;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2em;
+}
+
+/*bron: samen met Sanne in de les*/
+
+nav form {
+  width: 40em;
+  margin: auto;
+  padding: 0.75em;
+  background-color: #f9f9f9;
+  border: 1px solid #cccc;
+}
+
+nav form label {
+  width: 100%;
+  display: block;
+}
+
+nav form label input {
+  width: 100%;
+  display: block;
+  border: none;
+  color: grey;
+}
+
+/*bron: samen met Sanne in de voortgangles*/
+
+nav>form label img {
+
+  width: 5em;
+}
+
+
+nav img {
+  width: 1.5em;
+}
+
+nav img:nth-of-type(1) {
+  width: 10em;
+  display: flex;
+  justify-content: center;
+  margin: auto;
 
 }
+
+nav img:nth-of-type(2),
+nav img:nth-last-of-type(3) {
+  order: -1;
+  justify-content: flex-start;
+
+}
+
+nav img:nth-last-of-type(4) {
+  display: flex;
+  align-items: center;
+
+}
+
+
+
+/****************/
+/* FOOTER */
+/****************/
+
+
+
+footer {
+  margin: 1em;
+}
+
+footer a {
+  list-style-type: none;
+  text-decoration: none;
+  color: black;
+  flex-wrap: wrap;
+}
+
+footer p {
+  padding-left: 1em;
+}
+
+
+footer > section:nth-of-type(1) {
+  background-image: url("images/levering_auto.png");
+  background-size:100%;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+footer section:nth-of-type(1) h3 {
+  font-size: small;
+  font-weight: 500;
+  padding-left: 2.5em;
+}
+
+footer section:nth-of-type(1) p{
+  font-size: small;
+  font-weight: 300;
+  padding-left: 2.5em;
+}
+
+
+
+footer section:nth-of-type(1) button {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  padding-left: 11.5em;
+  padding-right: 11.5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+  margin-top: 1em;
+
+}
+
+footer section:nth-of-type(1) form {
+  width: 25em;
+  margin: auto;
+  padding: 0.75em;
+  background-color: #f9f9f9;
+}
+
+footer section:nth-of-type(1) form label {
+  width: 100%;
+  display: block;
+  border-color: black;
+
+}
+
+footer section:nth-of-type(1) form input {
+  width: 100%;
+  display: block;
+  border-color: black;
+  color: grey;
+  font-size: small;
+  padding: 1em;
+  border-width: 0.1em;
+  border-radius: 0.2em;
+
+}
+
+
+
+footer section:nth-of-type(2) ul {
+  display: grid;
+}
+
 footer section:nth-of-type(2) li{
   list-style-type: none;
-  justify-content: space-between;
-  flex-direction: row;
+
+  grid-template-columns: 2fr;
+  grid-template-rows: 2fr;
+
 }
 
-footer section:nth-of-type(2) img:nth-of-type(1),img:nth-of-type(2) {
-  width: 4em;
+footer section:nth-of-type(3) h4{
+  font-size: small;
+  font-weight: 500;
+}
+footer section:nth-of-type(3) ul{
+  display: flex;
 }
 
-footer section:nth-of-type(2) li:nth-of-type(4) img , li:nth-of-type(3) img {
+footer section:nth-of-type(3) a:nth-of-type(7) img{
+  width: 20em;
+}
+
+footer section:nth-of-type(3) a:nth-of-type(10) img, a:nth-of-type(11) img, a:nth-of-type(12) img, a:nth-of-type(13) img {
   width: 2em;
-  background-color: aqua;
+  padding-bottom: 3em;
+}
+
+
+footer section:nth-of-type(4){
+  padding-bottom: 5em;
+}
+footer details{
+  border-top: solid;
+  border-bottom: solid;
+  border-color: #dddddd;
+  padding: 1em;
+  cursor: pointer;
+}
+
+footer details summary {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: smaller;
+  font-weight: 200;
+
+}
+
+footer details a{
+  font-size: small;
+  font-weight: 200;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 1.2em;
+}
+
+footer details img {
+  width: 1em;
+
+}
+
+footer details[open] img {
+  rotate: 180deg;
+}
+
+
+
+footer section:nth-of-type(5) h2{
+  text-transform: uppercase;
+  font-size: larger;
+  display: flex;
+  justify-content: end;
+}
+
+footer section:nth-of-type(5) img{
+  width: 7em;
+  height: auto;
+}
+
+footer section:nth-of-type(6) img {
+  width: 2em;
 }
