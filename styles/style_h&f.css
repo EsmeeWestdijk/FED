@@ -19,9 +19,6 @@
   /* startje */
   --color-text: #111;
   --color-background: #eee;
-  --color-text-button: #eee;
-  --color-button: #111;
-
   --font-family: Sans-serif, Helvetica;
 }
 
@@ -169,13 +166,28 @@ footer p {
 }
 
 
-footer > section:nth-of-type(1) {
+/*footer section:nth-of-type(1) {
   background-image: url("images/levering_auto.png");
   background-size:100%;
   background-repeat: no-repeat;
   background-position: center;
 
+}*/
+
+
+footer section:nth-of-type(1){
+  display: grid;
 }
+
+footer section:nth-of-type(1) li{
+  list-style-type: none;
+}
+
+footer section:nth-of-type(1) img{
+  width: auto;
+  height: 25em;
+}
+
 
 footer section:nth-of-type(1) h3 {
   font-size: small;
@@ -190,11 +202,12 @@ footer section:nth-of-type(1) p{
 }
 
 
-
 footer section:nth-of-type(1) button {
   display: flex;
   justify-content: center;
   text-align: center;
+  background-color: black;
+  color: #eee;
 
   padding-left: 11.5em;
   padding-right: 11.5em;
@@ -235,15 +248,50 @@ footer section:nth-of-type(1) form input {
 
 footer section:nth-of-type(2) ul {
   display: grid;
+  grid-template-columns: 2fr;
+  grid-template-rows: 2fr;
+  padding: 1em;
+
 }
 
 footer section:nth-of-type(2) li{
   list-style-type: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
 
-  grid-template-columns: 2fr;
-  grid-template-rows: 2fr;
+footer section:nth-of-type(2) li:nth-of-type(1), li:nth-of-type(2){
+  grid-row: 1;
 
 }
+
+footer section:nth-of-type(2) li:nth-of-type(3), li:nth-of-type(4){
+  grid-row: 2; 
+  
+}
+
+footer section:nth-of-type(2) li p{
+  font-size: small; 
+  text-align: center;
+  padding: 0;
+  margin: 0; 
+}
+
+footer section:nth-of-type(2) li p:first-of-type{
+ font-weight: 550;
+}
+footer section:nth-of-type(2) p{
+  font-size: small;
+
+}
+
+footer section:nth-of-type(2) img{
+  width: 3em;
+}
+
+
 
 footer section:nth-of-type(3) h4{
   font-size: small;
@@ -266,6 +314,7 @@ footer section:nth-of-type(3) a:nth-of-type(10) img, a:nth-of-type(11) img, a:nt
 footer section:nth-of-type(4){
   padding-bottom: 5em;
 }
+
 footer details{
   border-top: solid;
   border-bottom: solid;
@@ -315,6 +364,135 @@ footer section:nth-of-type(5) img{
   height: auto;
 }
 
-footer section:nth-of-type(6) img {
+
+
+footer section:nth-of-type(5) form {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+}
+
+footer section:nth-of-type(5) form label {
+  width: 100%;
+  display: block;
+  border-color: black;
+
+}
+
+footer section:nth-of-type(5) form input {
+  width: 100%;
+  display: block;
+  border-color: black;
+  color: grey;
+  font-size: small;
+  padding: 1.5em;
+  border-width: 0.1em;
+  border-radius: 0.5em;
+
+}
+
+footer section:nth-of-type(5) form button{
+  background: none;
+  border: none; 
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+footer section:nth-of-type(5) button img{
   width: 2em;
+
+}
+
+footer section:nth-of-type(6) ul{
+  padding: 0;
+  margin-bottom: 3em;
+
+}
+
+footer section:nth-of-type(6) li{
+  list-style-type: none;
+  display: flex;
+
+}
+
+footer section:nth-of-type(6) ul > p{
+  font-size: small;
+  font-weight: 550;
+  
+}
+
+footer section:nth-of-type(6) li p{
+  font-size: small;
+}
+
+
+footer section:nth-of-type(6) img {
+  width: 1em;
+}
+
+footer section:nth-of-type(7){
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+
+}
+
+footer section:nth-of-type(7) a{
+  margin: 1em;
+  font-size: small;
+}
+
+footer section:nth-of-type(7) a:nth-of-type(2){
+  margin-bottom: 3em;
+}
+
+
+
+footer section:nth-of-type(8) ul{
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-template-rows: 2fr;
+  padding: 0;
+}
+
+footer section:nth-of-type(8) li{
+  list-style-type: none;
+
+}
+
+footer section:nth-of-type(8) li a{
+  font-size: smaller;
+  font-weight: 200;
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+footer section:nth-of-type(8) li p{
+  font-size: smaller;
+  font-weight: 200;
+  padding: 0;
+}
+
+
+footer section:nth-of-type(8) li:nth-of-type(1){
+  grid-row: 1;
+  grid-column-start: 1;
+  grid-row-start: 1;
+
+}
+
+footer section:nth-of-type(8) li:nth-of-type(2){
+  grid-row: 1;
+  grid-column-start: 2;
+  grid-row-start: 1;
+  margin-bottom: 3em;
+  
 }

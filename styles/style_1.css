@@ -157,6 +157,8 @@ main > section:nth-of-type(2) li img{
 main > section:nth-of-type(3) ul{
 	display: flex;
 	overflow-x: auto;
+	margin: 0;
+	padding: 0;
 }
 
 main > section:nth-of-type(3) li{
@@ -181,7 +183,7 @@ main > section:nth-of-type(3) img:first-of-type{
 	grid-row: 1;
 	display: block;
 	margin: 0;
-	width: 30em;
+	width: 27em;
 	padding: 0;
 
 	grid-row-start: 1;
@@ -209,7 +211,7 @@ main > section:nth-of-type(3) img:last-of-type{
 
 main > section:nth-of-type(3) li h3{
 	grid-row: 3;
-	margin: 0;
+	margin-top: 1em;
 	padding: 1em;
 	text-transform: uppercase;
 	font-weight: 200;
@@ -224,9 +226,9 @@ main > section:nth-of-type(3) li p{
 	background-color: black;
 	color: #eee;
 	font-weight: 500; 
-	font-size: x-small;
+	font-size: small;
 	padding-bottom: 2em;
-	line-height: 0.5em;
+	line-height: 1.5em;
 
 }
 
