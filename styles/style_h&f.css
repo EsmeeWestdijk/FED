@@ -166,50 +166,38 @@ footer p {
 }
 
 
-/*footer section:nth-of-type(1) {
-  background-image: url("images/levering_auto.png");
-  background-size:100%;
-  background-repeat: no-repeat;
-  background-position: center;
-
-}*/
-
-
-footer section:nth-of-type(1){
-  position:relative; 
-  width: 100%;
-  margin: auto;
-  background-color: #eee;
-  padding: 1em;
-}
-
 footer section:nth-of-type(1) ul{
-  position: absolute;
 
+  background-image: url("../images/footer_landscape.avif"); 
+  background-position: center;
+  width: 100%;
+  padding-top: 2em;
+  padding-left: 1em;
+  padding-bottom: 5em;
+  padding-right: -1em;
 }
+
 
 
 footer section:nth-of-type(1) li{
   list-style-type: none;
-}
-
-footer section:nth-of-type(1) img{
-  width: 100%; 
-  height: auto;
-  display: block;
+  background-color: #eee;
+  width: auto;
+  padding: 1em;
 }
 
 
 footer section:nth-of-type(1) h3 {
   font-size: small;
   font-weight: 500;
-  padding-left: 2.5em;
+  padding-left: 3em;
 }
 
 footer section:nth-of-type(1) p{
   font-size: small;
   font-weight: 300;
-  padding-left: 2.5em;
+  padding-left: 3em;
+
 }
 
 
@@ -217,13 +205,14 @@ footer section:nth-of-type(1) button {
   display: flex;
   justify-content: center;
   text-align: center;
+  text-transform: uppercase;
   background-color: black;
   color: #eee;
   cursor: pointer;
-  width: 100%;
+  width: 15em;
 
-  padding-left: 11.5em;
-  padding-right: 11.5em;
+  padding-left: 8em;
+  padding-right: 8em;
   padding-top: 1em;
   padding-bottom: 1em;
 
@@ -232,7 +221,7 @@ footer section:nth-of-type(1) button {
 }
 
 footer section:nth-of-type(1) form {
-  width: 25em;
+  width: 15em;
   margin: auto;
   padding: 0.75em;
   background-color: #f9f9f9;
@@ -252,26 +241,30 @@ footer section:nth-of-type(1) form input {
   border-color: black;
   color: grey;
   font-size: small;
+  
   padding: 1em;
   border-width: 0.1em;
   border-radius: 0.2em;
-  text-align: center;
+  text-align: start;
 
 }
-
 
 
 footer section:nth-of-type(2) ul {
   display: grid;
   grid-template-columns: 2fr;
   grid-template-rows: 2fr;
-  padding: 1em;
+  padding: 0;
+  gap: 1em;
+  margin-bottom: 2em;
+  margin-top: 5em;
 }
 
 footer section:nth-of-type(2) li{
   list-style-type: none;
   display: flex;
-  justify-content: center;
+  align-content: start;
+  
   flex-direction: column;
   align-items: center;
 }
@@ -299,11 +292,16 @@ footer section:nth-of-type(2) li p:first-of-type{
 footer section:nth-of-type(2) p{
   font-size: small;
   margin-bottom: 4em;
+  margin:0;
 
 }
 
-footer section:nth-of-type(2) img{
+footer section:nth-of-type(2) li:nth-of-type(1) img, li:nth-of-type(2) img {
   width: 3em;
+}
+
+footer section:nth-of-type(2) li:nth-of-type(3) img, li:nth-of-type(4) img{
+  width: 2em;
 }
 
 
@@ -365,44 +363,70 @@ footer details[open] img {
   rotate: 180deg;
 }
 
+footer section:nth-of-type(5){
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr;
 
+}
 
 footer section:nth-of-type(5) h2{
   text-transform: uppercase;
   font-size: larger;
-  display: flex;
-  justify-content: end;
+
+  grid-row: 1;
+  grid-column-start: 2;
+  grid-row-start: 1; 
+  margin-left: 0.7em; 
+  padding: 0;
 }
 
+footer section:nth-of-type(5) p{
+  grid-row: 1;
+  grid-column: 2;
+  grid-row-start: 2;
+  font-size: small;
+  
+}
+
+
 footer section:nth-of-type(5) img{
-  width: 7em;
+  width: 6em;
   height: auto;
+
+  grid-row: 1;
+  grid-column: 1;
+  grid-row: span 2;
 }
 
 
 
 footer section:nth-of-type(5) form {
-  width: 400px;
   display: flex;
   align-items: center;
-  overflow: hidden;
+  position: relative;
+  width: fit-content;
+
+  grid-row-start: 3;
+  grid-column: span 2;
 
 }
 
 footer section:nth-of-type(5) form label {
-  width: 100%;
   display: block;
   border-color: black;
 
 }
 
 footer section:nth-of-type(5) form input {
-  width: 100%;
+  width: 25em;
   display: block;
   border-color: black;
   color: grey;
+
   font-size: small;
   padding: 1.5em;
+  padding-right: 10em;
   border-width: 0.1em;
   border-radius: 0.5em;
 
@@ -412,14 +436,32 @@ footer section:nth-of-type(5) form button{
   background: none;
   border: none; 
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 
 }
 
+footer section:nth-of-type(5) form button:first-of-type{
+  right: 40px
+}
+
+footer section:nth-of-type(5) form button:last-of-type{
+  right: 10px;
+}
+
+/*bron: ChatGpt
+  Promt: hoe krijg ik de buttons in de input?
+  Antwoord: Formulier als container: Het form-element krijgt position: relative, zodat we de knoppen absoluut kunnen positioneren ten opzichte van het formulier.
+  Input padding: De input krijgt padding-right: 50px zodat er voldoende ruimte is voor de knoppen aan de rechterkant van de input.
+  Knoppen positioneren: De knoppen krijgen position: absolute, zodat ze zich precies boven de input bevinden. De top: 50% en transform: translateY(-50%) zorgen ervoor dat de knoppen verticaal gecentreerd worden.
+  Knoppen rechts plaatsen: De right-eigenschap bepaalt de horizontale positie van de knoppen. De eerste knop (met het kruisje) wordt op right: 10px geplaatst, en de tweede knop (met het vergrootglas) wordt verder naar rechts geplaatst door right: 40px.
+  Afbeelding aanpassen: De afbeeldingen in de knoppen worden met width: 20px aangepast, maar je kunt de grootte naar wens wijzigen.*/ 
+
 footer section:nth-of-type(5) button img{
   width: 2em;
+  height: auto;
 
 }
 
@@ -479,11 +521,12 @@ footer section:nth-of-type(8) ul{
 
 footer section:nth-of-type(8) li{
   list-style-type: none;
+  padding: 2em;
 
 }
 
 footer section:nth-of-type(8) li a{
-  font-size: smaller;
+  font-size: 0.7em;
   font-weight: 200;
   padding: 0.5em;
   display: flex;
@@ -494,6 +537,7 @@ footer section:nth-of-type(8) li p{
   font-size: smaller;
   font-weight: 200;
   padding: 0;
+  margin: 0;
 }
 
 
@@ -508,6 +552,6 @@ footer section:nth-of-type(8) li:nth-of-type(2){
   grid-row: 1;
   grid-column-start: 2;
   grid-row-start: 1;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
   
 }
