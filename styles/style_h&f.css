@@ -176,16 +176,27 @@ footer p {
 
 
 footer section:nth-of-type(1){
-  display: grid;
+  position:relative; 
+  width: 100%;
+  margin: auto;
+  background-color: #eee;
+  padding: 1em;
 }
+
+footer section:nth-of-type(1) ul{
+  position: absolute;
+
+}
+
 
 footer section:nth-of-type(1) li{
   list-style-type: none;
 }
 
 footer section:nth-of-type(1) img{
-  width: auto;
-  height: 25em;
+  width: 100%; 
+  height: auto;
+  display: block;
 }
 
 
@@ -208,6 +219,8 @@ footer section:nth-of-type(1) button {
   text-align: center;
   background-color: black;
   color: #eee;
+  cursor: pointer;
+  width: 100%;
 
   padding-left: 11.5em;
   padding-right: 11.5em;
@@ -223,12 +236,13 @@ footer section:nth-of-type(1) form {
   margin: auto;
   padding: 0.75em;
   background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 footer section:nth-of-type(1) form label {
-  width: 100%;
-  display: block;
-  border-color: black;
+  display: none;
 
 }
 
@@ -241,6 +255,7 @@ footer section:nth-of-type(1) form input {
   padding: 1em;
   border-width: 0.1em;
   border-radius: 0.2em;
+  text-align: center;
 
 }
 
@@ -251,7 +266,6 @@ footer section:nth-of-type(2) ul {
   grid-template-columns: 2fr;
   grid-template-rows: 2fr;
   padding: 1em;
-
 }
 
 footer section:nth-of-type(2) li{
@@ -284,6 +298,7 @@ footer section:nth-of-type(2) li p:first-of-type{
 }
 footer section:nth-of-type(2) p{
   font-size: small;
+  margin-bottom: 4em;
 
 }
 
