@@ -151,7 +151,8 @@ nav img:nth-last-of-type(4) {
 
 
 footer {
-  margin: 1em;
+  margin: 1em; 
+
 }
 
 footer a {
@@ -167,14 +168,12 @@ footer p {
 
 
 footer section:nth-of-type(1) ul{
-
   background-image: url("../images/footer_landscape.avif"); 
   background-position: center;
   width: 100%;
   padding-top: 2em;
   padding-left: 1em;
-  padding-bottom: 5em;
-  padding-right: -1em;
+  padding-bottom: 7em;
 }
 
 
@@ -183,7 +182,7 @@ footer section:nth-of-type(1) li{
   list-style-type: none;
   background-color: #eee;
   width: auto;
-  padding: 1em;
+  padding-top: 1em;
 }
 
 
@@ -238,7 +237,7 @@ footer section:nth-of-type(1) form label {
 footer section:nth-of-type(1) form input {
   width: 100%;
   display: block;
-  border-color: black;
+  border-color: grey;
   color: grey;
   font-size: small;
   
@@ -291,8 +290,8 @@ footer section:nth-of-type(2) li p:first-of-type{
 }
 footer section:nth-of-type(2) p{
   font-size: small;
-  margin-bottom: 4em;
   margin:0;
+  padding-bottom: 5em;
 
 }
 
@@ -312,6 +311,11 @@ footer section:nth-of-type(3) h4{
 }
 footer section:nth-of-type(3) ul{
   display: flex;
+  margin: 1em;
+}
+
+footer section:nth-of-type(3) a img{
+  padding-bottom: 2em;
 }
 
 footer section:nth-of-type(3) a:nth-of-type(7) img{
@@ -320,8 +324,9 @@ footer section:nth-of-type(3) a:nth-of-type(7) img{
 
 footer section:nth-of-type(3) a:nth-of-type(10) img, a:nth-of-type(11) img, a:nth-of-type(12) img, a:nth-of-type(13) img {
   width: 2em;
-  padding-bottom: 3em;
+  padding-bottom: 2em;
 }
+
 
 
 footer section:nth-of-type(4){
@@ -362,6 +367,7 @@ footer details img {
 footer details[open] img {
   rotate: 180deg;
 }
+/* hulp van Helina*/
 
 footer section:nth-of-type(5){
   display: grid;
@@ -414,7 +420,7 @@ footer section:nth-of-type(5) form {
 
 footer section:nth-of-type(5) form label {
   display: block;
-  border-color: black;
+  border-color: grey; 
 
 }
 
