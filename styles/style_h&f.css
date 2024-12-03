@@ -19,10 +19,13 @@
   /* startje */
   --color-text: #111;
   --color-background: #eee;
-  --font-family: Sans-serif, Helvetica;
+  --font-family: "MijnFont"; 
 }
 
-
+@font-face{
+	font-family: "MijnFont";
+	src:url('../font/Avenir Next/Avenir-next-lt-pro/AvenirNextLTPro-Regular.otf'); 
+}
 
 
 
@@ -34,6 +37,7 @@
 
 body {
   margin: 0;
+  font-family: var(--font-family);
 }
 
 header {
@@ -90,7 +94,7 @@ nav ul {
 /*bron: samen met Sanne in de les*/
 
 nav form {
-  width: 40em;
+  width: 100%;
   margin: auto;
   padding: 0.75em;
   background-color: #f9f9f9;

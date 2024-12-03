@@ -5,33 +5,35 @@
 *::after,
 *::before {
 	box-sizing: border-box;
+	
+	border:solid 1px red;
+
 }
 
-
-
-
-
+@font-face{
+	font-family: "MijnFont";
+	src:url('../font/Avenir Next/Avenir-next-lt-pro/AvenirNextLTPro-Regular.otf'); 
+}
 
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
 	/* startje */
-	/*color-scheme: light dark;*/
+	color-scheme: light dark;
 
-	--color-text: #111;
-	--color-background: #eee; 
-	--font-family: "Avenir Next", Sans-serif, Helvetica; 
+	--color-text: light-dark(black, white); 
+	--color-background: light-dark(white, black); 
+	--font-family: "MijnFont"; 
+	
 }
 
-
-@media (prefers-color-scheme:dark){
+/*@media (prefers-color-scheme:dark){
 	:root{
 		--color-dark-background: #111;
 		--color-dark-text: #eee; 
-
 	}
-}
+}*/
 
 html:has( [value="light"]:checked){
 	color-scheme: light;
@@ -53,6 +55,7 @@ html:has( [value="dark"]:checked){
 body {
 	font-family: var(--font-family);
 	background-color: var(--color-background);
+	color: var(--color-text);
 }
 
 button {
@@ -111,43 +114,107 @@ main>section:nth-of-type(1) li img{
 /*bron: chatGPT voor schaaling van de afbeelding. 
   Promt: hoe krijg ik de afbeeldingen precies zoals op de foto in breedte en hoogte? 
   Antwoord: width: 260px en aspect-ratio: 3 / 4: Hiermee zorg je voor een consistente breedte en hoogteverhouding (3:4), zoals in je voorbeeld.
-  object-fit: cover in de img: Dit zorgt ervoor dat de afbeelding de hele container vult zonder vervorming, terwijl het beeld wordt bijgesneden als dat nodig is.*/
+  object-fit: cover in de img: Dit zorgt ervoor dat de afbeelding de hele container vult zonder vervorming, terwijl het beeld wordt bijgesneden als dat nodig is.
+*/
 
-
-main > section:nth-of-type(1) li h2,
-main > section:nth-of-type(1) li p {
-	color: black;
-	text-align: center;
-	width: 100%;
-	margin: 0;
-	z-index: 1;
-
-
-}
 
 
 main > section:nth-of-type(1) ul {
 	display: flex;
 	overflow-x: auto; 
 	margin: 0;
+	padding: 0;
 }
 
 main > section:nth-of-type(1) li{
 	flex-shrink: 0;
 	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 25em;
+
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
 }
 
 main > section:nth-of-type(1) li img{
-	width: 30em; 
-	height: 100%;
 	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%; 
+	object-fit: cover;
+	aspect-ratio: 3/4;
+
+	grid-column-start: 1;
+	grid-row-start: 1;
+
+	z-index: 0;
+
 }
 
+main > section:nth-of-type(1) li:nth-of-type(1) h2,li:nth-of-type(3) h2 {
+	color: black;
+	font-weight: bold;
+	font-size: 5em; 
+	text-align: center;
+	justify-content: center;
+	width: 100%;
+	z-index: 1;
 
+	grid-column-start: 1;
+	grid-row-start: 1;
 
+}
 
+main > section:nth-of-type(1) li:nth-of-type(4) h2,li:nth-of-type(6) h2, li:nth-of-type(2) h2, li:nth-of-type(5) h2 {
+	color: white;
+	font-weight: 800;
+	font-size: 3em; 
+	
+	text-align: center;
+	justify-content: center;
+	width: 100%;
+	z-index: 1;
 
+	grid-column-start: 1;
+	grid-row-start: 1;
 
+}
+
+main > section:nth-of-type(1) li:nth-of-type(1) p, li:nth-of-type(3) p{
+	color: black;
+	font-weight:bolder;
+	text-align: center;
+	justify-content: center;
+	width: 100%;
+	padding-bottom: 3em;
+	z-index: 1;
+
+	grid-column-start: 1;
+	grid-row-start: 1;
+
+	justify-self: end;
+	align-self: end;
+
+}
+
+main > section:nth-of-type(1) li:nth-of-type(2) p, li:nth-of-type(5) p, li:nth-of-type(6) p, li:nth-of-type(4) p {
+	color: white;
+	font-weight:bolder;
+	text-align: center;
+	justify-content: center;
+	width: 100%;
+	padding-bottom: 3em;
+	z-index: 1;
+
+	grid-column-start: 1;
+	grid-row-start: 1;
+
+	justify-self: end;
+	align-self: end;
+
+}
 
 main>section:nth-of-type(2) ul {
 	display: flex;
