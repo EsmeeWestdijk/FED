@@ -19,15 +19,27 @@
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
-	color-scheme: light dark;
-
-	--color-text: light dark(black, white); 
-	--color-background: light dark(white, black); 
-	--font-family: "MijnFont"; 
-	
+   
+    --color-text: black;
+    --color-background: white;
+    --font-family: "MijnFont", sans-serif; /* Fallback added */
 }
 
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-text: white;
+        --color-background: black;
+    }
+}
+
+
+@media (prefers-color-scheme:dark) {
+	.zwart-wit-icon {
+		/* 1. filter invert */
+		filter:invert(100%);
+	}
+}
 
 
 html:has( [value="light"]:checked){
@@ -53,7 +65,116 @@ html:has( [value="dark"]:checked){
 	width: 1px;
 	/*bron: a11yproject*/
   
-  }
+}
+
+body{
+	background-color: var(--color-background);
+	color: var(--color-text);
+	font-family: var(--font-family);
+	margin: 0;
+	padding: 0;
+}
+
+main > section:nth-of-type(1){
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+}
+
+main > section:nth-of-type(1) ul:nth-of-type(1){
+	display: flex;
+	gap: 0.5em;
+	padding: 0;
+	border-bottom: solid;
+	border-color: #dddddddd;
+	grid-row: 1;
+}
+
+main > section:nth-of-type(1) ul:nth-of-type(1) li a{
+	color: var(--color-text);
+	text-decoration: none;
+	font-size: small;
+}
+
+main > section:nth-of-type(1) > img:first-of-type{
+	width: 10em;
+	grid-row: 2;
+	justify-content: center;
+}
+
+main > section:nth-of-type(1) ul:nth-of-type(2){
+	display: flex;
+	overflow-x: auto;
+	grid-row: 3;
+}
+
+
+main > section:nth-of-type(1) ul:nth-of-type(2) img{
+	display: block;
+	aspect-ratio: 1/1;
+	width: 23em;
+	grid-row: 3/4;
+}
+main > section:nth-of-type(1) button{
+	border: none;
+	grid-row: 4;
+	display: flex;
+	justify-content: end;
+}
+
+main > section:nth-of-type(1) button img{
+	width: 3em;
+}
+
+
+
+main > section:nth-of-type(2){
+	display: grid;
+	grid-template-columns: 2fr;
+	grid-template-rows:auto;
+}
+
+main > section:nth-of-type(2) h2{
+	grid-row: 1;
+	grid-column-start: 1;
+	text-transform: uppercase;
+	font-size: medium;
+	margin-left: 1em;
+
+}
+
+main > section:nth-of-type(2) p{
+	grid-row: 2;
+	grid-column-start: 1;
+	margin-left: 1em;
+	padding: 0;
+	align-items: start;
+	font-size: small;
+	color:gray;
+}
+
+main > section:nth-of-type(2) svg{
+	grid-row: 2;
+	justify-content: end;
+}
+
+
+main > section:nth-of-type(3) form{
+	display: grid;
+	grid-template-columns: 2fr;
+	grid-template-rows: auto;
+}
+
+
+main > section:nth-of-type(3) input #radio{
+	background-color: aquamarine;
+	grid-row: 1;
+	grid-column: 1;
+	align-items: start;
+}
+
+
+
 
 main > section:nth-of-type(6) section:nth-of-type(1) ul{
 	background-color: aqua;
@@ -67,3 +188,4 @@ main > section:nth-of-type(6) section:nth-of-type(1) ul{
 main > section:nth-of-type(6) section:nth-of-type(1) ul.active {
 	transform: translateY(0);
 }
+

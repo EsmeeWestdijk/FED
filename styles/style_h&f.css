@@ -21,14 +21,33 @@
   src: url('../font/Avenir Next/Avenir-next-lt-pro/AvenirNextLTPro-Bold.otf');
 	src:url('../font/Avenir Next/Avenir-next-lt-pro/AvenirNextLTPro-Regular.otf');
 }
+ 
+:root {
+   
+  --color-text: black;
+  --color-background: white;
+  --font-family: "MijnFont", sans-serif;
+  --background-color-btn: black; 
+  --text-color-btn: white; 
 
-ul {
-  padding: 0;
 }
 
-li {
-  list-style-type: none;
+
+@media (prefers-color-scheme: dark) {
+  :root {
+      --color-text: white;
+      --color-background: black;
+  }
 }
+
+
+@media (prefers-color-scheme:dark) {
+.zwart-wit-icon {
+  /* 1. filter invert */
+  filter:invert(100%);
+}
+}
+
 
 
 /****************/
@@ -50,14 +69,19 @@ header {
   flex-direction: column;
 }
 
+li {
+  list-style-type: none;
+}
+
 div:first-of-type{
+  color: black; 
 	font-size: smaller;
 	font-weight: 900;
 	width: 100%;
 	align-items: center;
 	text-align: center;
 	background-color: #9bdcd2;
-	padding: 0.5em;
+	padding: 0.5em; 
 }
 
 /* bron: Ali student assisent*/
@@ -165,7 +189,7 @@ header form {
   width: 100%;
   margin: auto;
   padding: 0.75em;
-  background-color: #f9f9f9;
+  background-color: var(--color-background); 
   border: 1px solid #cccc;
 }
 
@@ -228,7 +252,7 @@ footer {
 footer a {
   list-style-type: none;
   text-decoration: none;
-  color: black;
+  color: var(--color-text); 
   flex-wrap: wrap;
 }
 
@@ -250,7 +274,7 @@ footer section:nth-of-type(1) ul{
 
 footer section:nth-of-type(1) li{
   list-style-type: none;
-  background-color: #eee;
+  background-color: var(--color-background); 
   width: auto;
   padding-top: 1em;
 }
@@ -279,6 +303,7 @@ footer section:nth-of-type(1) button {
   color: #eee;
   cursor: pointer;
   width: 15em;
+  position: relative;
 
   padding-left: 8em;
   padding-right: 8em;
@@ -288,6 +313,12 @@ footer section:nth-of-type(1) button {
   margin-top: 1em;
 
 }
+ 
+footer section:nth-of-type(1) button:hover::after{
+  position: absolute;
+
+}
+
 
 footer section:nth-of-type(1) form {
   width: 15em;
@@ -338,7 +369,7 @@ footer section:nth-of-type(2) li{
   align-items: center;
 }
 
-footer section:nth-of-type(2) li:nth-of-type(1), li:nth-of-type(2){
+footer > section:nth-of-type(2)  li:nth-of-type(1), li:nth-of-type(2){
   grid-row: 1;
 
 }
@@ -565,7 +596,7 @@ footer section:nth-of-type(6) ul p{
 
 footer section:nth-of-type(6) li p{
   font-size: small;
-  color: black;
+  color: var(--color-text); 
   text-align: start;
   margin-bottom: 0;
   padding: 0;
@@ -633,7 +664,7 @@ footer section:nth-of-type(8) li p{
   font-weight: 200;
   padding: 0;
   margin: 0;
-  color: black;
+  color: var(--color-text); 
   text-align: start;
 }
 

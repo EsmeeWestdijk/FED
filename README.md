@@ -229,9 +229,10 @@ Archromatopsia (geen kleur)
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
+  - menu aanmaken geleerd
+  - spans voor kruisje close button
+  - responsive 
+  - code opschoonen
 - ...
 
 </details>
@@ -266,11 +267,13 @@ Archromatopsia (geen kleur)
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  | Esmee          | Alycia             | Tom          | Sander           |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | li bolletjes   | en dit             | en ik dit    | en dan ik dat    |
+  | video javascript | dit als er tijd is | nog een punt | dit wil ik zeker |
+  | darkmode menu  | ...                | ...          | ...              |
+  | hover dialoog  | 
+  | grootte video's 
 
 
   ### Verslag van meeting
