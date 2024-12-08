@@ -1,52 +1,60 @@
 **************/
+
 /* CSS REMEDY */
 /**************/
 *,
 *::after,
 *::before {
 	box-sizing: border-box;
-	
+
 	/*border:solid 1px red;*/
 
 }
 
-@font-face{
+@font-face {
 	font-family: "MijnFont";
-	src:url('../font/Avenir Next/Avenir-next-lt-pro/AvenirNextLTPro-Regular.otf'); 
+	src: url('../font/Avenir Next/Avenir-next-lt-pro/AvenirNextLTPro-Regular.otf');
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "MijnFont";
+	src: url('../font/Avenir Next/Avenir-next-lt-pro/AvenirNextLTPro-Bold.otf');
+	font-weight: 700;
 }
 
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-   
-    --color-text: black;
-    --color-background: white;
-    --font-family: "MijnFont", sans-serif; /* Fallback added */
+
+	--color-text: black;
+	--color-background: white;
+	--font-family: "MijnFont", sans-serif;
 }
 
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --color-text: white;
-        --color-background: black;
-    }
+	:root {
+		--color-text: white;
+		--color-background: black;
+	}
 }
 
 
 @media (prefers-color-scheme:dark) {
 	.zwart-wit-icon {
 		/* 1. filter invert */
-		filter:invert(100%);
+		filter: invert(100%);
 	}
 }
 
 
-html:has( [value="light"]:checked){
+html:has([value="light"]:checked) {
 	color-scheme: light;
 }
 
-html:has( [value="dark"]:checked){
+html:has([value="dark"]:checked) {
 	color-scheme: dark;
 }
 
@@ -64,10 +72,10 @@ html:has( [value="dark"]:checked){
 	white-space: nowrap;
 	width: 1px;
 	/*bron: a11yproject*/
-  
+
 }
 
-body{
+body {
 	background-color: var(--color-background);
 	color: var(--color-text);
 	font-family: var(--font-family);
@@ -75,13 +83,23 @@ body{
 	padding: 0;
 }
 
-main > section:nth-of-type(1){
+h2,
+h3 {
+	font-weight: 400;
+}
+
+/****************/
+/* LUCHTJES SLIDER */
+/****************/
+
+main>section:nth-of-type(1) {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr;
+
 }
 
-main > section:nth-of-type(1) ul:nth-of-type(1){
+main>section:nth-of-type(1) ul:nth-of-type(1) {
 	display: flex;
 	gap: 0.5em;
 	padding: 0;
@@ -90,51 +108,82 @@ main > section:nth-of-type(1) ul:nth-of-type(1){
 	grid-row: 1;
 }
 
-main > section:nth-of-type(1) ul:nth-of-type(1) li a{
+main>section:nth-of-type(1) ul:nth-of-type(1) li a {
 	color: var(--color-text);
 	text-decoration: none;
 	font-size: small;
 }
 
-main > section:nth-of-type(1) > img:first-of-type{
+main>section:nth-of-type(1) img:first-of-type {
 	width: 10em;
 	grid-row: 2;
+	display: flex;
 	justify-content: center;
 }
 
-main > section:nth-of-type(1) ul:nth-of-type(2){
+main>section:nth-of-type(1) ul:nth-of-type(2) {
 	display: flex;
 	overflow-x: auto;
 	grid-row: 3;
 }
 
 
-main > section:nth-of-type(1) ul:nth-of-type(2) img{
+main>section:nth-of-type(1) ul:nth-of-type(2) img {
 	display: block;
 	aspect-ratio: 1/1;
 	width: 23em;
 	grid-row: 3/4;
 }
-main > section:nth-of-type(1) button{
+
+main>section:nth-of-type(1)>button {
 	border: none;
 	grid-row: 4;
-	display: flex;
-	justify-content: end;
-}
-
-main > section:nth-of-type(1) button img{
 	width: 3em;
 }
 
-
-
-main > section:nth-of-type(2){
-	display: grid;
-	grid-template-columns: 2fr;
-	grid-template-rows:auto;
+main>section:nth-of-type(1) button>img:first-of-type {
+	width: 100%;
+	height: 100%;
 }
 
-main > section:nth-of-type(2) h2{
+main>section:nth-of-type(1)>nav ul {
+	display: flex;
+	justify-content: center;
+	gap: 1em;
+	padding: 0;
+	margin-top: 0;
+
+}
+
+main>section:nth-of-type(1)>nav>ul>li {
+	border-radius: 30px;
+	border: 1px solid;
+
+}
+
+main>section:nth-of-type(1)>nav>ul>li a {
+	margin: 0;
+	padding: 7px;
+	background-color: black;
+	border-radius: 30px;
+	display: block;
+	width: 100%;
+	height: 100%;
+
+}
+
+
+/****************/
+/* TITEL EN STERREN */
+/****************/
+
+main>section:nth-of-type(2) {
+	display: grid;
+	grid-template-columns: 2fr;
+	grid-template-rows: auto;
+}
+
+main>section:nth-of-type(2) h2 {
 	grid-row: 1;
 	grid-column-start: 1;
 	text-transform: uppercase;
@@ -143,49 +192,199 @@ main > section:nth-of-type(2) h2{
 
 }
 
-main > section:nth-of-type(2) p{
+main>section:nth-of-type(2) p {
 	grid-row: 2;
 	grid-column-start: 1;
 	margin-left: 1em;
 	padding: 0;
 	align-items: start;
 	font-size: small;
-	color:gray;
+	color: gray;
 }
 
-main > section:nth-of-type(2) svg{
+main>section:nth-of-type(2) svg {
 	grid-row: 2;
 	justify-content: end;
 }
 
 
-main > section:nth-of-type(3) form{
+/****************/
+/* FIELDSETS */
+/****************/
+main>section:nth-of-type(3) fieldset{
+	border: none;
+}
+
+main>section:nth-of-type(3) fieldset form{
+	border-bottom: solid;
+	border-color: #dddddddd;
+	border-width: 0.1em;
+	padding: 1em;
+
+}
+
+main>section:nth-of-type(3) fieldset form {
 	display: grid;
-	grid-template-columns: 2fr;
+	grid-template-columns: max-content 2fr;
 	grid-template-rows: auto;
+	font-size: small;
+
 }
 
 
-main > section:nth-of-type(3) input #radio{
-	background-color: aquamarine;
-	grid-row: 1;
+main>section:nth-of-type(3) form input {
 	grid-column: 1;
+	grid-row: 1/2;
+	display: flex;
 	align-items: start;
+	width: 2em;
+	aspect-ratio: 1/1;
+
+}
+
+main>section:nth-of-type(3) form label {
+	grid-column: 2;
+	grid-row: 1/2;
+	display: flex;
+	justify-self: start;
+	
+	padding-top: 0.5em;
+	font-size: medium;
+	font-weight: bold;
+
 }
 
 
+/****************/
+/* FIELDSET 1 */
+/****************/
 
+main>section:nth-of-type(3) fieldset:nth-of-type(1) > form:first-of-type{
+	border-top: solid;
+	border-color: #dddddddd;
+	border-width: 0.1em;
 
-main > section:nth-of-type(6) section:nth-of-type(1) ul{
-	background-color: aqua;
-	height: 50%;
-	width: 100%;
-	position: fixed;
-	transition: 1s ease;
-	transform: translateY(100%); 
 }
 
-main > section:nth-of-type(6) section:nth-of-type(1) ul.active {
-	transform: translateY(0);
+main>section:nth-of-type(3) fieldset:nth-of-type(1) form p:nth-of-type(1),
+fieldset:nth-of-type(1) form p:nth-of-type(2) {
+	
+	grid-column: 2;
+	margin: 0.2em;
 }
 
+main>section:nth-of-type(3) fieldset:nth-of-type(1) form p:nth-of-type(3),
+fieldset:nth-of-type(1) form p:nth-of-type(4),
+fieldset:nth-of-type(1) form p:nth-of-type(5) {
+	
+	grid-column: 3;
+	margin: 0.2em;
+}
+
+
+main>section:nth-of-type(3) fieldset:nth-of-type(1) form p:nth-of-type(3) {
+	grid-row: 1/2;
+	margin: 0.2em;
+}
+
+main>section:nth-of-type(3) fieldset:nth-of-type(1) form p:nth-of-type(4) {
+	grid-row: 2/3;
+	font-size: medium;
+	color: purple;
+	font-weight: 600;
+	margin: 0.2em;
+
+}
+
+main>section:nth-of-type(3) fieldset:nth-of-type(1) form p:nth-of-type(5) {
+	grid-row: 3/4;
+	margin: 0.2em;
+}
+
+
+/****************/
+/* FIELDSET 2 */
+/****************/
+
+main>section:nth-of-type(3) fieldset:nth-of-type(2) form p:nth-of-type(1),
+fieldset:nth-of-type(2) form p:nth-of-type(2) {
+	
+	grid-column: 2;
+	margin: 0.2em;
+}
+
+main>section:nth-of-type(3) fieldset:nth-of-type(2) form p:nth-of-type(3),
+fieldset:nth-of-type(2) form p:nth-of-type(4),
+fieldset:nth-of-type(2) form p:nth-of-type(5) {
+	
+	grid-column: 3;
+	margin: 0.2em;
+}
+
+
+main>section:nth-of-type(3) fieldset:nth-of-type(2) form p:nth-of-type(3) {
+	grid-row: 1/2;
+	margin: 0.2em;
+}
+
+main>section:nth-of-type(3) fieldset:nth-of-type(2) form p:nth-of-type(4) {
+	grid-row: 2/3;
+	font-size: medium;
+	color: purple;
+	font-weight: 600;
+	margin: 0.2em;
+	
+}
+
+main>section:nth-of-type(3) fieldset:nth-of-type(2) form p:nth-of-type(5) {
+	grid-row: 3/4;
+	margin: 0.2em;
+
+}
+
+/****************/
+/* FIELDSET 3 */
+/****************/
+
+main>section:nth-of-type(3) fieldset:nth-of-type(3) form p:nth-of-type(1), fieldset:nth-of-type(3) form p:nth-of-type(2),
+fieldset:nth-of-type(3) form p:nth-of-type(3) {
+	grid-column: 2;
+	margin: 0.2em;
+}
+
+main>section:nth-of-type(3) fieldset:nth-of-type(3) form p:nth-of-type(4),
+fieldset:nth-of-type(3) form p:nth-of-type(5),
+fieldset:nth-of-type(3) form p:nth-of-type(6) {
+	grid-column: 3;
+	margin: 0.2em;
+}
+
+main>section:nth-of-type(3) fieldset:nth-of-type(3) form p:nth-of-type(1){
+	color: #eee;
+	background-color: black;
+	padding: 0.3em;
+	width: max-content;
+	text-transform: uppercase;
+	font-size: x-small;
+
+}
+
+main>section:nth-of-type(3) fieldset:nth-of-type(3) form p:nth-of-type(4) {
+	grid-row: 1/2;
+	margin: 0.2em;
+	
+}
+
+main>section:nth-of-type(3) fieldset:nth-of-type(3) form p:nth-of-type(5) {
+	grid-row: 2/3;
+	font-size: medium;
+	color: purple;
+	font-weight: 600;
+	margin: 0.2em;
+	
+}
+
+main>section:nth-of-type(3) fieldset:nth-of-type(3) form p:nth-of-type(6) {
+	grid-row: 3/4;
+	margin: 0.2em;
+}

@@ -10,8 +10,6 @@
 
 
 
-
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
@@ -20,6 +18,12 @@
 	font-family: "MijnFont";
   src: url('../font/Avenir Next/Avenir-next-lt-pro/AvenirNextLTPro-Bold.otf');
 	src:url('../font/Avenir Next/Avenir-next-lt-pro/AvenirNextLTPro-Regular.otf');
+}
+
+@font-face{
+	font-family: "MijnFont";
+	src:url('../font/Avenir Next/Avenir-next-lt-pro/AvenirNextLTPro-Bold.otf'); 
+	font-weight: 700;
 }
  
 :root {
@@ -76,7 +80,7 @@ li {
 div:first-of-type{
   color: black; 
 	font-size: smaller;
-	font-weight: 900;
+	font-weight: bold; 
 	width: 100%;
 	align-items: center;
 	text-align: center;
