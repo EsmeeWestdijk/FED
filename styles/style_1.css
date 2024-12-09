@@ -21,6 +21,8 @@
 	font-weight: 700;
 }
 
+
+
 /*bron: codepen Sanne lesstof*/ 
 
 /*********************/
@@ -446,20 +448,19 @@ main>section:nth-of-type(4) li button img {
 	padding: 0;
 	margin: 0;
 	width: 3em;
-
-	grid-row-start: 1;
-	grid-column-start: 1;
-
-	justify-self: end;
-	align-self: end;
-
-	z-index: 1;
 }
 
 main>section:nth-of-type(4) li button {
 	background: none;
 	border: none;
-	padding-left: 6em;
+	padding-left: 9em;
+	grid-column: 1;
+	grid-row: span 2;
+
+	justify-self: end;
+	align-self: end;
+
+	z-index: 4;
 }
 
 

@@ -23,6 +23,12 @@
 	font-weight: 700;
 }
 
+@media (prefers-color-scheme:dark) {
+	.inline-svg-icon {
+		fill:white;
+	}
+}
+
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
@@ -47,6 +53,38 @@
 		/* 1. filter invert */
 		filter: invert(100%);
 	}
+}
+
+body {
+	font-family: var(--font-family);
+	background-color: var(--color-background);
+	color: var(--color-text);
+}
+
+body.inactive {
+	overflow: hidden;
+}
+
+button {
+	background-color: var(--color-button);
+	color: var(--color-text-button);
+}
+
+a:hover {
+	color: rgb(0, 213, 255);
+	text-decoration: underline;
+}
+
+a:active {
+	color: rgba(0, 213, 255, 0.721);
+	font-size: medium;
+
+}
+
+
+a:focus {
+	border-color: aqua;
+
 }
 
 
@@ -75,13 +113,6 @@ html:has([value="dark"]:checked) {
 
 }
 
-body {
-	background-color: var(--color-background);
-	color: var(--color-text);
-	font-family: var(--font-family);
-	margin: 0;
-	padding: 0;
-}
 
 
 /****************/
@@ -92,32 +123,43 @@ main>section:nth-of-type(1) {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr;
+	position: relative;
+	overflow-y: auto;
 
 }
 
-main>section:nth-of-type(1) ul:nth-of-type(1) {
+
+main>section:nth-of-type(1) > ul:nth-of-type(1) {
 	display: flex;
-	gap: 0.5em;
-	padding: 0;
 	border-bottom: solid;
 	border-color: #dddddddd;
 	grid-row: 1;
+	padding: 0;
 }
 
-main>section:nth-of-type(1) ul:nth-of-type(1) li a {
+main>section:nth-of-type(1) ul:nth-of-type(1) li{
+	font-size: small;
+	margin: 0;
+	padding: 0;
+}
+
+main>section:nth-of-type(1) > ul:nth-of-type(1) li a {
 	color: var(--color-text);
 	text-decoration: none;
 	font-size: small;
+	padding: 1em;
+
 }
 
-main>section:nth-of-type(1) img:first-of-type {
-	width: 10em;
+main>section:nth-of-type(1) > img:first-of-type {
 	grid-row: 2;
-	display: flex;
-	justify-content: center;
+	width: 10em;
+	max-width: 100%;
+	
 }
 
-main>section:nth-of-type(1) ul:nth-of-type(2) {
+
+main>section:nth-of-type(1) > ul:nth-of-type(2) {
 	display: flex;
 	overflow-x: auto;
 	grid-row: 3;
@@ -125,30 +167,52 @@ main>section:nth-of-type(1) ul:nth-of-type(2) {
 
 
 main>section:nth-of-type(1) ul:nth-of-type(2) img {
-	display: block;
 	aspect-ratio: 1/1;
 	width: 23em;
-	grid-row: 3/4;
+	grid-row: 3;
+	grid-column: 1;
+
 }
 
-main>section:nth-of-type(1)>button {
+main>section:nth-of-type(1)>button:first-of-type {
 	border: none;
 	grid-row: 4;
-	width: 3em;
+	width: 4em;
+	grid-column-start: 1;
+
+	justify-self: end;
+	align-items: end;
 }
 
 main>section:nth-of-type(1) button>img:first-of-type {
-	width: 100%;
-	height: 100%;
+	grid-row: 4;
+	width: 4em;
+	grid-column-start: 1;
 }
+
+main>section:nth-of-type(1)>button:nth-of-type(2){
+	background-color: var(--color-text);
+	color: var(--color-background);
+	position: fixed;
+	width: 100%;
+	padding: 1em;
+	text-transform: uppercase;
+	border-color: #eee;
+	border-width: 1em;
+	border-style: solid;
+	bottom: 0;
+	z-index: 20;
+}
+
+
+
 
 main>section:nth-of-type(1)>nav ul {
 	display: flex;
 	justify-content: center;
-	gap: 1em;
+	gap: 0.5em;
 	padding: 0;
 	margin-top: 0;
-
 }
 
 main>section:nth-of-type(1)>nav>ul>li {
@@ -205,13 +269,21 @@ main>section:nth-of-type(2) svg {
 
 
 /****************/
-/* FIELDSETS */
+/* FIELDSETs */
 /****************/
-main>section:nth-of-type(3) fieldset{
+main>section:nth-of-type(3) input#radiobutton1:checked{
+	background-image: url("images/ysl_parfum_30ml.avif");
+}
+
+main>section:nth-of-type(3) input#radiobutton2:checked{
+	background-image: url("images/ysl_parfum_50ml.avif");
+}
+
+main>section:nth-of-type(3) form{
 	border: none;
 }
 
-main>section:nth-of-type(3) fieldset form{
+main>section:nth-of-type(3) form fieldset{
 	border-bottom: solid;
 	border-color: #dddddddd;
 	border-width: 0.1em;
@@ -219,7 +291,7 @@ main>section:nth-of-type(3) fieldset form{
 
 }
 
-main>section:nth-of-type(3) fieldset form {
+main>section:nth-of-type(3) form fieldset {
 	display: grid;
 	grid-template-columns: max-content 2fr;
 	grid-template-rows: auto;
@@ -228,7 +300,7 @@ main>section:nth-of-type(3) fieldset form {
 }
 
 
-main>section:nth-of-type(3) form input {
+main>section:nth-of-type(3) fieldset input  {
 	grid-column: 1;
 	grid-row: 1/2;
 	display: flex;
@@ -238,9 +310,13 @@ main>section:nth-of-type(3) form input {
 
 }
 
+main>section:nth-of-type(3) input[type="radio"]{
+	accent-color: black;
+}
 
 
-main>section:nth-of-type(3) form label {
+
+main>section:nth-of-type(3) fieldset label {
 	grid-column: 2;
 	grid-row: 1/2;
 	display: flex;
@@ -257,35 +333,37 @@ main>section:nth-of-type(3) form label {
 /* FIELDSET 1 */
 /****************/
 
-main>section:nth-of-type(3) fieldset:nth-of-type(1) > form:first-of-type{
+main>section:nth-of-type(3) fieldset:nth-of-type(1){
 	border-top: solid;
 	border-color: #dddddddd;
 	border-width: 0.1em;
 
 }
 
-main>section:nth-of-type(3) fieldset:nth-of-type(1) form p:nth-of-type(1),
-fieldset:nth-of-type(1) form p:nth-of-type(2) {
+main>section:nth-of-type(3) fieldset:nth-of-type(1) p:nth-of-type(1),
+fieldset:nth-of-type(1) p:nth-of-type(2) {
 	
 	grid-column: 2;
 	margin: 0.2em;
 }
 
-main>section:nth-of-type(3) fieldset:nth-of-type(1) form p:nth-of-type(3),
-fieldset:nth-of-type(1) form p:nth-of-type(4),
-fieldset:nth-of-type(1) form p:nth-of-type(5) {
+main>section:nth-of-type(3) fieldset:nth-of-type(1) p:nth-of-type(3),
+fieldset:nth-of-type(1) p:nth-of-type(4),
+fieldset:nth-of-type(1) p:nth-of-type(5) {
 	
 	grid-column: 3;
 	margin: 0.2em;
+	text-transform: none;
 }
 
 
-main>section:nth-of-type(3) fieldset:nth-of-type(1) form p:nth-of-type(3) {
+main>section:nth-of-type(3) fieldset:nth-of-type(1) p:nth-of-type(3) {
 	grid-row: 1/2;
 	margin: 0.2em;
+
 }
 
-main>section:nth-of-type(3) fieldset:nth-of-type(1) form p:nth-of-type(4) {
+main>section:nth-of-type(3) fieldset:nth-of-type(1) p:nth-of-type(4) {
 	grid-row: 2/3;
 	font-size: medium;
 	color: purple;
@@ -294,7 +372,7 @@ main>section:nth-of-type(3) fieldset:nth-of-type(1) form p:nth-of-type(4) {
 
 }
 
-main>section:nth-of-type(3) fieldset:nth-of-type(1) form p:nth-of-type(5) {
+main>section:nth-of-type(3) fieldset:nth-of-type(1) p:nth-of-type(5) {
 	grid-row: 3/4;
 	margin: 0.2em;
 }
@@ -304,28 +382,29 @@ main>section:nth-of-type(3) fieldset:nth-of-type(1) form p:nth-of-type(5) {
 /* FIELDSET 2 */
 /****************/
 
-main>section:nth-of-type(3) fieldset:nth-of-type(2) form p:nth-of-type(1),
-fieldset:nth-of-type(2) form p:nth-of-type(2) {
+main>section:nth-of-type(3) fieldset:nth-of-type(2) p:nth-of-type(1),
+fieldset:nth-of-type(2) p:nth-of-type(2) {
 	
 	grid-column: 2;
 	margin: 0.2em;
 }
 
-main>section:nth-of-type(3) fieldset:nth-of-type(2) form p:nth-of-type(3),
-fieldset:nth-of-type(2) form p:nth-of-type(4),
-fieldset:nth-of-type(2) form p:nth-of-type(5) {
+main>section:nth-of-type(3) fieldset:nth-of-type(2) p:nth-of-type(3),
+fieldset:nth-of-type(2) p:nth-of-type(4),
+fieldset:nth-of-type(2) p:nth-of-type(5) {
 	
 	grid-column: 3;
 	margin: 0.2em;
+	text-transform: none;
 }
 
 
-main>section:nth-of-type(3) fieldset:nth-of-type(2) form p:nth-of-type(3) {
+main>section:nth-of-type(3) fieldset:nth-of-type(2) p:nth-of-type(3) {
 	grid-row: 1/2;
 	margin: 0.2em;
 }
 
-main>section:nth-of-type(3) fieldset:nth-of-type(2) form p:nth-of-type(4) {
+main>section:nth-of-type(3) fieldset:nth-of-type(2) p:nth-of-type(4) {
 	grid-row: 2/3;
 	font-size: medium;
 	color: purple;
@@ -334,7 +413,7 @@ main>section:nth-of-type(3) fieldset:nth-of-type(2) form p:nth-of-type(4) {
 	
 }
 
-main>section:nth-of-type(3) fieldset:nth-of-type(2) form p:nth-of-type(5) {
+main>section:nth-of-type(3) fieldset:nth-of-type(2) p:nth-of-type(5) {
 	grid-row: 3/4;
 	margin: 0.2em;
 
@@ -348,36 +427,37 @@ section:nth-of-type(3) ul{
 	padding: 1em;
 }
 
-main>section:nth-of-type(3) fieldset:nth-of-type(3) form p:nth-of-type(1), fieldset:nth-of-type(3) form p:nth-of-type(2),
-fieldset:nth-of-type(3) form p:nth-of-type(3) {
+main>section:nth-of-type(3) fieldset:nth-of-type(3) p:nth-of-type(1), fieldset:nth-of-type(3) p:nth-of-type(2),
+fieldset:nth-of-type(3) p:nth-of-type(3) {
 	grid-column: 2;
 	margin: 0.2em;
+	text-transform: none;
 }
 
-main>section:nth-of-type(3) fieldset:nth-of-type(3) form p:nth-of-type(4),
-fieldset:nth-of-type(3) form p:nth-of-type(5),
-fieldset:nth-of-type(3) form p:nth-of-type(6) {
+main>section:nth-of-type(3) fieldset:nth-of-type(3) p:nth-of-type(4),
+fieldset:nth-of-type(3)  p:nth-of-type(5),
+fieldset:nth-of-type(3)  p:nth-of-type(6) {
 	grid-column: 3;
 	margin: 0.2em;
+	text-transform: none;
 }
 
-main>section:nth-of-type(3) fieldset:nth-of-type(3) form p:nth-of-type(1){
-	color: #eee;
-	background-color: black;
-	padding: 0.3em;
+main>section:nth-of-type(3) fieldset:nth-of-type(3)  p:nth-of-type(1){
+	color: var(--color-background);
+	background-color: var(--color-text);
 	width: max-content;
 	text-transform: uppercase;
 	font-size: x-small;
 
 }
 
-main>section:nth-of-type(3) fieldset:nth-of-type(3) form p:nth-of-type(4) {
+main>section:nth-of-type(3) fieldset:nth-of-type(3)  p:nth-of-type(4) {
 	grid-row: 1/2;
 	margin: 0.2em;
 	
 }
 
-main>section:nth-of-type(3) fieldset:nth-of-type(3) form p:nth-of-type(5) {
+main>section:nth-of-type(3) fieldset:nth-of-type(3)  p:nth-of-type(5) {
 	grid-row: 2/3;
 	font-size: medium;
 	color: purple;
@@ -386,7 +466,7 @@ main>section:nth-of-type(3) fieldset:nth-of-type(3) form p:nth-of-type(5) {
 	
 }
 
-main>section:nth-of-type(3) fieldset:nth-of-type(3) form p:nth-of-type(6) {
+main>section:nth-of-type(3) fieldset:nth-of-type(3) p:nth-of-type(6) {
 	grid-row: 3/4;
 	margin: 0.2em;
 }
@@ -557,7 +637,7 @@ section:nth-of-type(6) button:last-of-type{
 	width: fit-content;
 }
 
-section:nth-of-type(6) button{
+section:nth-of-type(6) > button{
 	grid-column: 2;
 	width: 2em;
 	border: none; 
@@ -571,6 +651,187 @@ section:nth-of-type(6) p:last-of-type{
 	padding-bottom: 5em;
 
 }
+
+/*********************/
+/*DIALOG 1*/
+/*********************/
+
+section:nth-of-type(6) dialog:nth-of-type(1){
+	transform: translateY(40%);
+	max-width: 100%;
+	height: 100%;
+	border: none;
+
+}
+
+section:nth-of-type(6) dialog:nth-of-type(1) h4{
+	font-weight: 400;
+	text-transform: uppercase;
+	font-size: small;
+
+}
+
+section:nth-of-type(6) dialog:nth-of-type(1) > p{
+	font-weight: 400;
+	font-size: small;
+	text-transform: none;
+	margin: 0;
+	padding: 0.2em;
+}
+
+section:nth-of-type(6) dialog:nth-of-type(1) section{
+	display: flex;
+	justify-content: space-between; 
+	border: none; 
+
+}
+section:nth-of-type(6) dialog:nth-of-type(1) section button{
+  
+  border: none; 
+  
+}
+
+section:nth-of-type(6) dialog:nth-of-type(1) > button:nth-of-type(1){
+	margin: 0;
+	padding: 0.2em;
+
+	border: none; 
+	background-color: var(--color-text);
+	color: var(--color-background);
+}
+
+/*********************/
+/*DIALOG 2*/
+/*********************/
+
+section:nth-of-type(6) dialog:nth-of-type(2){
+	transform: translateY(85%);
+	max-width: 100%;
+	height: 100%;
+	border: none;
+
+}
+
+section:nth-of-type(6) dialog:nth-of-type(2) h4{
+	font-weight: 400;
+	text-transform: uppercase;
+	font-size: small;
+
+}
+
+section:nth-of-type(6) dialog:nth-of-type(2) > p{
+	font-weight: 400;
+	font-size: small;
+	text-transform: none;
+	margin: 0;
+	padding: 0.2em;
+}
+
+section:nth-of-type(6) dialog:nth-of-type(2) section{
+	display: flex;
+	justify-content: space-between; 
+	border: none; 
+
+}
+section:nth-of-type(6) dialog:nth-of-type(2) section button{
+  
+  border: none; 
+  
+}
+
+/*********************/
+/*DIALOG 3*/
+/*********************/
+
+section:nth-of-type(6) dialog:nth-of-type(3){
+	transform: translateY(70%);
+	max-width: 100%;
+	height: 100%;
+	border: none;
+
+}
+
+section:nth-of-type(6) dialog:nth-of-type(3) h4{
+	font-weight: 400;
+	text-transform: uppercase;
+	font-size: small;
+
+}
+
+section:nth-of-type(6) dialog:nth-of-type(3) > p{
+	font-weight: 400;
+	font-size: small;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0.2em;
+}
+
+section:nth-of-type(6) dialog:nth-of-type(3) section{
+	display: flex;
+	justify-content: space-between; 
+	border: none; 
+
+}
+section:nth-of-type(6) dialog:nth-of-type(3) section button{
+  
+  border: none; 
+  
+}
+
+/*********************/
+/*DIALOG 4*/
+/*********************/
+
+section:nth-of-type(6) dialog:nth-of-type(4){
+	transform: translateY(30%);
+	max-width: 100%;
+	height: 100%;
+	border: none;
+
+}
+
+section:nth-of-type(6) dialog:nth-of-type(4) h4{
+	font-weight: 400;
+	text-transform: uppercase;
+	font-size: small;
+
+}
+
+section:nth-of-type(6) dialog:nth-of-type(4) > p:nth-of-type(1){
+	font-size: xx-large;
+}
+
+section:nth-of-type(6) dialog:nth-of-type(4) > p{
+	font-weight: 400;
+	font-size: small;
+	text-transform: none;
+	margin: 0;
+	padding: 0.2em;
+}
+
+section:nth-of-type(6) dialog:nth-of-type(4) section{
+	display: flex;
+	justify-content: space-between; 
+	border: none; 
+
+}
+section:nth-of-type(6) dialog:nth-of-type(4) section button{
+  
+  border: none; 
+  
+}
+
+section:nth-of-type(6) dialog:nth-of-type(4) > button:nth-of-type(1){
+	margin: 0;
+	padding: 0.2em;
+
+	border: none; 
+	background-color: var(--color-text);
+	color: var(--color-background);
+}
+
+
+
 
 /*********************/
 /*AANBEVELING*/
@@ -592,15 +853,15 @@ main>section:nth-of-type(7) li {
 
 main>section:nth-of-type(7) h2{
 	text-transform: uppercase;
-	font-weight: 700;
-	font-size: medium;
+	font-weight: 400;
+	font-size: small;
 	margin: 1em;
 }
 
 main>section:nth-of-type(7) > h3{
 	text-transform: uppercase;
-	font-weight: 700;
-	font-size: medium;
+	font-weight: 400;
+	font-size: small;
 	margin-left: 1em;
 
 	grid-row: 2;
@@ -621,11 +882,13 @@ main>section:nth-of-type(7) li p {
 	font-weight: 100;
 	font-size: small;
 	line-height: 0.1em;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 
 main>section:nth-of-type(7) li img {
-	width: 8em;
+	width: 10em; 
 	padding-bottom: 0;
 
 	grid-row-start: 1;
@@ -644,12 +907,11 @@ main>section:nth-of-type(7) li button img {
 main>section:nth-of-type(7) li button {
 	background: none;
 	border: none;
-	padding-left: 4em;
-
+	padding-left: 9em;
 	grid-column: 1;
-	grid-row: 1;
+	grid-row: span 2;
 
-	justify-self: center;
+	justify-self: end;
 	align-self: end;
 
 	z-index: 4;
@@ -713,33 +975,50 @@ main>section:nth-of-type(7) li:nth-of-type(3) p:nth-of-type(5) {
 main>section:nth-of-type(8) ul{
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	margin: 1em;
+	padding-left: 1em;
+	padding-right: 1em;
 }
 
 main>section:nth-of-type(8) li{
 	display: grid;
 	grid-template-columns: 1;
 	grid-row: auto;
-	justify-content: center;
-	align-items: center;
+
+}
+
+main>section:nth-of-type(8) h2{
+	text-transform: uppercase;
+	font-size: small;
+	font-weight: 400;
+	margin: 1em;
+	text-align: center;
+	padding-top: 2em;
+}
+
+main>section:nth-of-type(8) > p{
+	font-size: medium;
+	font-weight: 300;
+	margin: 1em;
+	text-align: center;
+	text-transform: uppercase;
 }
 
 main>section:nth-of-type(8) li h3{
 	grid-column: 1;
 	grid-row: 2;
+	text-align: center;
 }
 
 main>section:nth-of-type(8) img{
 	width: 15em;
 	border-radius: 50%;
-	justify-content: center;
 
 	grid-column: 1;
 	grid-row: 1;
 }
 
-main>section:nth-of-type(8) p{
+main>section:nth-of-type(8) li p{
 	font-size: small;
 	text-align: center;
 	padding-bottom: 2em;
@@ -753,5 +1032,90 @@ main>section:nth-of-type(8) h3{
 	text-align: center;
 	text-transform: uppercase;
 	font-weight: 400;
+
+}
+
+/*********************/
+/*DUA LIPA STUKJE*/
+/*********************/
+
+
+
+
+main > section:nth-of-type(9) ul{
+	display: flex;
+	flex-direction: column;
+	padding-left: 3em;
+	padding-right: 3em;
+	padding-top: 1em;
+	margin: 0;
+}
+
+main > section:nth-of-type(9) li{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows:  min-content auto;
+}
+
+
+main > section:nth-of-type(9) li h2{
+	grid-row: 2;
+	font-size: small;
+	font-weight: 400;
+	padding-top: 2em;
+
+}
+
+main > section:nth-of-type(9) li p:nth-of-type(1){
+	grid-row: 3;
+	font-size: small;
+	padding: 0;
+	margin: 0;
+}
+
+main > section:nth-of-type(9) li p:nth-of-type(2) {
+	grid-row: 4;
+	grid-column: 1;
+
+	font-size: small;
+	font-weight: 700;
+}
+
+main > section:nth-of-type(9) li p:nth-of-type(3){
+	grid-row: 4;
+	grid-column: 1;
+
+	padding-top: 2em;
+	font-weight: bold; 
+	padding-bottom: 2em;
+}
+
+
+main > section:nth-of-type(9) li img{
+  grid-row: 1;
+  max-width: 100%;
+  
+}
+
+/*********************/
+/*VIDEO*/
+/*********************/
+
+main > section:nth-of-type(10) h2{
+	font-size: small;
+	font-weight: 400;
+	text-transform: uppercase;
+	padding-left: 3.5em;
+
+}
+
+main > section:nth-of-type(10) p{
+	font-size: small;
+	padding-left: 3.5em;
+}
+
+main > section:nth-of-type(10) video{
+   max-width: 100%;
+   padding: 3em;
 
 }

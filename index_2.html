@@ -32,6 +32,13 @@
             <img class="zwart-wit-icon" src="images/hartje_icon.webp" alt="hartje icon">
             <img class="zwart-wit-icon" src="images/winkeltas_icon.webp" alt="winkeltas icon">
 
+            <section>
+            <input type="radio" id="radiobuttonkerst" name="radiobutton">
+            <label for="radiobuttonkerst">kerst</label>
+            <input type="radio" id="radiobuttonnormaal" name="radiobutton">
+            <label for="radiobuttonkerst">normaal</label>
+            </section>
+
 
         </nav>
 
@@ -79,15 +86,23 @@
         <section>
             <h2 class="visually-hidden">Yves Saint Laurant</h2>
 
+
             <ul>
-                <li><a href="#">homepage/</a></li>
-                <li><a href="#">parfum/</a></li>
-                <li><a href="#">Damesparfum/</a></li>
-                <li><a href="#">Damesgeuren/</a></li>
+        
+                <li><a href="#">homepage</a></li>
+                <li>/</li>
+                <li><a href="#">parfum</a></li>
+                <li>/</li>
+                <li><a href="#">Damesparfum</a></li>
+                <li>/</li>
+                <li><a href="#">Damesgeuren</a></li>
+                <li>/</li>
                 <li><a href="#">Yves saint laurant</a></li>
             </ul>
 
-            <img src="images/YSL_logo.webp" alt="Yves Saint Laurant logo">
+
+
+            <img class="zwart-wit-icon" src="images/YSL_logo.webp" alt="Yves Saint Laurant logo">
 
             <ul>
                 <li id="li1">
@@ -119,18 +134,28 @@
             <nav>
                 <ul>
                     <li><a href="#li1"></a></li>
-					<li><a href="#li2"></a></li>
-					<li><a href="#li3"></a></li>
-					<li><a href="#li4"></a></li>
-					<li><a href="#li5"></a></li>
-					<li><a href="#li6"></a></li>
+                    <li><a href="#li2"></a></li>
+                    <li><a href="#li3"></a></li>
+                    <li><a href="#li4"></a></li>
+                    <li><a href="#li5"></a></li>
+                    <li><a href="#li6"></a></li>
                 </ul>
             </nav>
 
             <button><img class="zwart-wit-icon" src="images/hartje_button.jpg" alt="hartje icon"></button>
+
+            <button aria-label="toevoegen aan winkelmand">In het winkel mandje</button>
+
+            <dialog>
+                <h2>artikel zit nu in je winkelmandje</h2>
+                <p>Yves Saint laurent - Libre 30 ml is toegevoegd aan je winkelmandje.</p>
+
+                <button aria-label="verder winkelen">verder winkelen</button>
+
+            </dialog>
         </section>
 
-         <!--Section 2-->
+        <!--Section 2-->
         <section>
             <h2>Libre Flowers & Flames</h2>
             <p>Eau de parfum</p>
@@ -172,14 +197,15 @@
         </section>
 
 
-         <!--Section 3-->
+        <!--Section 3-->
         <section>
 
             <h2 class="visually-hidden">Formulier</h2>
 
-            <fieldset>
+            <form>
 
-                <form>
+                <fieldset>
+
                     <input type="radio" id="radiobutton1" name="radiobutton">
                     <label for="radiobutton1">30ml</label>
                     <p>Spaar 385 beauty points</p>
@@ -187,13 +213,11 @@
                     <p>Adviesprijs <s>€97,00</s></p>
                     <p>€77,60</p>
                     <p>Je bespaart 20%</p>
-                </form>
 
-            </fieldset>
+                </fieldset>
 
-            <fieldset>
+                <fieldset>
 
-                <form>
                     <input type="radio" id="radiobutton2" name="radiobutton">
                     <label for="radiobutton2">50ml</label>
                     <p>Spaar 580 beauty points</p>
@@ -201,13 +225,11 @@
                     <p>Adviesprijs <s>€145,00</s></p>
                     <p>€116,00</p>
                     <p>Je bespaart 20%</p>
-                </form>
 
-            </fieldset>
+                </fieldset>
 
-            <fieldset>
+                <fieldset>
 
-                <form>
                     <input type="radio" id="radiobutton3" name="radiobutton">
                     <label for="radiobutton3">90ml</label>
                     <p>Beste Prijs</p>
@@ -216,18 +238,19 @@
                     <p>Adviesprijs <s>€195,00</s></p>
                     <p>€156,00</p>
                     <p>Je bespaart 20%</p>
-                </form>
 
-            </fieldset>
+                </fieldset>
+            </form>
 
         </section>
 
-         <!--Section 4-->
+        <!--Section 4-->
         <section>
 
             <ul>
                 <li>
-                    <button><img class="zwart-wit-icon" src="images/vrachtwagen_icon.png" alt="vrachtwagen icon"></button>
+                    <button><img class="zwart-wit-icon" src="images/vrachtwagen_icon.png"
+                            alt="vrachtwagen icon"></button>
                     <!--bron:https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flaticon.com%2Ffree-icon%2Ftruck_691038&psig=AOvVaw2iHPJrNJpcUOtoBDwMH2KW&ust=1733488906984000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNimzdTTkIoDFQAAAAAdAAAAABAE-->
                     <p>Online op voorraad</p>
                     <p>Gratis verzending</p>
@@ -245,25 +268,25 @@
             </ul>
         </section>
 
-         <!--Section 5-->
+        <!--Section 5-->
         <section>
             <ul>
                 <li>
                     <h3>Jouw cadeau</h3>
                     <img src="images/jouw_cadeau_foto.avif" alt="mascara van ysl voor jou een cadeau">
-                    <p>Yves Saint Laurant Lash Clash Mascara (9ml) 
+                    <p>Yves Saint Laurant Lash Clash Mascara (9ml)
                         bij besteding vanaf €80,- aan Yves Saint
                         Laurant-producten</p>
                     <p>€0,00</p>
                     <button><img class="zwart-wit-icon" src="images/info_icon.png" alt="inormatie icoon"></button>
                 </li>
 
-                </li>
+
             </ul>
 
         </section>
 
-         <!--Section 6-->
+        <!--Section 6-->
         <section>
 
             <h2>Productomschrijving</h2>
@@ -274,14 +297,17 @@
 
             <dialog>
 
-                <h4>PRODUCTOMSCHRIJVING</h4>
+                <section>
 
-                <button aria-label="sluit button">X</button>
+                    <h4>PRODUCTOMSCHRIJVING</h4>
 
-                <button aria-label="cadeau toevoegen">CADEAU +</button>
-                <p><strong>Art-Nr.:</strong> 1192983</p>
-                <p><strong>Geurnoot:</strong> Bloemig</p>
-                <p><strong>Topnoot:</strong> Lelie, Bergamot, Lavendel, Lavandin</p>
+                    <button aria-label="sluit button">X</button>
+                </section>
+
+                <button aria-label="cadeau toevoegen"> + CADEAU</button>
+                <p> <strong>Art-Nr.:</strong> 1192983</p>
+                <p> <strong>Geurnoot:</strong> Bloemig</p>
+                <p> <strong>Topnoot:</strong> Lelie, Bergamot, Lavendel, Lavandin</p>
                 <p> <strong>Hartnoot:</strong> Lavendel, Lelie, Palmboom, Oranje Bloesem</p>
                 <p> <strong>Basisnoot:</strong> Lavendel, Vanille, Muskus, Ambergris</p>
                 <p> <strong>Ik ben refillable:</strong> Nee</p>
@@ -306,12 +332,15 @@
             <button aria-label="zie Gebruiksaanwijzing">></button>
 
             <dialog>
-                <h4>GEBRUIKSAANWIJZING</h4>
 
+                <section>
+                    <h4>GEBRUIKSAANWIJZING</h4>
 
-                <button aria-label="sluit button">X</button>
+                    <button aria-label="sluit button">X</button>
+
+                </section>
                 <p>Voor een langdurige geurbeleving, spray de Eau de Parfum op de polsen, nek en achter de oren.
-                   Vermijd contact met de ogen.
+                    Vermijd contact met de ogen.
                 </p>
             </dialog>
 
@@ -319,59 +348,74 @@
             <button aria-label="zie Ingredienten">></button>
 
             <dialog>
+
+                <section>
                 <h4>INGREDIENTEN</h4>
                 <button aria-label="sluit button">X</button>
-                <p>ALCOHOL • PARFUM / FRAGRANCE • AQUA / WATER / EAU • LIMONENE • BENZYL SALICYLATE • LINALOOL • BENZYL ALCOHOL • METHYL ANTHRANILATE • HYDROXYCITRONELLAL • COUMARIN • ETHYLHEXYL SALICYLATE • BUTYL METHOXYDIBENZOYLMETHANE • CITRONELLOL • GERANIOL • ALPHA-ISOMETHYL IONONE • ISOEUGENOL • CITRAL • TRIS(TETRAMETHYLHYDROXYPIPERIDINOL) CITRATE • FARNESOL • CINNAMAL • BENZYL BENZOATE • CI 60730 / EXT. VIOLET 2 • CI 19140 / YELLOW 5 • CI 14700 / RED 4</p>
+                </section>
+
+
+                <p>ALCOHOL • PARFUM / FRAGRANCE • AQUA / WATER / EAU • LIMONENE • BENZYL SALICYLATE • LINALOOL • BENZYL
+                    ALCOHOL • METHYL ANTHRANILATE • HYDROXYCITRONELLAL • COUMARIN • ETHYLHEXYL SALICYLATE • BUTYL
+                    METHOXYDIBENZOYLMETHANE • CITRONELLOL • GERANIOL • ALPHA-ISOMETHYL IONONE • ISOEUGENOL • CITRAL •
+                    TRIS(TETRAMETHYLHYDROXYPIPERIDINOL) CITRATE • FARNESOL • CINNAMAL • BENZYL BENZOATE • CI 60730 /
+                    EXT. VIOLET 2 • CI 19140 / YELLOW 5 • CI 14700 / RED 4</p>
             </dialog>
 
             <p>Beoordelingen</p>
             <button><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
-                class="PtbKk9ogBoi2GdnLM7lW Q2V8KxgHDakQ2L3catrp rating-stars__star">
-                <path
-                    d="M6.14031 1.08924C6.08452 0.970253 5.91548 0.970253 5.85969 1.08924L4.40349 4.1953L1.13175 4.69576C1.00704 4.71484 0.956122 4.86712 1.04422 4.95752L3.41679 7.39205L2.85836 10.8195C2.83753 10.9473 2.97308 11.0429 3.08631 10.9803L6 9.36775L8.91369 10.9803C9.02692 11.0429 9.16247 10.9473 9.14164 10.8195L8.58321 7.39205L10.9558 4.95752C11.0439 4.86712 10.993 4.71484 10.8683 4.69576L7.59651 4.1953L6.14031 1.08924Z"
-                    fill="currentColor"></path>
-            </svg>
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
-                class="PtbKk9ogBoi2GdnLM7lW Q2V8KxgHDakQ2L3catrp rating-stars__star">
-                <path
-                    d="M6.14031 1.08924C6.08452 0.970253 5.91548 0.970253 5.85969 1.08924L4.40349 4.1953L1.13175 4.69576C1.00704 4.71484 0.956122 4.86712 1.04422 4.95752L3.41679 7.39205L2.85836 10.8195C2.83753 10.9473 2.97308 11.0429 3.08631 10.9803L6 9.36775L8.91369 10.9803C9.02692 11.0429 9.16247 10.9473 9.14164 10.8195L8.58321 7.39205L10.9558 4.95752C11.0439 4.86712 10.993 4.71484 10.8683 4.69576L7.59651 4.1953L6.14031 1.08924Z"
-                    fill="currentColor"></path>
-            </svg>
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
-                class="PtbKk9ogBoi2GdnLM7lW Q2V8KxgHDakQ2L3catrp rating-stars__star">
-                <path
-                    d="M6.14031 1.08924C6.08452 0.970253 5.91548 0.970253 5.85969 1.08924L4.40349 4.1953L1.13175 4.69576C1.00704 4.71484 0.956122 4.86712 1.04422 4.95752L3.41679 7.39205L2.85836 10.8195C2.83753 10.9473 2.97308 11.0429 3.08631 10.9803L6 9.36775L8.91369 10.9803C9.02692 11.0429 9.16247 10.9473 9.14164 10.8195L8.58321 7.39205L10.9558 4.95752C11.0439 4.86712 10.993 4.71484 10.8683 4.69576L7.59651 4.1953L6.14031 1.08924Z"
-                    fill="currentColor"></path>
-            </svg>
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
-                class="PtbKk9ogBoi2GdnLM7lW Q2V8KxgHDakQ2L3catrp rating-stars__star">
-                <path
-                    d="M6.14031 1.08924C6.08452 0.970253 5.91548 0.970253 5.85969 1.08924L4.40349 4.1953L1.13175 4.69576C1.00704 4.71484 0.956122 4.86712 1.04422 4.95752L3.41679 7.39205L2.85836 10.8195C2.83753 10.9473 2.97308 11.0429 3.08631 10.9803L6 9.36775L8.91369 10.9803C9.02692 11.0429 9.16247 10.9473 9.14164 10.8195L8.58321 7.39205L10.9558 4.95752C11.0439 4.86712 10.993 4.71484 10.8683 4.69576L7.59651 4.1953L6.14031 1.08924Z"
-                    fill="currentColor"></path>
-            </svg>
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
-                class="PtbKk9ogBoi2GdnLM7lW Q2V8KxgHDakQ2L3catrp rating-stars__star">
-                <path
-                    d="M6.89541 5.13455L6 3.22465L5.10459 5.13455L2.97747 5.45993L4.52055 7.04331L4.16935 9.19887L6 8.18573L7.83065 9.19887L7.47945 7.04331L9.02253 5.45993L6.89541 5.13455ZM10.8683 4.69576C10.993 4.71484 11.0439 4.86712 10.9558 4.95752L8.58321 7.39205L9.14164 10.8195C9.16247 10.9473 9.02692 11.0429 8.91369 10.9803L6 9.36775L3.08631 10.9803C2.97308 11.0429 2.83753 10.9473 2.85836 10.8195L3.41679 7.39205L1.04422 4.95752C0.956122 4.86712 1.00704 4.71484 1.13175 4.69576L4.40349 4.1953L5.85969 1.08924C5.91548 0.970253 6.08452 0.970253 6.14031 1.08924L7.59651 4.1953L10.8683 4.69576Z"
-                    fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
-                <path
-                    d="M5.82092 1.38154C5.88087 1.2538 6.068 1.272 6.10222 1.40889L6.99552 4.98209C6.9985 4.99398 7 5.0062 7 5.01847V9.31555C7 9.41069 6.91257 9.4818 6.81943 9.4624L6 9.2918L3.18017 10.8506C3.07059 10.9111 2.9394 10.8187 2.95956 10.6951L3.5 7.38197L1.20386 5.0286C1.1186 4.94122 1.16788 4.79401 1.28857 4.77557L4.45492 4.2918L5.82092 1.38154Z"
-                    fill="currentColor"></path>
-            </svg>4.8 (88)</button>
+                    class="PtbKk9ogBoi2GdnLM7lW Q2V8KxgHDakQ2L3catrp rating-stars__star">
+                    <path
+                        d="M6.14031 1.08924C6.08452 0.970253 5.91548 0.970253 5.85969 1.08924L4.40349 4.1953L1.13175 4.69576C1.00704 4.71484 0.956122 4.86712 1.04422 4.95752L3.41679 7.39205L2.85836 10.8195C2.83753 10.9473 2.97308 11.0429 3.08631 10.9803L6 9.36775L8.91369 10.9803C9.02692 11.0429 9.16247 10.9473 9.14164 10.8195L8.58321 7.39205L10.9558 4.95752C11.0439 4.86712 10.993 4.71484 10.8683 4.69576L7.59651 4.1953L6.14031 1.08924Z"
+                        fill="currentColor"></path>
+                </svg>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="PtbKk9ogBoi2GdnLM7lW Q2V8KxgHDakQ2L3catrp rating-stars__star">
+                    <path
+                        d="M6.14031 1.08924C6.08452 0.970253 5.91548 0.970253 5.85969 1.08924L4.40349 4.1953L1.13175 4.69576C1.00704 4.71484 0.956122 4.86712 1.04422 4.95752L3.41679 7.39205L2.85836 10.8195C2.83753 10.9473 2.97308 11.0429 3.08631 10.9803L6 9.36775L8.91369 10.9803C9.02692 11.0429 9.16247 10.9473 9.14164 10.8195L8.58321 7.39205L10.9558 4.95752C11.0439 4.86712 10.993 4.71484 10.8683 4.69576L7.59651 4.1953L6.14031 1.08924Z"
+                        fill="currentColor"></path>
+                </svg>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="PtbKk9ogBoi2GdnLM7lW Q2V8KxgHDakQ2L3catrp rating-stars__star">
+                    <path
+                        d="M6.14031 1.08924C6.08452 0.970253 5.91548 0.970253 5.85969 1.08924L4.40349 4.1953L1.13175 4.69576C1.00704 4.71484 0.956122 4.86712 1.04422 4.95752L3.41679 7.39205L2.85836 10.8195C2.83753 10.9473 2.97308 11.0429 3.08631 10.9803L6 9.36775L8.91369 10.9803C9.02692 11.0429 9.16247 10.9473 9.14164 10.8195L8.58321 7.39205L10.9558 4.95752C11.0439 4.86712 10.993 4.71484 10.8683 4.69576L7.59651 4.1953L6.14031 1.08924Z"
+                        fill="currentColor"></path>
+                </svg>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="PtbKk9ogBoi2GdnLM7lW Q2V8KxgHDakQ2L3catrp rating-stars__star">
+                    <path
+                        d="M6.14031 1.08924C6.08452 0.970253 5.91548 0.970253 5.85969 1.08924L4.40349 4.1953L1.13175 4.69576C1.00704 4.71484 0.956122 4.86712 1.04422 4.95752L3.41679 7.39205L2.85836 10.8195C2.83753 10.9473 2.97308 11.0429 3.08631 10.9803L6 9.36775L8.91369 10.9803C9.02692 11.0429 9.16247 10.9473 9.14164 10.8195L8.58321 7.39205L10.9558 4.95752C11.0439 4.86712 10.993 4.71484 10.8683 4.69576L7.59651 4.1953L6.14031 1.08924Z"
+                        fill="currentColor"></path>
+                </svg>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="PtbKk9ogBoi2GdnLM7lW Q2V8KxgHDakQ2L3catrp rating-stars__star">
+                    <path
+                        d="M6.89541 5.13455L6 3.22465L5.10459 5.13455L2.97747 5.45993L4.52055 7.04331L4.16935 9.19887L6 8.18573L7.83065 9.19887L7.47945 7.04331L9.02253 5.45993L6.89541 5.13455ZM10.8683 4.69576C10.993 4.71484 11.0439 4.86712 10.9558 4.95752L8.58321 7.39205L9.14164 10.8195C9.16247 10.9473 9.02692 11.0429 8.91369 10.9803L6 9.36775L3.08631 10.9803C2.97308 11.0429 2.83753 10.9473 2.85836 10.8195L3.41679 7.39205L1.04422 4.95752C0.956122 4.86712 1.00704 4.71484 1.13175 4.69576L4.40349 4.1953L5.85969 1.08924C5.91548 0.970253 6.08452 0.970253 6.14031 1.08924L7.59651 4.1953L10.8683 4.69576Z"
+                        fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    <path
+                        d="M5.82092 1.38154C5.88087 1.2538 6.068 1.272 6.10222 1.40889L6.99552 4.98209C6.9985 4.99398 7 5.0062 7 5.01847V9.31555C7 9.41069 6.91257 9.4818 6.81943 9.4624L6 9.2918L3.18017 10.8506C3.07059 10.9111 2.9394 10.8187 2.95956 10.6951L3.5 7.38197L1.20386 5.0286C1.1186 4.94122 1.16788 4.79401 1.28857 4.77557L4.45492 4.2918L5.82092 1.38154Z"
+                        fill="currentColor"></path>
+                </svg>4.8 (88)</button>
 
             <dialog>
+
+                <section>
                 <h4>Beoordelingen</h4>
                 <button aria-label="sluit button">X</button>
+                </section>
 
-                <P>4.8</P>
+                <p>4.8</p>
                 <button>Beoordeel dit product</button>
 
                 <p>Filter</p>
                 <p>sorteren</p>
 
-                <p>Klanten kunnen Beauty Points verdienen als dank voor hun beoordelingen (voor maximaal 5 reviews per dag en 10 reviews per maand). 
-                   Douglas vindt het belangrijk dat alleen echte reviews worden getoond. Negatief of positief: we zetten een review altijd online. 
-                   We controleren wel eerst of deze voldoet aan ons reviewbeleid. Dat gebeurt zowel automatisch als handmatig.
+                <p>Klanten kunnen Beauty Points verdienen als dank voor hun beoordelingen (voor maximaal 5 reviews per
+                    dag en 10 reviews per maand).
+                    Douglas vindt het belangrijk dat alleen echte reviews worden getoond. Negatief of positief: we
+                    zetten een review altijd online.
+                    We controleren wel eerst of deze voldoet aan ons reviewbeleid. Dat gebeurt zowel automatisch als
+                    handmatig.
                 </p>
 
                 <p>6. dec. 2024</p>
@@ -385,161 +429,174 @@
                 <p>Nuttig?</p>
             </dialog>
 
-            <p>* Luxe giftset met 8 miniaturen bij besteding vanaf € 120,- aan geselecteerde merken. Eén cadeau per klant. Niet geldig bij producten van Douglas-partners. Op=op.</p>
+            <p>* Luxe giftset met 8 miniaturen bij besteding vanaf € 120,- aan geselecteerde merken. Eén cadeau per
+                klant. Niet geldig bij producten van Douglas-partners. Op=op.</p>
 
         </section>
 
-         <!--Section 7-->
+        <!--Section 7-->
         <section>
             <h2>Onze aanbevelingen voor jou</h2>
 
             <ul>
-				<li>
-					<h3>Yves Saint Laurant</h3>
-					<img src="images/foto's_van_douglas/ysl_libre_klein.jpg" alt="">
-					<button><img class="zwart-wit-icon" src="images/hartje_button.jpg" alt="hartje button"></button>
-					<p>Libre</p>
-					<p>Eau de parfum</p>
-					<p>Adviesprijs <s>€92,00</s></p>
-					<p>€59,80</p>
-					<p>30 ml</p>
-					<p>-19%</p>
+                <li>
+                    <h3>Yves Saint Laurant</h3>
+                    <img src="images/foto's_van_douglas/ysl_libre_klein.jpg" alt="">
+                    <button><img class="zwart-wit-icon" src="images/hartje_button.jpg" alt="hartje button"></button>
+                    <p>Libre</p>
+                    <p>Eau de parfum</p>
+                    <p>Adviesprijs <s>€92,00</s></p>
+                    <p>€59,80</p>
+                    <p>30 ml</p>
+                    <p>-19%</p>
 
-				</li>
+                </li>
 
-				<li>
-					<h3>Bobby Brown</h3>
-					<img src="images/foto's_van_douglas/Bobby_brown_lipstick.jpg" alt="">
-					<button><img class="zwart-wit-icon" src="images/hartje_button.jpg" alt="hartje button"></button>
-					<p>Extra Lip Tint Lippenbalsem</p>
-					<p>€44,00</p>
-					<p>2.3 g</p>
-				</li>
+                <li>
+                    <h3>Bobby Brown</h3>
+                    <img src="images/foto's_van_douglas/Bobby_brown_lipstick.jpg" alt="">
+                    <button><img class="zwart-wit-icon" src="images/hartje_button.jpg" alt="hartje button"></button>
+                    <p>Extra Lip Tint Lippenbalsem</p>
+                    <p>€44,00</p>
+                    <p>2.3 g</p>
+                </li>
 
 
-				<li>
-					<h3>Narciso rodriguez</h3>
-					<img src="images/foto's_van_douglas/luchtje_narciso_rodriguez.jpeg" alt="">
-					<button><img class="zwart-wit-icon" src="images/hartje_button.jpg" alt="hartje button"></button>
-					<p>for her</p>
-					<p>Musc Noir Eau de Parfum</p>
-					<p>Eau de parfum</p>
-					<p>Adviesprijs <s>€107,00</s></p>
-					<p>€58,85</p>
-					<p>-19%</p>
-					<p>50 ml</p>
-				</li>
+                <li>
+                    <h3>Narciso rodriguez</h3>
+                    <img src="images/foto's_van_douglas/luchtje_narciso_rodriguez.jpeg" alt="">
+                    <button><img class="zwart-wit-icon" src="images/hartje_button.jpg" alt="hartje button"></button>
+                    <p>for her</p>
+                    <p>Musc Noir Eau de Parfum</p>
+                    <p>Eau de parfum</p>
+                    <p>Adviesprijs <s>€107,00</s></p>
+                    <p>€58,85</p>
+                    <p>-19%</p>
+                    <p>50 ml</p>
+                </li>
 
                 <li>
                     <h3>Yves Saint Laurant</h3>
                     <img src="images/ysl_parfum_90ml.avif" alt="Yves Saint Laurant 90 ml libre">
                     <button><img class="zwart-wit-icon" src="images/hartje_button.jpg" alt="hartje button"></button>
                     <p>Libre</p>
-					<p>Eau de parfum</p>
-					<p>Adviesprijs <s>€180,00</s></p>
-					<p>€156,00</p>
-					<p>90 ml</p>
-					<p>-19%</p>
+                    <p>Eau de parfum</p>
+                    <p>Adviesprijs <s>€180,00</s></p>
+                    <p>€156,00</p>
+                    <p>90 ml</p>
+                    <p>-19%</p>
                 </li>
 
-			</ul>
+            </ul>
 
             <h3>Bij dit product bekeken anderen ook</h3>
 
             <ul>
-				<li>
-					<h3>Yves Saint Laurant</h3>
-					<img src="images/foto's_van_douglas/ysl_libre_klein.jpg" alt="">
-					<button><img class="zwart-wit-icon" src="images/hartje_button.jpg" alt="hartje button"></button>
-					<p>Libre</p>
-					<p>Eau de parfum</p>
-					<p>Adviesprijs <s>€92,00</s></p>
-					<p>€59,80</p>
-					<p>30 ml</p>
-					<p>-19%</p>
+                <li>
+                    <h3>Yves Saint Laurant</h3>
+                    <img src="images/foto's_van_douglas/ysl_libre_klein.jpg" alt="">
+                    <button><img class="zwart-wit-icon" src="images/hartje_button.jpg" alt="hartje button"></button>
+                    <p>Libre</p>
+                    <p>Eau de parfum</p>
+                    <p>Adviesprijs <s>€92,00</s></p>
+                    <p>€59,80</p>
+                    <p>30 ml</p>
+                    <p>-19%</p>
 
-				</li>
+                </li>
 
-				<li>
-					<h3>Bobby Brown</h3>
-					<img src="images/foto's_van_douglas/Bobby_brown_lipstick.jpg" alt="">
-					<button><img class="zwart-wit-icon" src="images/hartje_button.jpg" alt="hartje button"></button>
-					<p>Extra Lip Tint Lippenbalsem</p>
-					<p>€44,00</p>
-					<p>2.3 g</p>
-				</li>
+                <li>
+                    <h3>Bobby Brown</h3>
+                    <img src="images/foto's_van_douglas/Bobby_brown_lipstick.jpg" alt="">
+                    <button><img class="zwart-wit-icon" src="images/hartje_button.jpg" alt="hartje button"></button>
+                    <p>Extra Lip Tint Lippenbalsem</p>
+                    <p>€44,00</p>
+                    <p>2.3 g</p>
+                </li>
 
 
-				<li>
-					<h3>Narciso rodriguez</h3>
-					<img src="images/foto's_van_douglas/luchtje_narciso_rodriguez.jpeg" alt="">
-					<button><img class="zwart-wit-icon" src="images/hartje_button.jpg" alt="hartje button"></button>
-					<p>for her</p>
-					<p>Musc Noir Eau de Parfum</p>
-					<p>Eau de parfum</p>
-					<p>Adviesprijs <s>€107,00</s></p>
-					<p>€58,85</p>
-					<p>-19%</p>
-					<p>50 ml</p>
-				</li>
+                <li>
+                    <h3>Narciso rodriguez</h3>
+                    <img src="images/foto's_van_douglas/luchtje_narciso_rodriguez.jpeg" alt="">
+                    <button><img class="zwart-wit-icon" src="images/hartje_button.jpg" alt="hartje button"></button>
+                    <p>for her</p>
+                    <p>Musc Noir Eau de Parfum</p>
+                    <p>Eau de parfum</p>
+                    <p>Adviesprijs <s>€107,00</s></p>
+                    <p>€58,85</p>
+                    <p>-19%</p>
+                    <p>50 ml</p>
+                </li>
 
                 <li>
                     <h3>Yves Saint Laurant</h3>
                     <img src="images/ysl_parfum_90ml.avif" alt="Yves Saint Laurant 90 ml libre">
                     <button><img class="zwart-wit-icon" src="images/hartje_button.jpg" alt="hartje button"></button>
                     <p>Libre</p>
-					<p>Eau de parfum</p>
-					<p>Adviesprijs <s>€180,00</s></p>
-					<p>€156,00</p>
-					<p>90 ml</p>
-					<p>-19%</p>
+                    <p>Eau de parfum</p>
+                    <p>Adviesprijs <s>€180,00</s></p>
+                    <p>€156,00</p>
+                    <p>90 ml</p>
+                    <p>-19%</p>
                 </li>
 
-			</ul>
+            </ul>
         </section>
 
-         <!--Section 8-->
+        <!--Section 8-->
         <section>
-            <h2>Bloemen op de meest sexy manier</h2>
-            <p>Libre flowers & Flames</p>
+            <h2>Libre flowers & Flames</h2>
+            <p>Bloemen op de meest sexy manier</p>
 
             <ul>
                 <li>
                     <h3>LELIE-AKKOORD UIT DE WOESTIJN</h3>
-                    <img src="images/ysl_bloem_2.webp" alt="lelie-akkoord uit de woestijn">
-                    <p>Als eerbetoon aan het erfgoed en de favoriete bloem van Yves Saint Laurent hebben de meester-parfummakers de intrigerende geur van de verlichtende woestijnlelie in een nieuw jasje gestoken.</p>
+                    <img src="images/ysl_bloem_1.webp" alt="lelie-akkoord uit de woestijn">
+                    <p>Als eerbetoon aan het erfgoed en de favoriete bloem van Yves Saint Laurent hebben de
+                        meester-parfummakers de intrigerende geur van de verlichtende woestijnlelie in een nieuw jasje
+                        gestoken.</p>
                 </li>
 
                 <li>
                     <h3>EEN KOKOSPALMBOOM BLOEMENAKKOORD</h3>
-                    <img src="images/ysl_bloem_1.webp" alt="een kokospalmboom bloemenakkoord">
-                    <p>Het kokospalmbloemakkoord biedt een romige tropische kokosnootsensatie. Het is zonnig en warm en voegt comfort en zachtheid toe aan het parfum.</p>
+                    <img src="images/ysl_bloem_2.webp" alt="een kokospalmboom bloemenakkoord">
+                    <p>Het kokospalmbloemakkoord biedt een romige tropische kokosnootsensatie. Het is zonnig en warm en
+                        voegt comfort en zachtheid toe aan het parfum.</p>
                 </li>
 
                 <li>
                     <h3>ICONISCHE ORANJEBLOESEM UIT MAROKKO</h3>
                     <img src="images/ysl_bloem_3.webp" alt="iconsiche oranjebloesem uit marrokko">
-                    <p>Een signature ingrediënt van LIBRE, luxueus, licht en sensueel, dat een verzengende vrouwelijke uitstraling geeft aan een stoere zelfverzekerde vrouw.</p>
+                    <p>Een signature ingrediënt van LIBRE, luxueus, licht en sensueel, dat een verzengende vrouwelijke
+                        uitstraling geeft aan een stoere zelfverzekerde vrouw.</p>
                 </li>
             </ul>
         </section>
 
-         <!--Section 9-->
+        <!--Section 9-->
         <section>
-            <h2>DUA LIPA, STRALENDER DAN OOIT</h2>
-            <img src="images/dua_lipa_ysl.webp" alt="Dua Lipa met libre parfum">
-            <p>hoofdstuk van geuren met Dua Lipa. Ze belichaamt onbeschaamde vrouwelijkheid, stoere sensualiteit, en veerkracht, en voelt zich verwant met de emblamatische woestijnlelie die zij als symbool gebruik</p>
-            <p>Dua lipa:</p>
-            <p>"JUIST DEZE UNIEKE INTERPRETATIE MAAKT DIT PARFUM HEEL VERSLAVEND"</p>
+
+            <ul>
+                <li>
+                    <h2>DUA LIPA, STRALENDER DAN OOIT</h2>
+                    <img src="images/dua_lipa_ysl.webp" alt="Dua Lipa met libre parfum">
+                    <p>LIBRE FLOWERS & FLAMES introduceert een hoofdstuk van geuren met Dua Lipa. Ze belichaamt
+                        onbeschaamde
+                        vrouwelijkheid, stoere sensualiteit, en veerkracht, en voelt zich verwant met de emblamatische
+                        woestijnlelie die zij als symbool gebruikt.</p>
+                    <p>Dua lipa:</p>
+                    <p>"JUIST DEZE UNIEKE INTERPRETATIE MAAKT DIT PARFUM HEEL VERSLAVEND"</p>
+                </li>
+            </ul>
         </section>
 
-         <!--Section 10-->
+        <!--Section 10-->
         <section>
             <h2>EEN GEDURFDE FLORALITEIT</h2>
             <p>Ontdek het volledige verhaal met Dua Lipa</p>
 
             <video controls>
-                <source src="videos/video_ysl.mp4" type="video/mp4"> 
+                <source src="videos/video_ysl.mp4" type="video/mp4">
             </video>
 
             <!--Bron: Chatgpt.
@@ -617,7 +674,8 @@
             <a href="#"> <img src="images/DHL.svg" alt="DHL platje"></a>
 
             <h4>Zorgeloos shoppen</h4>
-            <a href="#"> <img class="zwart-wit-icon" src="images/Shopping-awards-logo-zelf-gemaakt-2-.webp" alt="Shopping awards plaatje"></a>
+            <a href="#"> <img class="zwart-wit-icon" src="images/Shopping-awards-logo-zelf-gemaakt-2-.webp"
+                    alt="Shopping awards plaatje"></a>
 
             <h4>Douglas-app</h4>
             <a href="#"> <img src="images/master-google-play-icon-EN.svg" alt="Google plat store"></a>
@@ -633,7 +691,8 @@
 
         <section>
             <details>
-                <summary>Klantenservice <img src="images/pijltje_naar_beneden.jpg" alt="pijltje naar beneden"></summary>
+                <summary>Klantenservice <img class="zwart-wit-icon" src="images/pijltje_naar_beneden.jpg"
+                        alt="pijltje naar beneden"></summary>
                 <!--bron: https://nl.vecteezy.com/gratis-vector/pijltje-naar-beneden-->
                 <a href="#">Veelgestelde vragen</a>
                 <a href="#">Ruilen & Retourneren</a>
@@ -642,7 +701,8 @@
             </details>
 
             <details>
-                <summary>Meer informatie <img src="images/pijltje_naar_beneden.jpg" alt="pijltje naar beneden">
+                <summary>Meer informatie <img class="zwart-wit-icon" src="images/pijltje_naar_beneden.jpg"
+                        alt="pijltje naar beneden">
                 </summary>
                 <!--bron: https://nl.vecteezy.com/gratis-vector/pijltje-naar-beneden-->
                 <a href="#">Exclusieve voordelen</a>
@@ -651,7 +711,8 @@
             </details>
 
             <details>
-                <summary>Over Douglas <img src="images/pijltje_naar_beneden.jpg" alt="pijltje naar beneden"></summary>
+                <summary>Over Douglas <img class="zwart-wit-icon" src="images/pijltje_naar_beneden.jpg"
+                        alt="pijltje naar beneden"></summary>
                 <!--bron: https://nl.vecteezy.com/gratis-vector/pijltje-naar-beneden-->
                 <a href="#">Over ons</a>
                 <a href="#">Vacatures</a>
@@ -670,8 +731,9 @@
                 <label for="postcodeofplaats"></label>
                 <input type="text" id="postcodeofplaats" name="postcode of plaats"
                     placeholder="Voer postcode of plaats in">
-                <button><img src="images/Kruis_footer_icon.png" alt="kruisje icon"></button>
-                <button><img src="images/vergrootglas_icon.webp" alt="zoek icon vergrootglas"></button>
+                <button><img class="zwart-wit-icon" src="images/Kruis_footer_icon.png" alt="kruisje icon"></button>
+                <button><img class="zwart-wit-icon" src="images/vergrootglas_icon.webp"
+                        alt="zoek icon vergrootglas"></button>
             </form>
         </section>
 
@@ -683,13 +745,13 @@
                 </li>
 
                 <li>
-                    <img src="images/vinkje_icon.webp" alt="vinkje">
+                    <img class="zwart-wit-icon" src="images/vinkje_icon.webp" alt="vinkje">
                     <!--bron:https://nl.dreamstime.com/vinkje-tick-icon-no-image120599675-->
                     <p>Meer dan 100 stores in Nederland</p>
                 </li>
 
                 <li>
-                    <img src="images/vinkje_icon.webp" alt="vinkje">
+                    <img class="zwart-wit-icon" src="images/vinkje_icon.webp" alt="vinkje">
                     <!--bron:https://nl.dreamstime.com/vinkje-tick-icon-no-image120599675-->
                     <p>Beauty- en merkevents</p>
                 </li>
@@ -699,13 +761,13 @@
                 </li>
 
                 <li>
-                    <img src="images/vinkje_icon.webp" alt="vinkje">
+                    <img class="zwart-wit-icon" src="images/vinkje_icon.webp" alt="vinkje">
                     <!--bron:https://nl.dreamstime.com/vinkje-tick-icon-no-image120599675-->
                     <p>Check de productbeschikbaarheid in jouw store</p>
                 </li>
 
                 <li>
-                    <img src="images/vinkje_icon.webp" alt="vinkje">
+                    <img class="zwart-wit-icon" src="images/vinkje_icon.webp" alt="vinkje">
                     <!--bron:https://nl.dreamstime.com/vinkje-tick-icon-no-image120599675-->
                     <p>Gratis producten in store reserveren</p>
                 </li>
@@ -826,5 +888,3 @@
 </body>
 
 </html>
-
-</body>
