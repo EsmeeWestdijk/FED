@@ -33,11 +33,6 @@ const sliderImage = document.querySelector('#li1 img');
 
 const notificatie1 = document.querySelector("header nav:nth-of-type(1) p"); 
 
-const hartjeLeeg = document.querySelector("main>section:nth-of-type(4) li button:first-of-type img");
-const hartjeRood = document.querySelector("main>section:nth-of-type(4) li button:nth-of-type(2) img"); 
-
-console.log(hartjeLeeg,hartjeRood ); 
-
 
 
 btnItem.addEventListener('click', openMenu)
@@ -146,24 +141,3 @@ winkelmandjeBtn.addEventListener("click", () =>{
 notificatie1.addEventListener("click",() =>{
   notificatie1.classList.remove("active"); 
 })
-
-
-
-/*hartjeLeeg.addEventListener("click", () =>{
-  hartjeRood.classList.toggle("active"); 
-}); 
-
-hartjeLeeg.addEventListener("click",() =>{
-  hartjeLeeg.classList.remove("active"); 
-});*/
-
-hartjeLeeg.addEventListener("click", () => {
-  hartjeRood.classList.toggle("active");
-  hartjeLeeg.classList.remove("active");
-});
-
-
-hartjeLeeg.addEventListener("click", () => {
-  console.log("Klik geregistreerd!");
-});
-

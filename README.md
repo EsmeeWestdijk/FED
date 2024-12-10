@@ -19,7 +19,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Esmee Westdijk 
 
   #### Je startniveau:
-  Mijn startniveau is blauw
+  Mijn startniveau is rood
 
   #### Je focus:
   Ik focus op surface
@@ -84,7 +84,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
  - Score bij animations: alles yes
  - Score bij color contrast: alles yes 
 
-(Dit is nog van mijn eerste website)!!
+(Dit is nog van mijn eerste gekozen website)!!
  Naast de checklist van WCAG heb ik ook bij de inspector tools gekeken naar mijn website hoe hij eruit ziet met verschillende visuele beperkingen. Hier zijn de volgende resultaten: 
 
  Blurred vison
@@ -133,10 +133,8 @@ Archromatopsia (geen kleur)
   <img src="readme-images/breakdown_parfum_pagina.png" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="readme-images/breakdown_dynamisch.png" width="375px" alt="breakdown van een dynamisch deel">
 
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 
@@ -261,17 +259,25 @@ Archromatopsia (geen kleur)
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  <img src="readme-images/week_3_1.png" width="375px" alt="li bolletjes slider"> 
+  Hier zie je breadcrum bolletjes om de slider van de foto's voor gebruiksvriendelijker te maken. Mijn bolletjes staan er wle en ik heb ze gemaakt alleen werken ze nog niet als ik er op klik. Dit wil ik deze voortgang na vragen. 
+
+  <img src="readme-images/week_3_2.png" width="375px" alt="Hamburger menu"> 
+  Ik heb van de studentassistent Ali een paar tips gekregen hoe een hamburger menu werkt en we hebben er samen even naar gekeken hoe we het nog konden toepassen in mijn code. Het was een aardig gedoetje met vaak de nav moeten vervangen maar het is uiteindelijk gelukt. 
+
+  <img src="readme-images/darkmodus_week4.png" width="375px" alt="darmodus"> 
+  Hier zie je dat ik eindelijk de darkmodus werkend heb gekregen. Ik heb via de slides van de les de invert filter weten toe te passen op mijn foto's. De gehele pagina is nu ook netjes darkmode dat de afbeeldingen mee veranderen. Alleen mijn menu nog niet. Dit wil ik na vragen tijdens het gesprek. 
+
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
   | Esmee          | Alycia             | Tom          | Sander           |
-  | ---            | ---                | ---          | ---              |
-  | li bolletjes   | en dit             | en ik dit    | en dan ik dat    |
-  | video javascript | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | darkmode menu  | ...                | ...          | ...              |
+  | ---            | ---                | div gebruik  | grid spacing     |
+  | li bolletjes   | z-index            | dark mode    |                  |
+  | video javascript | postion:fixed;   |              |                  |
+  | darkmode menu  | ...                |              | ...              |
   | hover dialoog  | 
   | grootte video's 
 
@@ -279,10 +285,10 @@ Archromatopsia (geen kleur)
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - li bolletjes werken nu, er moest een apparte selectror voor worden aan gemaakt met een padding ne hij moest heel specifiek zijn aangezien een andere code deze bolletjes ook aanpaste. 
+  - Helaas waren we erg lang met mijn vraag over de bolletjes bezig waardoor dat het enige is wat ik heb kunnen vragen.
+  - geleerd over position sticky en relative en een goede opbouw van z-index structuur (Bij Alycia)
+  - geleerd responsive een video laten schalen (Bij Tom)
 
 </details>
 
@@ -302,16 +308,31 @@ Archromatopsia (geen kleur)
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatjes
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  <img src="readme-images/week_3_3.png" width="375px" alt="fieldset en form"> 
+  Ik heb voor de 2de pagina een form moeten maken voor de luchtjes opties qua groote. Hier ben ik erg lang mee bezig geweest aangezien het een form is met fieldsets en dan ook nog goed positioneren met grid. Ook al duurd het lang is het mij wel erg goed afgegaan. 
 
+  <img src="readme-images/week_3_4.png" width="375px" alt="dialog toevoegen java"> 
+  Ik heb met javascript geleerd hoe ik een dialoog tevoorschijn moet laten komen en hoe ik deze ook weer kan verwijderen van het beeldscherm met een close button. door dat ik de lesstof nog goed had onthouden gimg dit redelijk soepel. 
+
+  <img src="readme-images/kerst_modus_3.png" width="375px" alt="radiobutton kerst"> 
+  <img src="readme-images/kerst_modus_2.png" width="375px" alt="rendier animatie"> 
+  <img src="readme-images/kerst_modus_1.png" width="375px" alt="kerst decoratie animatie"> 
+  Hier zie je dat ik heb geleerd hoe ik met gebruik van has() op de radiobutton een kerst thema toevoeg aan de pagina. Er verschijnen dan belletjes boven aan die bewegen als je er overheen hoverd en dat geld ook voor de blaadjes. Dit heb ik gedaan met keyframes. Daarnaast heb ik ook nog een rendier animatie toegevoegd die zich over de pagian we weegt en als het ware over de pagina heen en weer loopt. 
+  
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="readme-images/footer_form.png" width="375px" alt="eerste form footer">
+  Het is mij helaas niet gelukt om het eerste form in de footer de lay-out te geven die ik wilde. Ik wil namelijk dat het witte vlak ook op de background image zit en nu overlapt hij het aan de rechter kant. Het is waarschijnlijk een simpele regel code maar helaas kom ik er niet uit. 
+
+  <img src="readme-images/logo_midden.png" width="375px" alt="ysl logo plaatsing">
+  Het yves Saint Laurant logo moet in het midden van de pagian komen. Dit is mij helaas niet gelukt. Ik weet ook niet waarom hij niet werkt aangezien alle andere dingen die ik het element toe zeg gebeuren wel behalve de positie. 
+
+  <img src="readme-images/placeholder_video.png" width="375px" alt="thubnnail video">
+  Het is mij helaas niet gelukt om een video toe te voegen aan deze thumbnail. Ik zou dan namelijk van deze foto een button moeten maken. Maar zodra ik dat deed was mijn hele grid verschoven. Ook als ik netjes mijn css daarop toepaste kwam het niet goed. 
+
 </details>
-
-
 
 
 
