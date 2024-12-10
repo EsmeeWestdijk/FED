@@ -3,7 +3,7 @@ const menuItem = document.querySelector('header nav:nth-of-type(2)')
 const bodyEl = document.body 
 const closeBtn = document.querySelector("header nav:nth-of-type(2) div button")
 
-const productBtn = document.querySelector("main section:nth-of-type(6) button:first-of-type")
+const productBtn = document.querySelector("section:nth-of-type(6) > button:first-of-type");
 const productDialog = document.querySelector("main section:nth-of-type(6)> dialog:first-of-type")
 const closeBtnproduct = document.querySelector("section:nth-of-type(6) dialog section button:nth-of-type(1)");
 
@@ -18,6 +18,22 @@ const closeBtnIngred = document.querySelector("main section:nth-of-type(6) dialo
 const beoordBtn = document.querySelector("main section:nth-of-type(6) button:nth-of-type(4)")
 const beoordDialog = document.querySelector("main section:nth-of-type(6) dialog:nth-of-type(4)")
 const closeBtnBeoord = document.querySelector("main section:nth-of-type(6) dialog:nth-of-type(4) button:first-of-type")
+
+const winkelmandjeBtn = document.querySelector("main section:nth-of-type(1) button:nth-of-type(2)")
+const winkelmandDialog = document.querySelector("main section:nth-of-type(1) dialog:nth-of-type(1)")
+const closeBtnWinkelmand = document.querySelector("main section:nth-of-type(1) dialog:nth-of-type(1) section > button")
+
+const verderBtn = document.querySelector("main section:nth-of-type(1) dialog:nth-of-type(1) > button")
+const verderDialog = document.querySelector("header nav dialog:nth-of-type(1)")
+
+const radioButton1 = document.getElementById('radiobutton1');
+const radioButton2 = document.getElementById('radiobutton2');
+const radioButton3 = document.getElementById('radiobutton3');
+const sliderImage = document.querySelector('#li1 img'); 
+
+const hartjeBtn = document.querySelector("main>section:nth-of-type(4) li button:first-of-type>img"); 
+const hartjeBtnRood = document.querySelector("main>section:nth-of-type(4) li button:nth-of-type(2)>img")
+
 
 
 
@@ -56,7 +72,7 @@ gebruikBtn.addEventListener("click",() =>{
 
 closeBtngebruik.addEventListener("click", () =>{
   gebruikDialog.close(); 
-}); ///
+}); 
 
 
 ingredBtn.addEventListener("click",() =>{
@@ -77,14 +93,23 @@ closeBtnBeoord.addEventListener("click", () =>{
 }); 
 
 
+winkelmandjeBtn.addEventListener("click",() =>{
+  winkelmandDialog.showModal(); 
+}); 
+
+
+closeBtnWinkelmand.addEventListener("click", () =>{
+  winkelmandDialog.close(); 
+}); 
+
+verderBtn.addEventListener("click", () =>{
+  winkelmandDialog.close(); 
+}); 
+
+
 
 
 //Bron: ChatGpt. promt:hoe zorg ik ervoor dat als ik de radiobuttons aanklik de eesrte foto uit de slider van section 1 veranderd //
-const radioButton1 = document.getElementById('radiobutton1');
-const radioButton2 = document.getElementById('radiobutton2');
-const radioButton3 = document.getElementById('radiobutton3');
-const sliderImage = document.querySelector('#li1 img'); 
-
 
 function updateImage(imagePath) {
     sliderImage.src = imagePath;
@@ -105,4 +130,21 @@ function handleRadioChange(event) {
 radioButton1.addEventListener('change', handleRadioChange);
 radioButton2.addEventListener('change', handleRadioChange);
 radioButton3.addEventListener('change', handleRadioChange);
+
+
+
+
+//like button rood//
+
+hartjeBtn.addEventListener("click", () => {
+  hartjeBtn.classList.toggle("active"); 
+  hartjeBtnRood.classList.remove("active"); // Verwijdert actieve status van hartjeBtnRood
+});
+
+hartjeBtnRood.addEventListener("click", () => {
+  hartjeBtnRood.classList.toggle("active"); 
+  hartjeBtn.classList.remove("active"); // Verwijdert actieve status van hartjeBtn
+});
+
+
 

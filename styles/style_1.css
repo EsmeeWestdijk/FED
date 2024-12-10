@@ -63,7 +63,7 @@ html:has([value="dark"]:checked) {
 	color-scheme: dark;
 }
 
-a
+
 /****************/
 /* JOUW STYLING */
 /****************/
@@ -125,6 +125,33 @@ a:focus {
   object-fit: cover in de img: Dit zorgt ervoor dat de afbeelding de hele container vult zonder vervorming, terwijl het beeld wordt bijgesneden als dat nodig is.
 */
 
+/****************/
+/* Kerst thema*/
+/****************/
+
+main > img{
+	width: 5em;
+	margin: 1em;
+	display: none;
+	position: relative; 
+}
+
+
+html:has([value="kerst"]:checked) main > img{
+	display: block;
+	animation-name: rendier;
+	animation-duration: 20s;
+  
+}
+
+@keyframes rendier{
+	0%{
+	  right: 100%;
+	}
+	100%{
+	  right: -100%;
+	}
+}
 
 
 main>section:nth-of-type(1) ul {
@@ -434,7 +461,7 @@ main>section:nth-of-type(4) li {
 
 }
 
-main>section:nth-of-type(4) li img {
+main>section:nth-of-type(4) li > img {
 	width: 10em;
 	padding-bottom: 0;
 
@@ -444,13 +471,29 @@ main>section:nth-of-type(4) li img {
 	z-index: 0;
 }
 
-main>section:nth-of-type(4) li button img {
+main>section:nth-of-type(4) li button:first-of-type > img,
+main>section:nth-of-type(4) li button:nth-of-type(2) > img{
 	padding: 0;
 	margin: 0;
 	width: 3em;
 }
 
-main>section:nth-of-type(4) li button {
+main>section:nth-of-type(4) li button:nth-of-type(2).active{
+	display: block;
+	
+}
+
+main>section:nth-of-type(4) li button:nth-of-type(2) > img{
+	display: none;
+}
+
+main>section:nth-of-type(4) li button:first-of-type.active{
+	display:none; 
+}
+
+
+
+main>section:nth-of-type(4) li button:first-of-type, button:nth-of-type(2) {
 	background: none;
 	border: none;
 	padding-left: 9em;
@@ -462,6 +505,7 @@ main>section:nth-of-type(4) li button {
 
 	z-index: 4;
 }
+
 
 
 main>section:nth-of-type(4) p:nth-of-type(6) {
@@ -492,7 +536,9 @@ main>section:nth-of-type(4) li:nth-of-type(1) p:nth-of-type(5) {
 	font-size: x-small;
 }
 
-
+main>section:nth-of-type(4) li:nth-of-type(1) a{
+	text-decoration: none;
+}
 
 main>section:nth-of-type(4) li:nth-of-type(2) p:nth-of-type(2) {
 	color: purple;
@@ -645,32 +691,6 @@ main>section:nth-of-type(6) li {
 	max-width: fit-content;
 
 }
-
-/*main>section:nth-of-type(6) li > button{
-	all: unset;
-	width: 100%;
-	height: 100%;
-	grid-row: 1/4;
-	grid-column: 1/3;
-	
-	
-}*/
-
-/*Bron ChatGPT.
-Promt: op de dougla is de hele ul kleiner hoe doe ik dat ook mij mij maar dat alles wel goed mee schaalt?
-Antwoord: Je kunt de breedte van de ul aanpassen zodat deze zich aanpast aan het scherm, maar niet breder is dan een bepaald maximum. Gebruik bijvoorbeeld max-width en width:
-
-main>section:nth-of-type(6) ul {
-    display: flex;
-    overflow-x: auto;
-    margin: 1em auto; / Zorgt voor centrale uitlijning 
-    padding: 0;
-    gap: 1em;
-    max-width: 80vw; / Beperkt de breedte tot 80% van het viewport 
-    width: 100%;  / Zorgt dat de ul zich uitstrekt tot 100% van de container 
-}
-*/
-
 
 
 

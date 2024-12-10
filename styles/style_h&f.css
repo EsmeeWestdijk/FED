@@ -53,6 +53,15 @@
 }
 
 
+html:has([value="light"]:checked) {
+	color-scheme: light;
+}
+
+html:has([value="dark"]:checked) {
+	color-scheme: dark;
+}
+
+
 
 /****************/
 /* JOUW STYLING */
@@ -71,6 +80,7 @@ header {
   align-items: center;
   top: 0;
   flex-direction: column;
+  position: relative;
 }
 
 li {
@@ -194,8 +204,98 @@ nav:nth-of-type(1) ul {
 }
 /* bron: Ali student assisent*/
 
-/*bron: samen met Sanne in de les*/
 
+/***********************/
+/* DIALOG WINKELMAND 1tje*/
+/***********************/
+
+/*bron: chatGPT.
+Promt: k wil alleen de inhoud van de diaoog zien niet de standaard dialoog die wit is hoe haal ik dees weg?
+antwoord: dialog {
+    all: unset;  Verwijdert alle standaardstijlen van het dialog-element 
+    position: absolute;  Zorgt ervoor dat je de locatie kunt bepalen 
+    background: none;  Geen achtergrondkleur 
+    color: inherit; Zorg dat de tekstkleur erfelijk is
+}*/
+
+
+/****************/
+/* KERST THEMA*/
+/****************/
+
+
+header section{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+header section img{
+  width: 5em;
+  display: none;
+}
+
+@keyframes blaadjes{
+  0%{
+    transform: rotate(8deg);
+  }
+  50%{
+    transform: rotate(10deg);
+  }
+  100%{
+    transform: rotate(-8deg); 
+  }
+}
+
+header section img:hover{
+  animation-name: blaadjes;
+  animation-duration: 1s;
+  animation-iteration-count: 5;
+  animation-timing-function: ease-in-out;
+}
+
+html:has([value="kerst"]:checked) header section > img{
+   display: block;
+
+}
+
+html:has([value="kerst"]:checked) header > img{
+  display: block;
+
+}
+
+
+header > img{
+  display: none;
+  width: 4em;
+  max-width: 100%;
+  position: sticky;
+  top: 0; 
+
+  z-index: 20;
+}
+
+@keyframes belletjes{
+  0%{
+    transform: rotate(45deg);
+  }
+  50%{
+    transform: rotate(-45deg);
+  }
+  100%{
+    transform: rotate(45deg);
+  }
+}
+
+header > img:hover{
+  animation-name: belletjes;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+
+}
+
+
+/*bron: samen met Sanne in de les*/
 header form {
   width: 100%;
   margin: auto;
