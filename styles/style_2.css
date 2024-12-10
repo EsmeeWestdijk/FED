@@ -56,6 +56,24 @@
 	}
 }
 
+html:has([value="dark"]:checked) {
+	--color-text: white;
+	--color-background: black;
+		color-scheme: dark;
+		.zwart-wit-icon {
+			/* 1. filter invert */
+			filter:invert(100%);
+		}
+	}
+	
+	 
+html:has([value="light"]:checked) {
+	--color-text: black;
+	--color-background: white;
+		color-scheme: light;
+		
+}
+
 body {
 	font-family: var(--font-family);
 	background-color: var(--color-background);
@@ -292,6 +310,11 @@ section:nth-of-type(1) dialog:first-of-type section > button{
   
   border: none; 
   
+}
+
+section:nth-of-type(1) dialog:first-of-type > button:hover{
+	background-color: var(--color-text); 
+	color: var(--color-background);
 }
 
 section:nth-of-type(1) dialog:first-of-type > button{

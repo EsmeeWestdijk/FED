@@ -31,9 +31,12 @@ const radioButton2 = document.getElementById('radiobutton2');
 const radioButton3 = document.getElementById('radiobutton3');
 const sliderImage = document.querySelector('#li1 img'); 
 
-const hartjeBtn = document.querySelector("main>section:nth-of-type(4) li button:first-of-type>img"); 
-const hartjeBtnRood = document.querySelector("main>section:nth-of-type(4) li button:nth-of-type(2)>img")
+const notificatie1 = document.querySelector("header nav:nth-of-type(1) p"); 
 
+const hartjeLeeg = document.querySelector("main>section:nth-of-type(4) li button:first-of-type img");
+const hartjeRood = document.querySelector("main>section:nth-of-type(4) li button:nth-of-type(2) img"); 
+
+console.log(hartjeLeeg,hartjeRood ); 
 
 
 
@@ -118,11 +121,11 @@ function updateImage(imagePath) {
 
 function handleRadioChange(event) {
     if (event.target.id === 'radiobutton1') {
-        updateImage('images/ysl_parfum_foto_goed.avif');
+        updateImage('images_2/ysl_parfum_foto_goed.avif');
     } else if (event.target.id === 'radiobutton2') {
-        updateImage('images/ysl_parfum_50ml.avif');
+        updateImage('images_2/ysl_parfum_50ml.avif');
     } else if (event.target.id === 'radiobutton3') {
-        updateImage('images/ysl_parfum_90ml.avif');
+        updateImage('images_2/ysl_parfum_90ml.avif');
     }
 }
 
@@ -134,17 +137,33 @@ radioButton3.addEventListener('change', handleRadioChange);
 
 
 
-//like button rood//
+// notificatie winkeltas mirco interactie //
 
-hartjeBtn.addEventListener("click", () => {
-  hartjeBtn.classList.toggle("active"); 
-  hartjeBtnRood.classList.remove("active"); // Verwijdert actieve status van hartjeBtnRood
+winkelmandjeBtn.addEventListener("click", () =>{
+  notificatie1.classList.toggle("active"); 
+})
+
+notificatie1.addEventListener("click",() =>{
+  notificatie1.classList.remove("active"); 
+})
+
+
+
+/*hartjeLeeg.addEventListener("click", () =>{
+  hartjeRood.classList.toggle("active"); 
+}); 
+
+hartjeLeeg.addEventListener("click",() =>{
+  hartjeLeeg.classList.remove("active"); 
+});*/
+
+hartjeLeeg.addEventListener("click", () => {
+  hartjeRood.classList.toggle("active");
+  hartjeLeeg.classList.remove("active");
 });
 
-hartjeBtnRood.addEventListener("click", () => {
-  hartjeBtnRood.classList.toggle("active"); 
-  hartjeBtn.classList.remove("active"); // Verwijdert actieve status van hartjeBtn
+
+hartjeLeeg.addEventListener("click", () => {
+  console.log("Klik geregistreerd!");
 });
-
-
 
