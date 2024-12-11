@@ -22,7 +22,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Mijn startniveau is rood
 
   #### Je focus:
-  Ik focus op surface
+  Ik focus op surface plane
  
 </details>
 
@@ -247,6 +247,28 @@ Archromatopsia (geen kleur)
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 
+  Lijst met je bevindingen die in de test naar voren kwamen:
+ - Score bij content: alles yes 
+ - Score bij global code: html valide 
+ - Score bij keyboard: alles yes 
+ - Score bij: mobile and touch: alles yes 
+ - Score bij headings: alles yes 
+ - Score bij lists: yes
+ - Score bij images: 2/3 yes - allen de decorative images hebben geen 0 null als alt. 
+ - Score bij media: 2/4 yes - geen captions en transcripts mogelijk. 
+ - Score bij controls: alles yes 
+ - Score bij apperance: 3/4 yes
+ - Score bij animations: alles yes 
+ - Score bij color contrast: 3/4 - text overlapt images.  
+
+ Wat er verbeterd is:
+ - html code is valide 
+ - Bij moblie en touch: is er nu genoeg ruimte tussen interactieve elementen. 
+ - Bij lists: worden list elementen gebruikt voor list content. 
+ - Bij Images: Alle images hebben een alt atribute.
+ - Bij apparance: de webiste heeft nu dark en light mode.
+
+
 </details>
 
 
@@ -302,7 +324,8 @@ Archromatopsia (geen kleur)
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/Screenhot_mijn_pagina_home.png" width="375px" alt="screenhot van mijn homepagina">
+  <img src="readme-images/screenhot_mijn_pagina_ysl.png" width="375px" alt="screenhot van mijn 2de pagina ysl">
 
 
   ### Dit ging goed/Heb ik geleerd: 
@@ -317,7 +340,7 @@ Archromatopsia (geen kleur)
   <img src="readme-images/kerst_modus_3.png" width="375px" alt="radiobutton kerst"> 
   <img src="readme-images/kerst_modus_2.png" width="375px" alt="rendier animatie"> 
   <img src="readme-images/kerst_modus_1.png" width="375px" alt="kerst decoratie animatie"> 
-  Hier zie je dat ik heb geleerd hoe ik met gebruik van has() op de radiobutton een kerst thema toevoeg aan de pagina. Er verschijnen dan belletjes boven aan die bewegen als je er overheen hoverd en dat geld ook voor de blaadjes. Dit heb ik gedaan met keyframes. Daarnaast heb ik ook nog een rendier animatie toegevoegd die zich over de pagian we weegt en als het ware over de pagina heen en weer loopt. 
+  Hier zie je dat ik heb geleerd hoe ik met gebruik van has() op de radiobutton een kerst thema toevoeg aan de pagina. Er verschijnen dan belletjes boven aan die bewegen als je er overheen hoverd en dat geld ook voor de blaadjes. Dit heb ik gedaan met keyframes. Daarnaast heb ik ook nog een rendier animatie toegevoegd die zich over de pagina we weegt en als het ware over de pagina heen en weer loopt. 
   
 
   ### Dit was lastig/Is niet gelukt:
@@ -345,8 +368,45 @@ Archromatopsia (geen kleur)
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. https://www.w3schools.com/html/html_forms.asp 
+  2. https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.douglas.nl%2Fnl%2Fb%2Fdouglas-collection%2Fparfum%2Fb9834_01&psig=AOvVaw1utxFVt9cesiwsbMxwQ6I8&ust=1732287388978000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOiW6MXX7YkDFQAAAAAdAAAAABAE 
+  3. https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.douglas.nl%2Fnl%2Fc%2Fendless-summer%2Fzomerse-geuren%2F8604&psig=AOvVaw2l6vufRG73jqh7Oi4XZxBC&ust=1732287047512000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKjS1aXW7YkDFQAAAAAdAAAAABAZ
+  4. https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.nieuwsblad.be%2Fcnt%2Fdmf20200818_93606375&psig=AOvVaw2l6vufRG73jqh7Oi4XZxBC&ust=1732287047512000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKjS1aXW7YkDFQAAAAAdAAAAABAe
+  5. https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.testyourparfum.com%2F10-lekkerste-mannen-luchtjes-in-2021%2F&psig=AOvVaw2SEHUIyQjTn-M3wZY9_OgP&ust=1732287496987000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMDS8fnX7YkDFQAAAAAdAAAAABAE 
+  6. https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.talkiesmagazine.nl%2Fbeauty%2Fparfumetiquette%2F&psig=AOvVaw2SEHUIyQjTn-M3wZY9_OgP&ust=1732287496987000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMDS8fnX7YkDFQAAAAAdAAAAABAO
+  7. https://www.google.com/url?sa=i&url=https%3A%2F%2Fcitymagazine.si%2Fnl%2Fherfstmagie-10-beste-damesparfums-voor-herfst-2024%2F&psig=AOvVaw2SEHUIyQjTn-M3wZY9_OgP&ust=1732287496987000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMDS8fnX7YkDFQAAAAAdAAAAABAV
+  8. https://depositphotos.com/nl/vectors/heart-icon.html
+  9. https://nl.vecteezy.com/gratis-vector/pijltje-naar-beneden
+  10. bron:https://nl.dreamstime.com/vinkje-tick-icon-no-image120599675
+  11. Bron: svg van de douglas site via inspecteren
+  12. https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flaticon.com%2Ffree-icon%2Ftruck_691038&psig=AOvVaw2iHPJrNJpcUOtoBDwMH2KW&ust=1733488906984000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNimzdTTkIoDFQAAAAAdAAAAABAE
+  13. https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flaticon.com%2Ffree-icon%2Fshop_126122&psig=AOvVaw3wCyRO11o5LeUJHsYZ9lJO&ust=1733489111913000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLDK_qfUkIoDFQAAAAAdAAAAABAE
+  14. bron: Chatgpt.
+            Promt: <video>
+                   <source src="videos/video_ysl.mp4" type="video/mp4"> 
+                   </video> waarom werkt dit niet
+            Antwoord: De <video>-tag zonder controls toont de video, maar zonder bedieningsknoppen (zoals afspelen, pauzeren, etc.). Als je geen bedieningsknoppen toevoegt, kun je de video niet bedienen.
+            Oplossing: Voeg het controls-attribuut toe aan de <video>-tag:
+  15. codepen Sanne lesstof @font-face
+  16. codepen Sanne lesstof filter invert
+  17. https://www.a11yproject.com/posts/how-to-hide-content/ voor visually-hidden class
+  18. bron: chatGPT voor schaaling van de afbeelding. 
+      Promt: hoe krijg ik de afbeeldingen precies zoals op de foto in breedte en hoogte? 
+      Antwoord: width: 260px en aspect-ratio: 3 / 4: Hiermee zorg je voor een consistente breedte en hoogteverhouding (3:4), zoals in je voorbeeld.
+      object-fit: cover in de img: Dit zorgt ervoor dat de afbeelding de hele container vult zonder vervorming, terwijl het beeld wordt bijgesneden als dat nodig is.
+19. bron: Chat-gpt. 
+    Promt: hoe zorg ik ervoor dat als de text te lang is voor in het grid het de text afmaakt met ...?
+    Antwoord: Je kunt ervoor zorgen dat tekst afgekapt wordt en eindigt met een ellips (...) door gebruik te maken van de CSS-eigenschap text-overflow. Dit werkt in combinatie met overflow: hidden en white-space: nowrap.*/
+20. codepen lesstof keyframes 
+21. bron: Ali student assisent hamburger menu
+22. bron: sanne voortgangles uitleg formulier in header.
+23.bron: ChatGpt
+  Promt: hoe krijg ik de buttons in de input?
+  Antwoord: Formulier als container: Het form-element krijgt position: relative, zodat we de knoppen absoluut kunnen positioneren ten opzichte van het formulier.
+  Input padding: De input krijgt padding-right: 50px zodat er voldoende ruimte is voor de knoppen aan de rechterkant van de input.
+  Knoppen positioneren: De knoppen krijgen position: absolute, zodat ze zich precies boven de input bevinden. De top: 50% en transform: translateY(-50%) zorgen ervoor dat de knoppen verticaal gecentreerd worden.
+  Knoppen rechts plaatsen: De right-eigenschap bepaalt de horizontale positie van de knoppen. De eerste knop (met het kruisje) wordt op right: 10px geplaatst, en de tweede knop (met het vergrootglas) wordt verder naar rechts geplaatst door right: 40px.
+  Afbeelding aanpassen: De afbeeldingen in de knoppen worden met width: 20px aangepast, maar je kunt de grootte naar wens wijzigen.*/ 
+
 
 </details>

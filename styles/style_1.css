@@ -15,15 +15,15 @@
 	src: url('../font/Avenir Next/Avenir-next-lt-pro/AvenirNextLTPro-Regular.otf');
 }
 
-@font-face{
+@font-face {
 	font-family: "MijnFont";
-	src:url('../font/Avenir Next/Avenir-next-lt-pro/AvenirNextLTPro-Bold.otf'); 
+	src: url('../font/Avenir Next/Avenir-next-lt-pro/AvenirNextLTPro-Bold.otf');
 	font-weight: 700;
 }
 
 
 
-/*bron: codepen Sanne lesstof*/ 
+/*bron: codepen Sanne lesstof*/
 
 /*********************/
 /* CUSTOM PROPERTIES */
@@ -31,48 +31,53 @@
 
 
 :root {
-   
-    --color-text: black;
-    --color-background: white;
-    --font-family: "MijnFont", sans-serif; /* Fallback added */
+
+	--color-text: black;
+	--color-background: white;
+	--font-family: "MijnFont", sans-serif;
+	--Douglas-color: #9bdcd2;
+	--Douglas-color-dark: #6fdbcb;
+	--radiobutton-checked: black;
 }
 
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --color-text: white;
-        --color-background: black;
-    }
+	:root {
+		--color-text: white;
+		--color-background: black;
+	}
 }
 
 
 @media (prefers-color-scheme:dark) {
 	.zwart-wit-icon {
 		/* 1. filter invert */
-		filter:invert(100%);
+		filter: invert(100%);
 	}
 }
-
 
 
 html:has([value="dark"]:checked) {
 	--color-text: white;
 	--color-background: black;
-		color-scheme: dark;
-		.zwart-wit-icon {
-			/* 1. filter invert */
-			filter:invert(100%);
-		}
-	}
-	
-	 
+	color-scheme: dark;
+  }
+  
+  html:has([value="dark"]:checked) .zwart-wit-icon {
+	/* 1. filter invert */
+	filter: invert(100%);
+  }
+
+
+
+
 html:has([value="light"]:checked) {
 	--color-text: black;
 	--color-background: white;
-		color-scheme: light;
-		
-	}
-	
+	color-scheme: light;
+
+}
+
 
 /****************/
 /* JOUW STYLING */
@@ -80,6 +85,11 @@ html:has([value="light"]:checked) {
 
 /* jouw code */
 
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
 
 
 .visually-hidden {
@@ -90,7 +100,7 @@ html:has([value="light"]:checked) {
 	position: absolute;
 	white-space: nowrap;
 	width: 1px;
-	/*bron: a11yproject*/
+	/*bron: https://www.a11yproject.com/posts/how-to-hide-content/*/
 
 }
 
@@ -105,26 +115,26 @@ body.inactive {
 	overflow: hidden;
 }
 
-button {
-	background-color: var(--color-button);
-	color: var(--color-text-button);
+button:active {
+	transform: translateY(-0.2em);
 }
 
+
 a:hover {
-	color: rgb(0, 213, 255);
+	color: var(--Douglas-color);
 	text-decoration: underline;
 }
 
 a:active {
-	color: rgba(0, 213, 255, 0.721);
+	color: var(--Douglas-color-dark);
 	font-size: medium;
 
 }
 
-
 a:focus {
-	border-color: aqua;
-
+	border-color: var(--Douglas-color);
+	outline-offset: 0.5em;
+	border-radius: 1em;
 }
 
 
@@ -138,28 +148,43 @@ a:focus {
 /* Kerst thema*/
 /****************/
 
-main > img{
+main>img {
 	width: 5em;
 	margin: 1em;
 	display: none;
-	position: relative; 
+	position: relative;
 }
 
 
-html:has([value="kerst"]:checked) main > img{
+html:has([value="kerst"]:checked) main>img {
 	display: block;
 	animation-name: rendier;
 	animation-duration: 20s;
-  
+	animation-iteration-count: infinite;
+
 }
 
-@keyframes rendier{
-	0%{
-	  right: 100%;
+@keyframes rendier {
+	0% {
+		right: 100%;
 	}
-	100%{
-	  right: -100%;
+
+	100% {
+		right: -100%;
 	}
+}
+
+/****************/
+/* Reduced motion*/
+/****************/
+
+html:has([value="reducedmotion"]:checked) main>section:nth-of-type(4) li>img:hover {
+	transform: none;
+}
+
+html:has([value="reducedmotion"]:checked) main>img {
+	animation: none;
+	display: none;
 }
 
 
@@ -168,9 +193,11 @@ main>section:nth-of-type(1) ul {
 	overflow-x: auto;
 	margin: 0;
 	padding: 0;
+	scroll-behavior: smooth;
+	scroll-padding-top: 5em;
 }
 
-main>section:nth-of-type(1) > ul:nth-of-type(1) li {
+main>section:nth-of-type(1)>ul:nth-of-type(1) li {
 	flex-shrink: 0;
 	list-style-type: none;
 	margin: 0;
@@ -248,7 +275,10 @@ section:nth-of-type(1) li:nth-of-type(3) p {
 
 }
 
-main>section:nth-of-type(1) li:nth-of-type(2) p, li:nth-of-type(5) p, li:nth-of-type(6) p, li:nth-of-type(4) p {
+main>section:nth-of-type(1) li:nth-of-type(2) p,
+li:nth-of-type(5) p,
+li:nth-of-type(6) p,
+li:nth-of-type(4) p {
 	color: white;
 	font-weight: bolder;
 	text-align: center;
@@ -265,24 +295,24 @@ main>section:nth-of-type(1) li:nth-of-type(2) p, li:nth-of-type(5) p, li:nth-of-
 
 }
 
-main > section:nth-of-type(1) > nav ul{
+main>section:nth-of-type(1)>nav ul {
 	display: flex;
 	justify-content: center;
 	gap: 1em;
 	padding: 0;
 	margin-top: 0;
-	
+
 
 }
 
-main > section:nth-of-type(1) > nav > ul > li{
+main>section:nth-of-type(1)>nav>ul>li {
 	border-radius: 30px;
 	border: 1px solid;
-	
+
 
 }
 
-main > section:nth-of-type(1) > nav > ul > li a{
+main>section:nth-of-type(1)>nav>ul>li a {
 	margin: 0;
 	padding: 7px;
 	background-color: black;
@@ -290,7 +320,7 @@ main > section:nth-of-type(1) > nav > ul > li a{
 	display: block;
 	width: 100%;
 	height: 100%;
-	
+
 
 }
 
@@ -326,12 +356,13 @@ main>section:nth-of-type(3) ul {
 	overflow-x: auto;
 	margin: 0;
 	padding: 0;
+	scroll-behavior: smooth;
 }
 
 main>section:nth-of-type(3) li {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows:  1fr 1em min-content min-content min-content;
+	grid-template-rows: 1fr 1em min-content min-content min-content;
 	background-color: black;
 	color: #eee;
 	margin: 0;
@@ -398,7 +429,7 @@ main>section:nth-of-type(3) li p {
 
 }
 
-main > section:nth-of-type(3) > nav ul{
+main>section:nth-of-type(3)>nav ul {
 	display: flex;
 	overflow: auto;
 	justify-content: center;
@@ -406,17 +437,18 @@ main > section:nth-of-type(3) > nav ul{
 	padding: 0;
 	margin-top: 0;
 	scroll-behavior: smooth;
+	scroll-padding-top: 5em;
 
 }
 
-main > section:nth-of-type(3) > nav > ul > li{
+main>section:nth-of-type(3)>nav>ul>li {
 	border-radius: 30px;
 	border: 1px solid;
 	display: block;
 
 }
 
-main > section:nth-of-type(3) > nav > ul > li a{
+main>section:nth-of-type(3)>nav>ul>li a {
 	margin: 0;
 	padding: 7px;
 	background-color: black;
@@ -463,6 +495,7 @@ main>section:nth-of-type(4) ul {
 	display: flex;
 	overflow-x: auto;
 	gap: 1em;
+	scroll-behavior: smooth;
 }
 
 main>section:nth-of-type(4) li {
@@ -473,7 +506,7 @@ main>section:nth-of-type(4) li {
 
 }
 
-main>section:nth-of-type(4) li > img {
+main>section:nth-of-type(4) li>img {
 	width: 10em;
 	padding-bottom: 0;
 
@@ -483,34 +516,32 @@ main>section:nth-of-type(4) li > img {
 	z-index: 0;
 }
 
-main>section:nth-of-type(4) li > img:hover{
-	scale: 1.5;
+main>section:nth-of-type(4) li>img:hover {
+	transform: scale(1.2);
 }
 
-main>section:nth-of-type(4) li button:first-of-type > img,
-main>section:nth-of-type(4) li button:nth-of-type(2) > img{
+
+main>section:nth-of-type(4) li:nth-of-type(3) button img {
 	padding: 0;
 	margin: 0;
 	width: 3em;
 }
 
-main>section:nth-of-type(4) li button:nth-of-type(2) img.active{
-	display: block;
+main>section:nth-of-type(4) li:nth-of-type(2) button img {
+	padding: 0;
+	margin: 0;
+	width: 3em;
 }
 
-main>section:nth-of-type(4) li button:nth-of-type(2) img{
-	display: none;
+main>section:nth-of-type(4) li:nth-of-type(1) button img {
+	padding: 0;
+	margin: 0;
+	width: 3em;
 }
 
 
-main>section:nth-of-type(4) li button:first-of-type  img.active{
-	display:none; 
-}
 
-  
-
-
-main>section:nth-of-type(4) li button:first-of-type, button:nth-of-type(2) {
+main>section:nth-of-type(4) li button:nth-of-type(1) {
 	background: none;
 	border: none;
 	padding-left: 9em;
@@ -544,20 +575,20 @@ main>section:nth-of-type(4) p:nth-of-type(6) {
 /*bron: Sanne uitleg in de les grid*/
 
 main>section:nth-of-type(4) li:nth-of-type(1) p:nth-of-type(4) {
-	color: purple; 
+	color: purple;
 	font-size: medium;
 	font-weight: 700;
 }
 
-main>section:nth-of-type(4) li:nth-of-type(1) p:nth-of-type(4):hover{
-	scale: 1.2; 
+main>section:nth-of-type(4) li:nth-of-type(1) p:nth-of-type(4):hover {
+	scale: 1.2;
 }
 
 main>section:nth-of-type(4) li:nth-of-type(1) p:nth-of-type(5) {
 	font-size: x-small;
 }
 
-main>section:nth-of-type(4) li:nth-of-type(1) a{
+main>section:nth-of-type(4) li:nth-of-type(1) a {
 	text-decoration: none;
 }
 
@@ -567,8 +598,8 @@ main>section:nth-of-type(4) li:nth-of-type(2) p:nth-of-type(2) {
 	font-weight: 700;
 }
 
-main>section:nth-of-type(4) li:nth-of-type(2) p:nth-of-type(2):hover{
-	scale: 1.2; 
+main>section:nth-of-type(4) li:nth-of-type(2) p:nth-of-type(2):hover {
+	scale: 1.2;
 }
 
 main>section:nth-of-type(4) li:nth-of-type(2) p:nth-of-type(3) {
@@ -582,19 +613,20 @@ main>section:nth-of-type(4) li:nth-of-type(3) p:nth-of-type(5) {
 	font-weight: 700;
 }
 
-main>section:nth-of-type(4) li:nth-of-type(3) p:nth-of-type(5):hover{
-	scale: 1.2; 
+main>section:nth-of-type(4) li:nth-of-type(3) p:nth-of-type(5):hover {
+	scale: 1.2;
 }
-	
+
 
 main>section:nth-of-type(5) ul {
 	display: flex;
 	overflow-x: auto;
 	margin: 0;
 	padding: 0;
+	scroll-behavior: smooth;
 }
 
-main > section:nth-of-type(5) > nav ul{
+main>section:nth-of-type(5)>nav ul {
 	display: flex;
 	overflow: auto;
 	justify-content: center;
@@ -605,14 +637,14 @@ main > section:nth-of-type(5) > nav ul{
 
 }
 
-main > section:nth-of-type(5) > nav > ul > li{
+main>section:nth-of-type(5)>nav>ul>li {
 	border-radius: 30px;
 	border: 1px solid;
 	display: block;
 
 }
 
-main > section:nth-of-type(5) > nav > ul > li a{
+main>section:nth-of-type(5)>nav>ul>li a {
 	margin: 0;
 	padding: 7px;
 	background-color: black;
@@ -671,11 +703,11 @@ main>section:nth-of-type(6) ul {
 	margin: 1em;
 	padding: 0;
 	gap: 1em;
-
+	scroll-behavior: smooth;
 
 }
 
-main > section:nth-of-type(6) > nav ul{
+main>section:nth-of-type(6)>nav ul {
 	display: flex;
 	overflow: auto;
 	justify-content: center;
@@ -686,14 +718,14 @@ main > section:nth-of-type(6) > nav ul{
 
 }
 
-main > section:nth-of-type(6) > nav > ul > li{
+main>section:nth-of-type(6)>nav>ul>li {
 	border-radius: 30px;
 	border: 1px solid;
 	display: block;
 
 }
 
-main > section:nth-of-type(6) > nav > ul > li a{
+main>section:nth-of-type(6)>nav>ul>li a {
 	margin: 0;
 	padding: 7px;
 	background-color: black;
@@ -738,7 +770,7 @@ main>section:nth-of-type(6) li img:first-of-type {
 }
 
 
-main>section:nth-of-type(6) li > img:nth-of-type(2) {
+main>section:nth-of-type(6) li>img:nth-of-type(2) {
 	width: 8em;
 	height: 100%;
 	object-fit: cover;
@@ -829,10 +861,8 @@ main>section:nth-of-type(6) p {
 
 }
 
-main>section:nth-of-type(6) video{
+main>section:nth-of-type(6) video {
 	display: none;
 	margin-top: 1em;
 }
 
-
-/*breadcrum

@@ -35,6 +35,8 @@ const notificatie1 = document.querySelector("header nav:nth-of-type(1) p");
 
 
 
+
+
 btnItem.addEventListener('click', openMenu)
 closeBtn.addEventListener("click", closeMenu)
 
@@ -95,7 +97,6 @@ winkelmandjeBtn.addEventListener("click",() =>{
   winkelmandDialog.showModal(); 
 }); 
 
-
 closeBtnWinkelmand.addEventListener("click", () =>{
   winkelmandDialog.close(); 
 }); 
@@ -141,3 +142,8 @@ winkelmandjeBtn.addEventListener("click", () =>{
 notificatie1.addEventListener("click",() =>{
   notificatie1.classList.remove("active"); 
 })
+
+
+
+
+

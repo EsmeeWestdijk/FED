@@ -1,5 +1,4 @@
-**************/
-
+/**************/
 /* CSS REMEDY */
 /**************/
 *,
@@ -10,6 +9,7 @@
 	/*border:solid 1px red;*/
 
 }
+
 
 @font-face {
 	font-family: "MijnFont";
@@ -32,6 +32,9 @@
 	--color-text: black;
 	--color-background: white;
 	--font-family: "MijnFont", sans-serif;
+	--radiobutton-checked: black; 
+	--Douglas-color: #9bdcd2;
+	--Douglas-color-dark: #6fdbcb; 
 }
 
 
@@ -59,19 +62,25 @@
 html:has([value="dark"]:checked) {
 	--color-text: white;
 	--color-background: black;
-		color-scheme: dark;
-		.zwart-wit-icon {
-			/* 1. filter invert */
-			filter:invert(100%);
-		}
-	}
-	
+	color-scheme: dark;
+  }
+  
+  html:has([value="dark"]:checked) .zwart-wit-icon {
+	/* 1. filter invert */
+	filter: invert(100%);
+  }	
 	 
 html:has([value="light"]:checked) {
 	--color-text: black;
 	--color-background: white;
 		color-scheme: light;
 		
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 body {
@@ -84,35 +93,26 @@ body.inactive {
 	overflow: hidden;
 }
 
-button {
-	background-color: var(--color-button);
-	color: var(--color-text-button);
+button:active{
+	transform: translateY(-0.2em);
 }
 
+
 a:hover {
-	color: rgb(0, 213, 255);
+	color: var(--Douglas-color); 
 	text-decoration: underline;
 }
 
 a:active {
-	color: rgba(0, 213, 255, 0.721);
+	color: var(--Douglas-color-dark); 
 	font-size: medium;
 
 }
 
-
 a:focus {
-	border-color: aqua;
-
-}
-
-
-html:has([value="light"]:checked) {
-	color-scheme: light;
-}
-
-html:has([value="dark"]:checked) {
-	color-scheme: dark;
+	border-color: var(--Douglas-color); 
+	outline-offset: 0.5em; 		
+	border-radius: 1em;								
 }
 
 
@@ -148,6 +148,7 @@ html:has([value="kerst"]:checked) main > img{
 	display: block;
 	animation-name: rendier;
 	animation-duration: 20s;
+	animation-iteration-count: infinite;
   
 }
 
@@ -160,6 +161,30 @@ html:has([value="kerst"]:checked) main > img{
 	}
 }
 
+/****************/
+/* Reduced motion*/
+/****************/
+
+html:has([value="reducedmotion"]:checked) main>section:nth-of-type(8) img:hover{
+	transform: none;
+}
+
+html:has([value="reducedmotion"]:checked) main>section:nth-of-type(7) li img:hover{
+	transform: none;
+}
+
+html:has([value="reducedmotion"]:checked) main>section:nth-of-type(8) img:hover{
+	animation: none;
+}
+
+html:has([value="reducedmotion"]:checked) button:active{
+	transform: none;
+}
+
+html:has([value="reducedmotion"]:checked) main > img{
+	animation: none;
+	display: none;
+}
 
 
 /****************/
@@ -182,6 +207,7 @@ main>section:nth-of-type(1) > ul:nth-of-type(1) {
 	border-color: #dddddddd;
 	grid-row: 1;
 	padding: 0;
+	margin: 0;
 }
 
 main>section:nth-of-type(1) ul:nth-of-type(1) li{
@@ -222,12 +248,19 @@ main>section:nth-of-type(1) ul:nth-of-type(2) img {
 
 }
 
-
-main>section:nth-of-type(1) button>img:first-of-type {
+main>section:nth-of-type(1) > button:first-of-type{
 	grid-row: 4;
-	width: 4em;
 	grid-column-start: 1;
 	border: none;
+	justify-self: center;
+	margin: 0;
+	max-width: 100%;
+
+	
+}
+
+main>section:nth-of-type(1) button>img:first-of-type {
+	width: 3em;
 }
 
 main>section:nth-of-type(1)>button:nth-of-type(2){
@@ -252,13 +285,12 @@ main>section:nth-of-type(1)>nav ul {
 	justify-content: center;
 	gap: 0.5em;
 	padding: 0;
-	margin-top: 0;
+	margin: 0;
 }
 
 main>section:nth-of-type(1)>nav>ul>li {
 	border-radius: 30px;
 	border: 1px solid;
-
 }
 
 main>section:nth-of-type(1)>nav>ul>li a {
@@ -996,6 +1028,10 @@ main>section:nth-of-type(7) li img {
 	z-index: 0;
 }
 
+main>section:nth-of-type(7) li img:hover{
+	transform: scale(1.2);
+}
+
 main>section:nth-of-type(7) li button img {
 	padding: 0;
 	margin: 0;
@@ -1081,7 +1117,7 @@ main>section:nth-of-type(8) ul{
 
 main>section:nth-of-type(8) li{
 	display: grid;
-	grid-template-columns: 1;
+	grid-template-columns: 1fr;
 	grid-row: auto;
 
 }
@@ -1117,6 +1153,22 @@ main>section:nth-of-type(8) img{
 	grid-row: 1;
 }
 
+@keyframes bloemen{
+	0%{
+	  transform: rotate(0deg);
+	}
+	100%{
+	  transform: rotate(360deg); 
+	}
+  }
+  
+  main>section:nth-of-type(8) img:hover{
+	animation-name: bloemen;
+	animation-duration: 3s;
+	animation-timing-function: ease-in-out;
+  }
+
+
 main>section:nth-of-type(8) li p{
 	font-size: small;
 	text-align: center;
@@ -1137,8 +1189,6 @@ main>section:nth-of-type(8) h3{
 /*********************/
 /*DUA LIPA STUKJE*/
 /*********************/
-
-
 
 
 main > section:nth-of-type(9) ul{
@@ -1188,6 +1238,7 @@ main > section:nth-of-type(9) li p:nth-of-type(3){
 	font-weight: bold; 
 	padding-bottom: 2em;
 }
+
 
 
 main > section:nth-of-type(9) li img{

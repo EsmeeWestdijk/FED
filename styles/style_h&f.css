@@ -31,8 +31,6 @@
   --color-text: black;
   --color-background: white;
   --font-family: "MijnFont", sans-serif;
-  --background-color-btn: black; 
-  --text-color-btn: white; 
 
 }
 
@@ -52,17 +50,17 @@
 }
 }
 
-
 html:has([value="dark"]:checked) {
-	--color-text: white;
-	--color-background: black;
-		color-scheme: dark;
-		.zwart-wit-icon {
-			/* 1. filter invert */
-			filter:invert(100%);
-		}
-	}
-	
+  --color-text: white;
+  --color-background: black;
+  color-scheme: dark;
+}
+
+html:has([value="dark"]:checked) .zwart-wit-icon {
+  /* 1. filter invert */
+  filter: invert(100%);
+}
+
 	 
 html:has([value="light"]:checked) {
 	--color-text: black;
@@ -217,14 +215,6 @@ nav:nth-of-type(1) ul {
 /* DIALOG WINKELMAND 1tje*/
 /***********************/
 
-/*bron: chatGPT.
-Promt: k wil alleen de inhoud van de diaoog zien niet de standaard dialoog die wit is hoe haal ik dees weg?
-antwoord: dialog {
-    all: unset;  Verwijdert alle standaardstijlen van het dialog-element 
-    position: absolute;  Zorgt ervoor dat je de locatie kunt bepalen 
-    background: none;  Geen achtergrondkleur 
-    color: inherit; Zorg dat de tekstkleur erfelijk is
-}*/
 
 nav:nth-of-type(1) p{
   background-color:#9bdcd2;
@@ -288,6 +278,8 @@ html:has([value="kerst"]:checked) header > img{
 }
 
 
+
+
 header > img{
   display: none;
   width: 4em;
@@ -316,6 +308,20 @@ header > img:hover{
   animation-iteration-count: infinite;
 
 }
+
+
+/****************/
+/* Reduced motion*/
+/****************/
+
+html:has([value="reducedmotion"]:checked) header > img:hover{
+  animation: none;
+}
+
+html:has([value="reducedmotion"]:checked) header section img:hover{
+  animation: none;
+}
+
 
 
 /*bron: samen met Sanne in de les*/
@@ -603,7 +609,7 @@ footer details img {
 }
 
 footer details[open] img {
-  rotate: 180deg;
+  transform: rotate(180deg);
 }
 /* hulp van Helina*/
 
