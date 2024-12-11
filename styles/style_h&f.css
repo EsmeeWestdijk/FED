@@ -221,6 +221,13 @@ nav:nth-of-type(1) p{
   color: var(--color-text);
   padding: 0.2em;
   border-radius: 50%;
+  border-style: solid;
+  border-width: 0.1em;
+  width: 1.6em;
+  position: absolute;
+  margin-left: 24em;
+  margin-bottom: 3em;
+  font-size: small;
 }
 
 nav:nth-of-type(1) p.active{
