@@ -186,6 +186,9 @@ html:has([value="reducedmotion"]:checked) main > img{
 	display: none;
 }
 
+html:has([value="reducedmotion"]:checked) button:active{
+	transition: none;
+}
 
 /****************/
 /* LUCHTJES SLIDER */

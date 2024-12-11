@@ -187,6 +187,23 @@ html:has([value="reducedmotion"]:checked) main>img {
 	display: none;
 }
 
+html:has([value="reducedmotion"]:checked) main>section:nth-of-type(4) li:nth-of-type(1) p:nth-of-type(4):hover{
+	transform: none;
+}
+
+html:has([value="reducedmotion"]:checked) main>section:nth-of-type(4) li:nth-of-type(2) p:nth-of-type(2):hover{
+	transform: none;
+}
+
+html:has([value="reducedmotion"]:checked) main>section:nth-of-type(4) li:nth-of-type(3) p:nth-of-type(5):hover{
+	transform: none;
+}
+
+html:has([value="reducedmotion"]:checked) button:active{
+	transition: none;
+}
+
+
 
 main>section:nth-of-type(1) ul {
 	display: flex;
@@ -581,7 +598,7 @@ main>section:nth-of-type(4) li:nth-of-type(1) p:nth-of-type(4) {
 }
 
 main>section:nth-of-type(4) li:nth-of-type(1) p:nth-of-type(4):hover {
-	scale: 1.2;
+	transform: scale(1.1); 
 }
 
 main>section:nth-of-type(4) li:nth-of-type(1) p:nth-of-type(5) {
@@ -599,7 +616,7 @@ main>section:nth-of-type(4) li:nth-of-type(2) p:nth-of-type(2) {
 }
 
 main>section:nth-of-type(4) li:nth-of-type(2) p:nth-of-type(2):hover {
-	scale: 1.2;
+	transform: scale(1.1);
 }
 
 main>section:nth-of-type(4) li:nth-of-type(2) p:nth-of-type(3) {
@@ -614,7 +631,7 @@ main>section:nth-of-type(4) li:nth-of-type(3) p:nth-of-type(5) {
 }
 
 main>section:nth-of-type(4) li:nth-of-type(3) p:nth-of-type(5):hover {
-	scale: 1.2;
+	transform: scale(1.1);
 }
 
 
