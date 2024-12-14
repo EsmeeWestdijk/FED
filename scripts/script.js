@@ -1,7 +1,7 @@
-const btnItem = document.querySelector('header nav button:nth-of-type(2) img')
-const menuItem = document.querySelector('header nav:nth-of-type(2)')
+const btnItem = document.querySelector('header section:nth-of-type(1) button:nth-of-type(2) img')
+const menuItem = document.querySelector('header nav:nth-of-type(1)')
 const bodyEl = document.body 
-const closeBtn = document.querySelector("header nav:nth-of-type(2) div button")
+const closeBtn = document.querySelector("header nav:nth-of-type(1) div button")
 
 
 

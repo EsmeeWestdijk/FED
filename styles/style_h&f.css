@@ -108,6 +108,67 @@ a{
 }
 
 
+
+/* States*/
+body.inactive {
+	overflow: hidden;
+}
+
+
+
+a:hover {
+	color: var(--Douglas-color); 
+	text-decoration: underline;
+}
+
+a:active {
+	color: var(--Douglas-color-dark); 
+	font-size: medium;
+}
+
+a:focus {
+	outline: 0.2em solid var(--Douglas-color-dark);
+	outline-offset: 0.1em;
+  border-radius: 0.1em;
+}
+
+
+
+button:active{
+	transform: translateY(-0.2em);
+}
+
+footer section:nth-of-type(1) button:hover{
+  background-color: var(--Douglas-color-dark)
+}
+
+button:focus-visible{
+	outline: 0.2em solid var(--Douglas-color-dark);
+	outline-offset: 0.2em;
+  border-radius: 0.5em;
+}
+
+
+
+
+input:focus{
+  outline: 0.2em solid var(--Douglas-color-dark);
+	outline-offset: 0.2em;
+  border-radius: 0.1em;                     
+}
+
+
+summary:focus{
+  outline: 0.2em solid var(--Douglas-color-dark);
+	outline-offset: 0.3em;
+  border-radius: 0.5em;                                 
+}
+
+
+
+
+
+
 div:first-of-type{
   color: black; 
 	font-size: smaller;
@@ -133,11 +194,11 @@ div:first-of-type{
 
 }
 
-header nav:nth-of-type(2).active {
+header nav:nth-of-type(1).active {
   transform: translateX(0);
 }
 
-header nav:nth-of-type(2){
+header nav:nth-of-type(1){
   position: fixed;
   width: 80vw;
   top: 0;
@@ -151,7 +212,7 @@ header nav:nth-of-type(2){
   background-color: var(--color-background);
 }
 
-header nav:nth-of-type(2) ul {
+header nav:nth-of-type(1) ul {
   flex-direction: column;
   display: flex;
   margin: 0;
@@ -167,7 +228,7 @@ header nav:nth-of-type(2) ul {
 
 }
 
-header nav:nth-of-type(2) div {
+header nav:nth-of-type(1) div {
   display: flex;
   padding: 0;
   background-color: transparent;
@@ -176,7 +237,7 @@ header nav:nth-of-type(2) div {
   font-size: x-small;
 }
 
-header nav:nth-of-type(2) div button {
+header nav:nth-of-type(1) div button {
   display: block;
   aspect-ratio: 1/1;
   border: none;
@@ -186,7 +247,7 @@ header nav:nth-of-type(2) div button {
 
 }
 
-header nav:nth-of-type(2) div button span {
+header nav:nth-of-type(1) div button span {
   display: block;
   width: 50%;
   height: 2px;
@@ -194,10 +255,10 @@ header nav:nth-of-type(2) div button span {
   position: absolute;
 }
 
-header nav:nth-of-type(2) div button span:nth-of-type(1) {
+header nav:nth-of-type(1) div button span:nth-of-type(1) {
   transform: rotate(45deg);
 }
-header nav:nth-of-type(2) div button span:nth-of-type(2) {
+header nav:nth-of-type(1) div button span:nth-of-type(2) {
   transform: rotate(-45deg);
 }
 
@@ -208,7 +269,7 @@ nav:nth-of-type(1) section input, label{
 }
 
 
-header nav:nth-of-type(1) {
+header section:nth-of-type(1) {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -217,7 +278,7 @@ header nav:nth-of-type(1) {
   gap: 1em;
 }
 
-nav:nth-of-type(1) ul  {
+ header section:nth-of-type(1) ul  {
   list-style-type: none;
   display: flex;
   justify-content: flex-end;
@@ -245,11 +306,11 @@ nav:nth-of-type(1) p{
   font-size: small;
 }
 
-nav:nth-of-type(1) p.active{
+section:nth-of-type(1) p.active{
   display: block;
 }
 
-nav:nth-of-type(1) p{
+section:nth-of-type(1) p{
   display: none;
 }
 
@@ -259,13 +320,13 @@ nav:nth-of-type(1) p{
 /****************/
 
 
-header section{
+header section:nth-of-type(2){
   display: flex;
   justify-content: space-between;
 
 }
 
-header section img{
+header section:nth-of-type(2) img{
   width: 5em;
   display: none;
 }
@@ -282,14 +343,14 @@ header section img{
   }
 }
 
-header section img:hover{
+header section:nth-of-type(2) img:hover{
   animation-name: blaadjes;
   animation-duration: 1s;
   animation-iteration-count: 5;
   animation-timing-function: ease-in-out;
 }
 
-html:has([value="kerst"]:checked) header section > img{
+html:has([value="kerst"]:checked) header section:nth-of-type(2) > img{
    display: block;
 
 }
@@ -368,28 +429,31 @@ header form label input {
 
 /*bron: samen met Sanne in de voortgangles*/
 
-nav:nth-of-type(1) button img{
+header section:nth-of-type(1) button >img{
   width: 1.5em;
 }
 
-nav:nth-of-type(1) button{
+header section:nth-of-type(1)> button{
   border: none;
-  all: unset;
+  background-color: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
 }
 
-nav:nth-of-type(1) button:nth-of-type(1) img{
+header section:nth-of-type(1) > button:nth-of-type(1) img{
   width: 10em;
 }
 
 
-nav:nth-of-type(1) button:nth-of-type(2),
-nav:nth-of-type(1) button:nth-last-of-type(3) {
+header section:nth-of-type(1)> button:nth-of-type(2),
+header section:nth-of-type(1)> button:nth-last-of-type(3) {
   order: -1;
   justify-content: flex-start;
 
 }
 
-nav:nth-of-type(1) button:nth-last-of-type(4) {
+header section:nth-of-type(1) > button:nth-last-of-type(4) {
   display: flex;
   align-items: center;
 
@@ -426,7 +490,8 @@ footer section:nth-of-type(1) ul{
   width: 100%;
   padding-top: 2em;
   padding-left: 1em;
-  padding-bottom: 7em;
+  padding-right: 1em;
+  padding-bottom: 5em;
 }
 
 

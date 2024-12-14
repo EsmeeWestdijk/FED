@@ -141,10 +141,11 @@ a:active {
 }
 
 a:focus {
-	border-color: var(--Douglas-color);
-	outline-offset: 0.5em;
-	border-radius: 1em;
+	outline: none;
+	outline: 0.2em solid var(--Douglas-color-dark);
+	outline-offset: 0.1em;
 }
+
 
 
 /*bron: chatGPT voor schaaling van de afbeelding. 
