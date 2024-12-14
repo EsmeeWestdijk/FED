@@ -7,9 +7,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>Douglas</title>
-
-	<link href="styles/style_1.css" rel="stylesheet">
+     
 	<link href="styles/style_h&f.css" rel="stylesheet">
+	<link href="styles/style_1.css" rel="stylesheet">
 
 	<link rel="icon" type="image/svg+xml" href="images/favicon_Douglas.ico">
 </head>
@@ -28,13 +28,11 @@
 
 		<nav>
 
-			<img class="zwart-wit-icon" src="images/Douglas_merknaam.png" alt="logo douglas">
-			<img class="zwart-wit-icon" src="images/menu_icon.svg" alt="menu icon">
-			<img class="zwart-wit-icon" src="images/profiel_icon.jpg" alt="profiel icon poppetje">
-			<img class="zwart-wit-icon" src="images/hartje_icon.webp" alt="hartje icon">
-			<img class="zwart-wit-icon" src="images/winkeltas_icon.webp" alt="winkeltas icon">
-
-
+			<button aria-label="Douglas homepagina"><img class="zwart-wit-icon" src="images/Douglas_merknaam.png" alt="logo douglas"></button>
+			<button aria-label="open het menu"><img class="zwart-wit-icon" src="images/menu_icon.svg" alt="menu icon"></button>
+			<button aria-label="open de profiel pagina"><img class="zwart-wit-icon" src="images/profiel_icon.jpg" alt="profiel icon poppetje"></button>
+		    <button aria-label="open je favorieten"><img class="zwart-wit-icon" src="images/hartje_icon.webp" alt="hartje icon"></button>
+			<button aria-label="open je winkelmandje"><img class="zwart-wit-icon" src="images/winkeltas_icon.webp" alt="winkeltas icon"></button>
 
 		</nav>
 
@@ -54,29 +52,29 @@
 				</button>
 			</div>
 			<ul>
-				<li>Kerst</li>
-				<li>Merken</li>
-				<li>Parfum</li>
-				<li>Make-up</li>
-				<li>Gezicht</li>
-				<li>Lichaam</li>
-				<li>Haar</li>
-				<li>Gezondheid</li>
-				<li>Home & Lifestyle</li>
-				<li>Nieuw</li>
-				<li>Outlet</li>
-				<li>Video's</li>
-				<li>Adventkalenders</li>
-				<li>Douglas collection</li>
-				<li>Duurzaamheid</li>
-				<li>Cadeautips</li>
-				<li>Trending</li>
+				<li><a href="#">Kerst</a></li>
+                <li><a href="#">Merken</a></li>
+                <li><a href="#">Parfum</a></li>
+                <li><a href="#">Make-up</a></li>
+                <li><a href="#">Gezicht</a></li>
+                <li><a href="#">Lichaam</a></li>
+                <li><a href="#">Haar</a></li>
+                <li><a href="#">Gezondheid</a></li>
+                <li><a href="#">Home & Lifestyle</a></li>
+                <li><a href="#">Nieuw</a></li>
+                <li><a href="#">Outlet</a></li>
+                <li><a href="#">Video's</a></li>
+                <li><a href="#">Adventkalenders</a></li>
+                <li><a href="#">Douglas collection</a></li>
+                <li><a href="#">Duurzaamheid</a></li>
+                <li><a href="#">Cadeautips</a></li>
+                <li><a href="#">Trending</a></li>
 				<li>
 					<form>
+						<label><input type="radio" id="radiobuttondark" name="modus" value="dark">darkmode</label>
+						<label><input type="radio" id="radiobuttonlight" name="modus" value="light">lightmode</label>
+						<label><input type="checkbox" id="checkboxanimatie" name="modus" value="animaties">animaties</label>
 						<label><input type="checkbox" id="checkboxkerst" name="modus" value="kerst">kerstmodus</label>
-						<label><input type="checkbox" id="checkboxdonker" name="modus" value="dark">darkmode</label>
-						<label><input type="checkbox" id="checkboxlicht" name="modus" value="light">lightmode</label>
-						<label><input type="checkbox" id="checkboxmotion" name="modus" value="reducedmotion">reduced motion</label>
 					</form>
 				</li>
 			</ul>
@@ -99,44 +97,47 @@
 
 	<main>
 		<section>
+
+			<h2 class="visually-hidden">Aanbieding reclame foto's</h2>
+
 			<ul>
 				<li id="li1">
-					<h2>20%</h2>
+					<h3>20%</h3>
 					<img src="images/Douglas_eerste_foto.webp" alt="bloemen en parfum 20% korting">
 					<!-- bron: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.douglas.nl%2Fnl%2Fb%2Fdouglas-collection%2Fparfum%2Fb9834_01&psig=AOvVaw1utxFVt9cesiwsbMxwQ6I8&ust=1732287388978000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOiW6MXX7YkDFQAAAAAdAAAAABAE -->
 					<p>Op alles van Beautiful stories</p>
 				</li>
 
 				<li id="li2">
-					<h2>Early acces</h2>
+					<h3>Early acces</h3>
 					<img src="images/Douglas_tweede_foto.webp" alt="vrouw met roze jurk early acces">
 					<!-- bron: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.douglas.nl%2Fnl%2Fc%2Fendless-summer%2Fzomerse-geuren%2F8604&psig=AOvVaw2l6vufRG73jqh7Oi4XZxBC&ust=1732287047512000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKjS1aXW7YkDFQAAAAAdAAAAABAZ   -->
 					<p>Alleen vandaag</p>
 				</li>
 
 				<li id="li3">
-					<h2>25%</h2>
+					<h3>25%</h3>
 					<img src="images/Douglas_derde_foto.jpg" alt="parfum met roos blaadjes 25% korting">
 					<!-- bron: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.nieuwsblad.be%2Fcnt%2Fdmf20200818_93606375&psig=AOvVaw2l6vufRG73jqh7Oi4XZxBC&ust=1732287047512000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKjS1aXW7YkDFQAAAAAdAAAAABAe -->
 					<p>Op alle roos geuren</p>
 				</li>
 
 				<li id="li4">
-					<h2>Chanel</h2>
+					<h3>Chanel</h3>
 					<img src="images/Douglas_vierde_foto.jpg" alt="chanel parfum voor mannen">
 					<!-- bron: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.testyourparfum.com%2F10-lekkerste-mannen-luchtjes-in-2021%2F&psig=AOvVaw2SEHUIyQjTn-M3wZY9_OgP&ust=1732287496987000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMDS8fnX7YkDFQAAAAAdAAAAABAE -->
 					<p>Voor mannen</p>
 				</li>
 
 				<li id="li5">
-					<h2>Georgio Armani</h2>
+					<h3>Georgio Armani</h3>
 					<img src="images/Douglas_vijfde_foto.png" alt="gergio armani my way met sidney sweeny ">
 					<!-- https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.talkiesmagazine.nl%2Fbeauty%2Fparfumetiquette%2F&psig=AOvVaw2SEHUIyQjTn-M3wZY9_OgP&ust=1732287496987000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMDS8fnX7YkDFQAAAAAdAAAAABAO -->
 					<p>My way</p>
 				</li>
 
 				<li id="li6">
-					<h2>Trory Burch</h2>
+					<h3>Trory Burch</h3>
 					<img src="images/Douglas_zesde_foto.webp" alt="kendal jenner met trory burch sublime">
 					<!-- https://www.google.com/url?sa=i&url=https%3A%2F%2Fcitymagazine.si%2Fnl%2Fherfstmagie-10-beste-damesparfums-voor-herfst-2024%2F&psig=AOvVaw2SEHUIyQjTn-M3wZY9_OgP&ust=1732287496987000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMDS8fnX7YkDFQAAAAAdAAAAABAV -->
 					<p>Sublime</p>
@@ -157,10 +158,14 @@
 			
 		</section>
 
+
 		<img src="images_2/rendier.png" alt="rendier">
+
 		
-		<section>
+		<section> 
+
 			<h2 class="visually-hidden">Merken logo's</h2>
+
 			<ul>
 				<li>
 					<img class="zwart-wit-icon" src="images/foto's_van_douglas/Logo-chanel.svg" alt="Logo-chanel">
@@ -189,22 +194,18 @@
 
 				<li>
 					<img class="zwart-wit-icon" src="images/foto's_van_douglas/logo_kiehl.svg" alt="logo_kiehl">
-
 				</li>
 
 				<li>
 					<img class="zwart-wit-icon" src="images/foto's_van_douglas/logo_narciso.svg" alt="logo_narciso">
-
 				</li>
 
 				<li>
 					<img class="zwart-wit-icon" src="images/foto's_van_douglas/logo_olaplex.svg" alt="logo_olaplex">
-					<!-- https://www.douglas.nl/nl/b/olaplex/b5157 -->
 				</li>
 
 				<li>
 					<img class="zwart-wit-icon" src="images/foto's_van_douglas/logo_tomford.svg" alt="logo_tomford">
-					<!-- https://www.douglas.nl/nl/b/tom-ford/b1161 -->
 				</li>
 
 				<li>
@@ -215,7 +216,8 @@
 		</section>
 
 		<section>
-			<h2>Merk Highlights</h2>
+
+			<h2>Merk Hoogtepunten</h2>
 
 			<ul>
 				<li id="li1.1">
@@ -265,20 +267,22 @@
 					<li><a href="#li4.1" aria-label="scroll naar Gucci"></a></li>
 				</ul>
 			</nav>
+
 		</section>
 
 		<section>
+
 			<h2>Voor jou geselecteerd</h2>
 
 			<ul>
 				<li>
 					<h3>Yves Saint Laurant</h3>
 					<img src="images/foto's_van_douglas/ysl_libre_klein.jpg" alt="ysl libre parfum">
-					<button aria-label=" hartje"><img class="zwart-wit-icon" src="images/hartje_button.jpg"
+					<button aria-label="voeg toe aan je favorieten"><img class="zwart-wit-icon" src="images/hartje_button.jpg"
 							alt="hartje button"></button>
 				
 					<!--bron:https://depositphotos.com/nl/vectors/heart-icon.html-->
-					<a href="index_2.html">Libre</a>
+					<p><a aria-label="naar de Yves Saint Laurent Libre pagina" href="index_2.html">Libre</a></p>
 					<p>Eau de parfum</p>
 					<p>Adviesprijs <s>€92,00</s></p>
 					<p>€59,80</p>
@@ -290,7 +294,7 @@
 				<li>
 					<h3>Bobby Brown</h3>
 					<img src="images/foto's_van_douglas/Bobby_brown_lipstick.jpg" alt="bobby brown lipstick">
-					<button aria-label=" hartje"><img class="zwart-wit-icon" src="images/hartje_button.jpg"
+					<button aria-label="voeg toe aan je favorieten"><img class="zwart-wit-icon" src="images/hartje_button.jpg"
 							alt="hartje button"></button>
 					<p>Extra Lip Tint Lippenbalsem</p>
 					<p>€44,00</p>
@@ -300,7 +304,7 @@
 				<li>
 					<h3>Narciso rodriguez</h3>
 					<img src="images/foto's_van_douglas/luchtje_narciso_rodriguez.jpeg" alt="luchtje_narciso_rodriguez">
-					<button aria-label=" hartje"><img class="zwart-wit-icon" src="images/hartje_button.jpg"
+					<button aria-label="voeg toe aan je favorieten"><img class="zwart-wit-icon" src="images/hartje_button.jpg"
 							alt="hartje button"></button>
 					<p>for her</p>
 					<p>Musc Noir Eau de Parfum</p>
@@ -315,27 +319,28 @@
 		</section>
 
 		<section>
-			<h2>Beauty stories</h2>
+
+			<h2>schoonheidsverhalen</h2>
 
 			<ul>
 				<li id="li1.2">
-					<h3>All about</h3>
+					<h3>Top 10 geuren</h3>
 					<img src="images/luchtjes_klein_paars.webp" alt="luchtjes top 10">
-					<p>Top 10 geuren</p>
+					<p>All about</p>
 					<p>Ontdek de populairste parfums van dit moment!</p>
 				</li>
 
 				<li id="li2.2">
-					<h3>All about</h3>
+					<h3>Top 10 Herengeuren</h3>
 					<img src="images/luchtje_klein_paars_2.webp" alt="luchtjes top 10 mannen">
-					<p>Top 10 Herengeuren</p>
+					<p>All about</p>
 					<p>Ondek de populairste herengeuren van het moment!</p>
 				</li>
 
 				<li id="li3.2">
-					<h3>All about</h3>
+					<h3>Top 10 damesgeuren</h3>
 					<img src="images/luchtjes_klein_paars_3.webp" alt="luchtjes top 10 dames">
-					<p>Top 10 damesgeuren</p>
+					<p>All about</p>
 					<p>Ontdek de populairste damesgeuren van het moment!</p>
 				</li>
 			</ul>
@@ -350,17 +355,16 @@
 		</section>
 
 		<section>
-			<h2>Douglas clips beta</h2>
+
+			<h2>Douglas video's</h2>
+
 			<a href="https://www.douglas.nl/nl/cp/videos/video-overview">Alles Weergeven</a>
 
 			<ul>
 				<li id="li1.3">
 					<h3>NYX Professional Makeup</h3>
 
-
 					<img src="images/thumbnail_1.jpg" alt="thumbnail NYX video">
-
-
 					<img src="images/product_thumbnail_1.avif" alt="Butter gloss bling NYX">
 					<img src="images/NYX_logo_video.png" alt="NYX logo">
 					<p>Butter Gloss Bling</p>
@@ -370,10 +374,7 @@
 				<li id="li2.3">
 					<h3>Benefit</h3>
 
-
 					<img src="images/thumbnail_2.jpg" alt="thumbnail Benefit video">
-
-
 					<img src="images/product_thumbnail_2.avif" alt="make-up remeving oil">
 					<img src="images/profiel_thumbnail_2.webp" alt="profielfoto">
 					<p>Get Unblocked - Pre-Clearing Makeup-Removing Oil</p>
@@ -383,11 +384,7 @@
 				<li id="li3.3">
 					<h3>Armani</h3>
 
-
-
 					<img src="images/thumbnail_3.jpg" alt="thumbnail Armani video">
-
-
 					<img src="images/product_thumbnail_3.avif" alt="acqua merkeerstift armani">
 					<img src="images/profiel_thumbnail_3.webp" alt="profielfoto">
 					<p>Acqua Markeerstift</p>
@@ -408,12 +405,13 @@
 	<footer>
 
 		<section>
+
 			<h2 class="visually-hidden">Douglas nieuwsletter</h2>
+
 			<ul>
 				<li>
 					<h3>Douglas nieuwsletter</h3>
 					<p>Blijf altijd op de hoogte van het laatste beautynieuws!</p>
-
 
 					<form>
 						<label for="e-mail">E-mailadres</label>
@@ -426,7 +424,9 @@
 		</section>
 
 		<section>
+
 			<h2 class="visually-hidden">bestellen</h2>
+
 			<ul>
 				<li>
 					<img class="zwart-wit-icon" src="images/levering_auto.png" alt="bezorg auto icon">
@@ -456,38 +456,41 @@
 		</section>
 
 		<section>
-			<h4>Betalingsmogelijkheden</h4>
 
-			<a href="#"> <img src="images/Mastercard.svg" alt="mastercard"></a>
-			<a href="#"> <img src="images/Visa.svg" alt="visa"></a>
-			<a href="#"> <img src="images/GPay.svg" alt="Gpay"></a>
-			<a href="#"> <img src="images/Master-Payment-ApplePay.svg" alt="Applepay"></a>
-			<a href="#"> <img src="images/Master-Payment-iDeal.svg" alt="iDeal"></a>
+			<h2>Betalingsmogelijkheden</h2>
+
+			<a aria-label="" href="#"> <img src="images/Mastercard.svg" alt="mastercard"></a>
+			<a aria-label="" href="#"> <img src="images/Visa.svg" alt="visa"></a>
+			<a aria-label="" href="#"> <img src="images/GPay.svg" alt="Gpay"></a>
+			<a aria-label="" href="#"> <img src="images/Master-Payment-ApplePay.svg" alt="Applepay"></a>
+			<a aria-label="" href="#"> <img src="images/Master-Payment-iDeal.svg" alt="iDeal"></a>
 
 
 			<h4>Verzending en levering</h4>
-			<a href="#"> <img src="images/DHL.svg" alt="DHL platje"></a>
+			<a aria-label="" href="#"> <img src="images/DHL.svg" alt="DHL logo"></a>
 
 			<h4>Zorgeloos shoppen</h4>
-			<a href="#"> <img class="zwart-wit-icon" src="images/Shopping-awards-logo-zelf-gemaakt-2-.webp"
+			<a aria-label="" href="#"> <img class="zwart-wit-icon" src="images/Shopping-awards-logo-zelf-gemaakt-2-.webp"
 					alt="Shopping awards plaatje"></a>
 
 			<h4>Douglas-app</h4>
-			<a href="#"> <img src="images/master-google-play-icon-EN.svg" alt="Google plat store"></a>
-			<a href="#"> <img src="images/master-apple-store-icon-EN.svg" alt="apple app store"></a>
+			<a aria-label="" href="#"> <img src="images/master-google-play-icon-EN.svg" alt="Google play store"></a>
+			<a aria-label="" href="#"> <img src="images/master-apple-store-icon-EN.svg" alt="apple app store"></a>
 
 			<h4>Volg ons</h4>
-			<a href="#"> <img class="zwart-wit-icon" src="images/Master-Social-Icon-Facebook.svg"
+			<a aria-label="" href="#"> <img class="zwart-wit-icon" src="images/Master-Social-Icon-Facebook.svg"
 					alt="facebook icon"></a>
-			<a href="#"> <img class="zwart-wit-icon" src="images/Master-Social-Icon-Instagram.svg"
+			<a aria-label="" href="#"> <img class="zwart-wit-icon" src="images/Master-Social-Icon-Instagram.svg"
 					alt="instagram icon"></a>
-			<a href="#"> <img class="zwart-wit-icon" src="images/Master-Social-Icon-YouTube.svg" alt="youtube icon"></a>
-			<a href="#"> <img class="zwart-wit-icon" src="images/Master-Social-Icon-TikTok.svg" alt="tiktok icon"></a>
+			<a aria-label="" href="#"> <img class="zwart-wit-icon" src="images/Master-Social-Icon-YouTube.svg" alt="youtube icon"></a>
+			<a aria-label="" href="#"> <img class="zwart-wit-icon" src="images/Master-Social-Icon-TikTok.svg" alt="tiktok icon"></a>
 
 		</section>
 
 		<section>
+
 			<h2 class="visually-hidden">Informatie Douglas</h2>
+
 			<details>
 				<summary>Klantenservice <img class="zwart-wit-icon" src="images/pijltje_naar_beneden.jpg"
 						alt="pijltje naar beneden"></summary>
@@ -521,7 +524,9 @@
 		</section>
 
 		<section>
+
 			<h2>Zoek een store</h2>
+			
 			<img class="zwart-wit-icon" src="images/Footer_zoek.avif" alt="ronde afbeeling winkel">
 			<p>Zoek een Douglas-store bij jou in de buurt en ervaar onze producten in het echt.</p>
 
@@ -548,7 +553,7 @@
 					<!--bron:https://nl.dreamstime.com/vinkje-tick-icon-no-image120599675-->
 					<p>Meer dan 100 stores in Nederland</p>
 				</li>
-
+ 
 				<li>
 					<img class="zwart-wit-icon" src="images/vinkje_icon.webp" alt="vinkje">
 					<!--bron:https://nl.dreamstime.com/vinkje-tick-icon-no-image120599675-->

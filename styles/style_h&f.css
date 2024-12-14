@@ -80,6 +80,15 @@ body {
   font-family: var(--font-family);
 }
 
+
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+   scroll-padding-top: 7em;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -92,6 +101,12 @@ header {
 li {
   list-style-type: none;
 }
+
+a{
+  text-decoration: none;
+  color: var(--color-text);
+}
+
 
 div:first-of-type{
   color: black; 
@@ -134,7 +149,6 @@ header nav:nth-of-type(2){
   left: 0;
   transform: translateX(-100vw);
   background-color: var(--color-background);
-
 }
 
 header nav:nth-of-type(2) ul {
@@ -149,6 +163,7 @@ header nav:nth-of-type(2) ul {
   font-size: small;
   color: var(--color-text);
   background-color: var(--color-background);
+
 
 }
 
@@ -202,7 +217,7 @@ header nav:nth-of-type(1) {
   gap: 1em;
 }
 
-nav:nth-of-type(1) ul {
+nav:nth-of-type(1) ul  {
   list-style-type: none;
   display: flex;
   justify-content: flex-end;
@@ -285,8 +300,6 @@ html:has([value="kerst"]:checked) header > img{
 }
 
 
-
-
 header > img{
   display: none;
   width: 4em;
@@ -335,7 +348,6 @@ html:has([value="reducedmotion"]:checked) header section img:hover{
 header form {
   width: 100%;
   margin: auto;
-  padding: 0.75em;
   background-color: var(--color-background); 
   border: 1px solid #cccc;
 }
@@ -351,33 +363,33 @@ header form label input {
   border: none;
   color: grey;
   text-align: start;
+  padding: 1em;
 }
 
 /*bron: samen met Sanne in de voortgangles*/
 
-
-
-
-nav:nth-of-type(1) img {
+nav:nth-of-type(1) button img{
   width: 1.5em;
 }
 
-nav:nth-of-type(1) img:nth-of-type(1) {
-  width: 10em;
-  display: flex;
-  justify-content: center;
-  margin: auto;
-
+nav:nth-of-type(1) button{
+  border: none;
+  all: unset;
 }
 
-nav:nth-of-type(1) img:nth-of-type(2),
-nav:nth-of-type(1) img:nth-last-of-type(3) {
+nav:nth-of-type(1) button:nth-of-type(1) img{
+  width: 10em;
+}
+
+
+nav:nth-of-type(1) button:nth-of-type(2),
+nav:nth-of-type(1) button:nth-last-of-type(3) {
   order: -1;
   justify-content: flex-start;
 
 }
 
-nav:nth-of-type(1) img:nth-last-of-type(4) {
+nav:nth-of-type(1) button:nth-last-of-type(4) {
   display: flex;
   align-items: center;
 
