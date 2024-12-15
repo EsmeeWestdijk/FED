@@ -26,7 +26,7 @@ const radioButton2 = document.getElementById('radiobutton2');
 const radioButton3 = document.getElementById('radiobutton3');
 const sliderImage = document.querySelector('#li1 img'); 
 
-const notificatie1 = document.querySelector("header nav:nth-of-type(1) p"); 
+const notificatie1 = document.querySelector("header section:nth-of-type(1) p"); 
 
 
 
@@ -127,6 +127,8 @@ winkelmandjeBtn.addEventListener("click", () =>{
     
   
 })
+
+
 
 // notificatie1.addEventListener("click",() =>{
 //   notificatie1.classList.remove("active"); 
