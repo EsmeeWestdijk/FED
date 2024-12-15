@@ -325,7 +325,7 @@ header section:nth-of-type(2){
 
 }
 
-header section:nth-of-type(2) img{
+header section:nth-of-type(2) > img{
   width: 5em;
   display: none;
 }
@@ -397,7 +397,7 @@ html:has([value="animaties"]:checked) header > img:hover{
   animation-iteration-count: infinite;
 }
 
-html:has([value="animaties"]:checked) header section img:hover{
+html:has([value="animaties"]:checked) header section:nth-of-type(2) img:hover{
   animation-name: blaadjes;
   animation-duration: 1s;
   animation-iteration-count: 5;
