@@ -124,10 +124,6 @@ body.inactive {
 	overflow: hidden;
 }
 
-button:active {
-	transform: translateY(-0.2em);
-}
-
 
 a:hover {
 	color: var(--Douglas-color);
@@ -137,13 +133,34 @@ a:hover {
 a:active {
 	color: var(--Douglas-color-dark);
 	font-size: medium;
+	border: none; 
 
 }
 
-a:focus {
-	outline: none;
+a:focus-visible {
+	outline-offset: 0.5em; 		
+	border-radius: 1em;	
+	outline: 0.2em solid var(--Douglas-color-dark);	
+}
+
+button:focus-visible{
+	outline-offset: 0.5em; 		
+	border-radius: 1em;	
+	outline: 0.2em solid var(--Douglas-color-dark);	
+}
+
+input:focus-visible{
 	outline: 0.2em solid var(--Douglas-color-dark);
-	outline-offset: 0.1em;
+	  outline-offset: 0.2em;
+	  border-radius: 0.1em;                     
+}
+
+input:focus{
+	outline: none;
+}
+
+input:active{
+	outline:none; 
 }
 
 
@@ -165,14 +182,10 @@ main>img {
 	position: relative;
 }
 
-
-html:has([value="kerst"]:checked) main>img {
+html:has([value="kerst"]:checked) main>img{
 	display: block;
-	animation-name: rendier;
-	animation-duration: 20s;
-	animation-iteration-count: infinite;
-
 }
+
 
 @keyframes rendier {
 	0% {
@@ -185,32 +198,62 @@ html:has([value="kerst"]:checked) main>img {
 }
 
 /****************/
-/* Reduced motion*/
+/* animaties aan/uit*/
 /****************/
 
-html:has([value="reducedmotion"]:checked) main>section:nth-of-type(4) li>img:hover {
+ main>section:nth-of-type(4) li>img:hover {
 	transform: none;
 }
 
-html:has([value="reducedmotion"]:checked) main>img {
+ main>img {
 	animation: none;
 	display: none;
 }
 
-html:has([value="reducedmotion"]:checked) main>section:nth-of-type(4) li:nth-of-type(1) p:nth-of-type(4):hover{
+ main>section:nth-of-type(4) li:nth-of-type(1) p:nth-of-type(4):hover{
 	transform: none;
 }
 
-html:has([value="reducedmotion"]:checked) main>section:nth-of-type(4) li:nth-of-type(2) p:nth-of-type(2):hover{
+ main>section:nth-of-type(4) li:nth-of-type(2) p:nth-of-type(2):hover{
 	transform: none;
 }
 
-html:has([value="reducedmotion"]:checked) main>section:nth-of-type(4) li:nth-of-type(3) p:nth-of-type(5):hover{
+ main>section:nth-of-type(4) li:nth-of-type(3) p:nth-of-type(5):hover{
 	transform: none;
 }
 
-html:has([value="reducedmotion"]:checked) button:active{
+ button:active{
 	transition: none;
+}
+
+
+
+
+html:has([value="animaties"]:checked) main>section:nth-of-type(4) li>img:hover {
+	transform: scale(1.2);
+}
+
+html:has([value="animaties"]:checked) main>img {
+	display: block;
+	animation-name: rendier;
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
+}
+
+html:has([value="animaties"]:checked) main>section:nth-of-type(4) li:nth-of-type(1) p:nth-of-type(4):hover{
+	transform: scale(1.2)
+}
+
+html:has([value="animaties"]:checked) main>section:nth-of-type(4) li:nth-of-type(2) p:nth-of-type(2):hover{
+	transform: scale(1.2)
+}
+
+html:has([value="animaties"]:checked) main>section:nth-of-type(4) li:nth-of-type(3) p:nth-of-type(5):hover{
+	transform: scale(1.2)
+}
+
+html:has([value="animaties"]:checked) button:active{
+	transform: translateY(-0.2em);
 }
 
 
@@ -266,10 +309,12 @@ main > section:nth-of-type(1) li:nth-of-type(3) h3 {
 
 }
 
-main>section:nth-of-type(1) li:nth-of-type(4) h3,
-main>section:nth-of-type(1) li:nth-of-type(4) li:nth-of-type(6) h3,
-main>section:nth-of-type(1) li:nth-of-type(4) li:nth-of-type(2) h3,
-main>section:nth-of-type(1) li:nth-of-type(4) li:nth-of-type(5) h3 {
+
+
+main>section:nth-of-type(1) li:nth-of-type(6) h3,
+main>section:nth-of-type(1) li:nth-of-type(2) h3,
+main>section:nth-of-type(1) li:nth-of-type(5) h3,
+main>section:nth-of-type(1) li:nth-of-type(4) h3 {
 	color: white;
 	font-weight: 800;
 	font-size: 3em;
@@ -284,8 +329,8 @@ main>section:nth-of-type(1) li:nth-of-type(4) li:nth-of-type(5) h3 {
 
 }
 
-main>section:nth-of-type(1) li:nth-of-type(1) p,
-section:nth-of-type(1) li:nth-of-type(3) p {
+main> section:nth-of-type(1) li:nth-of-type(1) p,
+main> section:nth-of-type(1) li:nth-of-type(3) p {
 	color: black;
 	font-weight: bolder;
 	text-align: center;
@@ -303,9 +348,9 @@ section:nth-of-type(1) li:nth-of-type(3) p {
 }
 
 main>section:nth-of-type(1) li:nth-of-type(2) p,
-li:nth-of-type(5) p,
-li:nth-of-type(6) p,
-li:nth-of-type(4) p {
+main>section:nth-of-type(1) li:nth-of-type(5) p,
+main>section:nth-of-type(1) li:nth-of-type(6) p,
+main>section:nth-of-type(1) li:nth-of-type(4) p {
 	color: white;
 	font-weight: bolder;
 	text-align: center;
@@ -542,9 +587,6 @@ main>section:nth-of-type(4) li>img {
 	z-index: 0;
 }
 
-main>section:nth-of-type(4) li>img:hover {
-	transform: scale(1.2);
-}
 
 
 main>section:nth-of-type(4) li:nth-of-type(3) button img {
@@ -606,9 +648,6 @@ main>section:nth-of-type(4) li:nth-of-type(1) p:nth-of-type(4) {
 	font-weight: 700;
 }
 
-main>section:nth-of-type(4) li:nth-of-type(1) p:nth-of-type(4):hover {
-	transform: scale(1.1); 
-}
 
 main>section:nth-of-type(4) li:nth-of-type(1) p:nth-of-type(5) {
 	font-size: x-small;
@@ -624,9 +663,7 @@ main>section:nth-of-type(4) li:nth-of-type(2) p:nth-of-type(2) {
 	font-weight: 700;
 }
 
-main>section:nth-of-type(4) li:nth-of-type(2) p:nth-of-type(2):hover {
-	transform: scale(1.1);
-}
+
 
 main>section:nth-of-type(4) li:nth-of-type(2) p:nth-of-type(3) {
 	font-size: x-small;
@@ -639,9 +676,6 @@ main>section:nth-of-type(4) li:nth-of-type(3) p:nth-of-type(5) {
 	font-weight: 700;
 }
 
-main>section:nth-of-type(4) li:nth-of-type(3) p:nth-of-type(5):hover {
-	transform: scale(1.1);
-}
 
 
 

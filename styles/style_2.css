@@ -95,9 +95,6 @@ body.inactive {
 	overflow: hidden;
 }
 
-button:active{
-	transform: translateY(-0.2em);
-}
 
 
 a:hover {
@@ -105,18 +102,38 @@ a:hover {
 	text-decoration: underline;
 }
 
+a:focus-visible {
+	outline-offset: 0.5em; 		
+	border-radius: 1em;	
+	outline: 0.2em solid var(--Douglas-color-dark);										
+}
+
 a:active {
 	color: var(--Douglas-color-dark); 
 	font-size: medium;
+	border: none;
 
 }
 
-a:focus {
-	border-color: var(--Douglas-color); 
+button:focus-visible{
 	outline-offset: 0.5em; 		
-	border-radius: 1em;								
+	border-radius: 1em;	
+	outline: 0.2em solid var(--Douglas-color-dark);	
 }
 
+input:focus-visible{
+	outline: 0.2em solid var(--Douglas-color-dark);
+	  outline-offset: 0.2em;
+	border-radius: 0.1em;                     
+}
+
+input:focus{
+	outline: none;
+}
+  
+input:active{
+	outline:none; 
+}
 
 /****************/
 /* JOUW STYLING */
@@ -148,9 +165,6 @@ main > img{
 
 html:has([value="kerst"]:checked) main > img{
 	display: block;
-	animation-name: rendier;
-	animation-duration: 20s;
-	animation-iteration-count: infinite;
   
 }
 
@@ -164,33 +178,54 @@ html:has([value="kerst"]:checked) main > img{
 }
 
 /****************/
-/* Reduced motion*/
+/* animaties aan/uit*/
 /****************/
 
-html:has([value="reducedmotion"]:checked) main>section:nth-of-type(8) img:hover{
+ main>section:nth-of-type(8) img:hover{
 	transform: none;
 }
 
-html:has([value="reducedmotion"]:checked) main>section:nth-of-type(7) li img:hover{
+ main>section:nth-of-type(7) li img:hover{
 	transform: none;
 }
 
-html:has([value="reducedmotion"]:checked) main>section:nth-of-type(8) img:hover{
+ main>section:nth-of-type(8) img:hover{
 	animation: none;
 }
 
-html:has([value="reducedmotion"]:checked) button:active{
+ button:active{
 	transform: none;
 }
 
-html:has([value="reducedmotion"]:checked) main > img{
+ main > img{
 	animation: none;
 	display: none;
 }
 
-html:has([value="reducedmotion"]:checked) button:active{
-	transition: none;
+
+
+
+html:has([value="animaties"]:checked) main>section:nth-of-type(7) li img:hover{
+	transform: scale(1.2);
 }
+
+html:has([value="animaties"]:checked) main>section:nth-of-type(8) img:hover{
+	animation-name: bloemen;
+	animation-duration: 3s;
+	animation-timing-function: ease-in-out;
+}
+
+html:has([value="animaties"]:checked) button:active{
+	transform: translateY(-0.2em);
+}
+
+html:has([value="animaties"]:checked) main > img{
+	display: block;
+	animation-name: rendier;
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
+}
+
 
 /****************/
 /* LUCHTJES SLIDER */
@@ -215,26 +250,30 @@ main>section:nth-of-type(1) > ul:nth-of-type(1) {
 	margin: 0;
 }
 
-main>section:nth-of-type(1) ul:nth-of-type(1) li{
+main>section:nth-of-type(1) ul:nth-of-type(1) > li{
 	font-size: small;
 	margin: 0;
-	padding: 0;
+	padding-bottom: 0.5em;
 }
 
 main>section:nth-of-type(1) > ul:nth-of-type(1) li a {
 	color: var(--color-text);
 	text-decoration: none;
 	font-size: small;
-	padding: 1em;
+	padding: 0.2em;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 
 }
 
 main>section:nth-of-type(1) > img:first-of-type {
 	grid-row: 2;
-	align-items: center;
-    display: flex; 
-    justify-content: center;
-	width: 10em;
+	margin: 0;
+	width: 20em;
+	align-self: center;
+	justify-self: center;
+	padding-right: 8em;
+	
 }
 
 
@@ -242,6 +281,8 @@ main>section:nth-of-type(1) > ul:nth-of-type(2) {
 	display: flex;
 	overflow-x: auto;
 	grid-row: 3;
+	margin: 0;
+	padding: 0;
 }
 
 
@@ -256,10 +297,12 @@ main>section:nth-of-type(1) ul:nth-of-type(2) img {
 main>section:nth-of-type(1) > button:first-of-type{
 	grid-row: 4;
 	grid-column-start: 1;
+	align-self: end;
 	border: none;
-	justify-self: center;
-	margin: 0;
+	justify-self: center;  
+	margin-left: 15em;
 	max-width: 100%;
+	background-color: var(--color-background);
 
 	
 }
@@ -287,15 +330,15 @@ main>section:nth-of-type(1)>button:nth-of-type(2){
 
 main>section:nth-of-type(1)>nav ul {
 	display: flex;
-	justify-content: center;
+	justify-self: center;
 	gap: 0.5em;
-	padding: 0;
+	padding-right: 8em;
 	margin: 0;
 }
 
 main>section:nth-of-type(1)>nav>ul>li {
-	border-radius: 30px;
-	border: 1px solid;
+	border-radius: 50%;
+	padding: 0.2em;
 }
 
 main>section:nth-of-type(1)>nav>ul>li a {
@@ -646,11 +689,14 @@ main > section:nth-of-type(4) li button:nth-of-type(2){
 	grid-row: span 2;;
 	margin-right: 1em;
 	width: 1em;
+	color: var(--color-text);
+	background-color: var(--color-background);
  
 }
 
 main > section:nth-of-type(4) li button:nth-of-type(2) img{
 	width: 1.5em;
+	background-color: var(--color-background);
 }
 
 main > section:nth-of-type(4) li p:first-of-type{
@@ -706,6 +752,7 @@ section:nth-of-type(5) li button {
 	align-self: start;
 	width: 1.5em;
 	border: none; 
+	background-color: var(--color-background);
 
 }
 
@@ -771,6 +818,7 @@ section:nth-of-type(6) p:nth-of-type(2), p:nth-of-type(3), p:nth-of-type(4), p:n
 section:nth-of-type(6) button:last-of-type{
 	grid-column: 2;
 	width: fit-content;
+	background-color: var(--color-background);
 }
 
 section:nth-of-type(6) > button{
@@ -778,6 +826,8 @@ section:nth-of-type(6) > button{
 	width: 2em;
 	border: none; 
 	justify-self: end;
+	color: var(--color-text);
+	background-color: var(--color-background);
 
 }
 
@@ -1033,9 +1083,6 @@ main>section:nth-of-type(7) li img {
 	z-index: 0;
 }
 
-main>section:nth-of-type(7) li img:hover{
-	transform: scale(1.2);
-}
 
 main>section:nth-of-type(7) li button img {
 	padding: 0;
@@ -1053,6 +1100,7 @@ main>section:nth-of-type(7) li button {
 
 	justify-self: end;
 	align-self: end;
+	
 
 	z-index: 4;
 
@@ -1153,6 +1201,7 @@ main>section:nth-of-type(8) li h3{
 main>section:nth-of-type(8) img{
 	width: 15em;
 	border-radius: 50%;
+	justify-self: center;
 
 	grid-column: 1;
 	grid-row: 1;
@@ -1167,11 +1216,6 @@ main>section:nth-of-type(8) img{
 	}
   }
   
-  main>section:nth-of-type(8) img:hover{
-	animation-name: bloemen;
-	animation-duration: 3s;
-	animation-timing-function: ease-in-out;
-  }
 
 
 main>section:nth-of-type(8) li p{
